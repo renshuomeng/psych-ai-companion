@@ -1,0 +1,92 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+frontend/.env.local
+frontend/.env.*.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / frontend build outputs
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+
+# Runtime data and generated local files
+logs/
+logs/public-demo/
+uploads/
+outputs/
+audio/
+work/
+.codex_tmp/
+cloudflared*.log
+dev-state.json
+
+# Databases and backups
+*.db
+*.sqlite
+*.sqlite3
+backend/database/*.db
+backend/database/*.sqlite
+backend/database/*.sqlite3
+backend/database/backups/
+
+# Upload/session/runtime storage
+backend/data/uploads/
+backend/data/sessions/
+backend/data/tmp/
+backend/data/chroma_db/
+chroma_db/
+
+# Knowledge-base generated artifacts and large source files
+backend/data/knowledge_base/backups/
+backend/data/knowledge_base/chunks/
+backend/data/knowledge_base/cleaned/
+backend/data/knowledge_base/indexes/
+backend/data/knowledge_base/models/
+backend/data/knowledge_base/parsed/
+backend/data/knowledge_base/processed/
+backend/data/knowledge_base/raw/
+backend/data/knowledge_base/reports/download_manifest.jsonl
+backend/data/knowledge_base/reports/download_summary.json
+backend/data/knowledge_base/reports/build_report.json
+backend/data/knowledge_base/reports/chunk_review*.csv
+backend/data/knowledge_base/reports/rag_v1_build_report.md
+
+# Training datasets and generated SFT files
+training/raw/
+training/normalized/
+training/processed/
+training/reports/*manual_review*.jsonl
+
+# Evaluation generated outputs
+evaluation/cache/
+evaluation/results/
+evaluation/rag_v1/results/
+evaluation/rag_v11/results/
+evaluation/rag_v2/results/
+competition_results/
+
+# Credentials / certificates / private keys
+*.pem
+*.key
+*.token
+id_rsa*
+id_ed25519*
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini

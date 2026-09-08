@@ -1,0 +1,65 @@
+{
+  "index_version": "KB_V2.1_dense_staging_2026-08-26T090504+0000",
+  "created_at": "2026-08-26T09:05:04+00:00",
+  "index_mode": "staging",
+  "incremental": true,
+  "force_rebuild": false,
+  "dry_run": false,
+  "embedding_provider": "local",
+  "embedding_model": "BAAI/bge-m3",
+  "embedding_model_version": "BAAI/bge-m3",
+  "embedding_dimension": 1024,
+  "chunk_count": 13127,
+  "new_embeddings": 11297,
+  "cache_hits": 1830,
+  "cache_path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/chroma/embedding_cache.jsonl",
+  "registry_hash": "98eeaa33707c09bf457a5e20cc3ee6c207258707ed3615913518191d72b9de5c",
+  "chunk_manifest_hash": "c38dde7fa74aaceaf47c5293c80a34588b72a46fa9db56f863f080f2ef76de3d",
+  "build_time_ms": 7727844,
+  "collection_counts": {
+    "interventions": 6909,
+    "professional_knowledge": 1626,
+    "campus_support": 36,
+    "evidence": 971,
+    "safety": 817,
+    "helping_skills": 2500,
+    "governance": 268
+  },
+  "chroma_collections": {
+    "psych_campus_support_staging": {
+      "collection": "campus_support",
+      "count": 36,
+      "status": "ready"
+    },
+    "psych_evidence_staging": {
+      "collection": "evidence",
+      "count": 971,
+      "status": "ready"
+    },
+    "psych_governance_staging": {
+      "collection": "governance",
+      "count": 268,
+      "status": "ready"
+    },
+    "psych_helping_skills_staging": {
+      "collection": "helping_skills",
+      "count": 2500,
+      "status": "ready"
+    },
+    "psych_interventions_staging": {
+      "collection": "interventions",
+      "count": 6909,
+      "status": "ready"
+    },
+    "psych_professional_knowledge_staging": {
+      "collection": "professional_knowledge",
+      "count": 1626,
+      "status": "ready"
+    },
+    "psych_safety_staging": {
+      "collection": "safety",
+      "count": 817,
+      "status": "ready"
+    }
+  }
+}

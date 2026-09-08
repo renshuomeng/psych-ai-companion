@@ -1,0 +1,42 @@
+[
+  {
+    "id": "thesis_procrastination",
+    "query": "最近论文拖延严重，总是不愿意开始怎么办？"
+  },
+  {
+    "id": "perfectionism",
+    "query": "我总觉得论文必须做到完美才能交出去。"
+  },
+  {
+    "id": "graduation_job_worry",
+    "query": "最近总担心毕业和找工作，晚上停不下来想这些事情。"
+  },
+  {
+    "id": "research_failure_self_worth",
+    "query": "因为实验失败，我开始觉得自己很没用。"
+  },
+  {
+    "id": "sleep_thesis",
+    "query": "我晚上一想着论文，很难睡着。"
+  },
+  {
+    "id": "advisor_communication",
+    "query": "我一想到和导师沟通就紧张。"
+  },
+  {
+    "id": "loneliness",
+    "query": "最近很孤独，又不知道怎么主动和别人建立联系。"
+  },
+  {
+    "id": "grounding",
+    "query": "焦虑的时候有什么简单的稳定情绪方法？"
+  },
+  {
+    "id": "avoidance",
+    "query": "我知道事情应该做，但就是一直回避。"
+  },
+  {
+    "id": "problem_solving",
+    "query": "遇到无法解决的问题时应该怎么办？"
+  }
+]

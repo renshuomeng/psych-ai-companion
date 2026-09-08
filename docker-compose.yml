@@ -1,0 +1,39 @@
+services:
+  app:
+    build: .
+    env_file:
+      - .env
+    environment:
+      APP_ENV: production
+      APP_HOST: 0.0.0.0
+      APP_PORT: 8001
+      SERVE_FRONTEND: "true"
+      FRONTEND_DIST_DIR: /app/frontend/dist
+      PUBLIC_ACCESS_ENABLED: "true"
+    volumes:
+      - uploads:/app/backend/data/uploads
+      - sqlite:/app/backend/database
+    expose:
+      - "8001"
+    restart: unless-stopped
+
+  reverse-proxy:
+    image: caddy:2
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      PUBLIC_DOMAIN: ${PUBLIC_DOMAIN:-localhost}
+    volumes:
+      - ./deployment/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    restart: unless-stopped
+
+volumes:
+  uploads:
+  sqlite:
+  caddy_data:
+  caddy_config:

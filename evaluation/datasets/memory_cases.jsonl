@@ -1,0 +1,1 @@
+{"case_id":"memory_001","turns":[{"role":"user","text":"我不喜欢冥想，感觉越做越烦。"},{"role":"user","text":"论文压力最大，尤其是实验结果解释。"},{"role":"assistant","text":"可以先做任务拆分。"},{"role":"user","text":"我试了任务拆分，有帮助。"}],"expected":{"remember_disliked":["冥想"],"remember_stressors":["论文"],"prefer":["任务拆分"],"avoid_fabricating":["呼吸训练"]}}

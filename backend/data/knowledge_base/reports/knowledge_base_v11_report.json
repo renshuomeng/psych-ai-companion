@@ -1,0 +1,240 @@
+{
+  "created_at": "2026-08-22T14:55:54+00:00",
+  "registry": {
+    "name": "care_psy_knowledge_base_v2",
+    "version": 2,
+    "sources": 67,
+    "auto_download_sources": 65,
+    "collections": [
+      "campus_support",
+      "case_rag",
+      "evidence",
+      "governance",
+      "helping_skills",
+      "interventions",
+      "professional_knowledge",
+      "safety"
+    ]
+  },
+  "chunk_counts": {
+    "pending": 13127,
+    "approved": 0,
+    "rejected": 0,
+    "total": 13127,
+    "review_status": {
+      "pending": 13127
+    },
+    "collection": {
+      "interventions": 6909,
+      "professional_knowledge": 1626,
+      "campus_support": 36,
+      "evidence": 971,
+      "safety": 817,
+      "helping_skills": 2500,
+      "governance": 268
+    },
+    "language": {
+      "en": 12088,
+      "zh-CN": 1039
+    },
+    "source": {
+      "CCI_ANXIETY": 365,
+      "CCI_ASSERTIVENESS": 194,
+      "CCI_BIPOLAR": 240,
+      "CCI_BODY_DYSMORPHIA": 310,
+      "CCI_DEPRESSION": 208,
+      "CCI_DISORDERED_EATING": 273,
+      "CCI_DISTRESS_TOLERANCE": 372,
+      "CCI_HEALTH_ANXIETY": 290,
+      "CCI_PANIC": 217,
+      "CCI_PERFECTIONISM": 577,
+      "CCI_PROCRASTINATION": 450,
+      "CCI_SELF_COMPASSION": 445,
+      "CCI_SELF_ESTEEM": 587,
+      "CCI_SLEEP": 119,
+      "CCI_SOCIAL_ANXIETY": 1017,
+      "CCI_WORRY_RUMINATION": 584,
+      "MOE_HIGHER_ED_MH_GUIDE_2018": 17,
+      "MOE_STUDENT_MH_ACTION_2023_2025": 19,
+      "NHS_CBT_HUB": 26,
+      "NHS_PROBLEM_SOLVING": 30,
+      "NHS_SLEEP": 26,
+      "NHS_THOUGHT_RECORD": 19,
+      "NHS_TODO_LIST": 30,
+      "NHS_WORRIES": 28,
+      "NICE_DEPRESSION": 229,
+      "NICE_GAD_PANIC": 104,
+      "NICE_SELF_HARM": 198,
+      "NIMH_ADHD": 30,
+      "NIMH_ANXIETY": 17,
+      "NIMH_AUTISM": 17,
+      "NIMH_BIPOLAR": 16,
+      "NIMH_DEPRESSION": 18,
+      "NIMH_EATING_DISORDERS": 15,
+      "NIMH_OCD": 14,
+      "NIMH_PTSD": 18,
+      "NIMH_SUICIDE_PREVENTION": 18,
+      "UNICEF_PARENTING_MH": 19,
+      "VA_SKILLS_PSYCHOLOGICAL_RECOVERY": 77,
+      "WHO_DEMENTIA_ACTION_PLAN_2017": 114,
+      "WHO_DWM_STRESS_2020": 270,
+      "WHO_EASE_INTERVENTION_2023": 611,
+      "WHO_EASE_TRAINING_2025": 812,
+      "WHO_GROUP_PM_PLUS_2020": 538,
+      "WHO_GROUP_PM_PLUS_TRAINING_2026": 584,
+      "WHO_HELPING_SKILLS_2025": 458,
+      "WHO_LIVE_LIFE_2021": 597,
+      "WHO_MHGAP_2023": 635,
+      "WHO_PFA_FACILITATOR_2013": 3,
+      "WHO_PFA_GUIDE_2011": 3,
+      "WHO_PM_PLUS_2018": 7,
+      "WHO_PM_PLUS_TRAINING_2025": 563,
+      "WHO_PSYCH_IMPLEMENTATION_2024": 265,
+      "WHO_SAFETY_PLANNING_2023": 4,
+      "WHO_SELFHELP_2026": 418,
+      "WHO_SH_PLUS_2021": 5,
+      "WHO_THINKING_HEALTHY_2015": 1,
+      "WHO_WORK_GUIDELINE_2022": 3,
+      "WHO_WORK_POLICY_BRIEF_2022": 3
+    },
+    "chunk_type": {
+      "psychoeducation": 7297,
+      "exercise": 792,
+      "intervention_step": 185,
+      "communication_skill": 214,
+      "policy": 351,
+      "clinical_reference": 968,
+      "safety_guidance": 817,
+      "helping_skill": 2500,
+      "evidence_summary": 3
+    },
+    "use_mode": {
+      "direct_user_support": 6954,
+      "psychoeducation_only": 1581,
+      "agent_policy_only": 304,
+      "clinical_reference_only": 968,
+      "safety_only": 817,
+      "helping_skills_only": 2500,
+      "evidence_only": 3
+    },
+    "risk_scope": {
+      "normal": 12310,
+      "safety_route_only": 817
+    }
+  },
+  "download": {
+    "successful_sources": 22,
+    "partial_sources": 0,
+    "failed_sources": 3,
+    "failed_source_ids": [
+      "SAMHSA_FAMILY_SUPPORT",
+      "SAMHSA_TRAUMA_INFORMED_CARE",
+      "UNICEF_ADOLESCENT_MH"
+    ]
+  },
+  "indexes": {
+    "bm25_staging_documents": 13127,
+    "bm25_production_documents": 0,
+    "bm25_staging_dir": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/bm25/staging",
+    "bm25_production_dir": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/bm25/production",
+    "chroma_collections": {
+      "psych_professional_knowledge_staging": 465,
+      "psych_interventions_staging": 559,
+      "psych_campus_support_staging": 0,
+      "psych_governance_staging": 0,
+      "psych_safety_staging": 0,
+      "psych_evidence_staging": 0,
+      "psych_helping_skills_staging": 0
+    }
+  },
+  "metadata": {
+    "missing_counts": {},
+    "quality_issue_sample_count": 200,
+    "duplicate_content_groups_sample_count": 50
+  },
+  "coverage": {
+    "collections": [
+      {
+        "collection": "campus_support",
+        "chunks": 36,
+        "status": "present"
+      },
+      {
+        "collection": "case_rag",
+        "chunks": 0,
+        "status": "empty"
+      },
+      {
+        "collection": "evidence",
+        "chunks": 971,
+        "status": "present"
+      },
+      {
+        "collection": "governance",
+        "chunks": 268,
+        "status": "present"
+      },
+      {
+        "collection": "helping_skills",
+        "chunks": 2500,
+        "status": "present"
+      },
+      {
+        "collection": "interventions",
+        "chunks": 6909,
+        "status": "present"
+      },
+      {
+        "collection": "professional_knowledge",
+        "chunks": 1626,
+        "status": "present"
+      },
+      {
+        "collection": "safety",
+        "chunks": 817,
+        "status": "present"
+      }
+    ],
+    "approved_core_topics": {
+      "core_topics": [
+        "academic_stress",
+        "anxiety",
+        "distress_tolerance",
+        "perfectionism",
+        "procrastination",
+        "relationships",
+        "rumination",
+        "self_compassion",
+        "sleep",
+        "worry"
+      ],
+      "covered": [],
+      "missing": [
+        "academic_stress",
+        "anxiety",
+        "distress_tolerance",
+        "perfectionism",
+        "procrastination",
+        "relationships",
+        "rumination",
+        "self_compassion",
+        "sleep",
+        "worry"
+      ],
+      "coverage": 0.0
+    }
+  },
+  "readiness": {
+    "staging_ready": true,
+    "production_ready": false,
+    "production_blockers": [
+      "no_approved_chunks",
+      "approved_core_topic_coverage_below_50_percent",
+      "production_bm25_index_empty"
+    ]
+  },
+  "source_balance_csv": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/reports/source_balance_report.csv",
+  "chunk_quality_csv": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/reports/chunk_quality_report.csv",
+  "dedup_report_json": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/reports/dedup_report.json",
+  "build_report_created_at": "2026-08-22T14:55:37.340406+00:00"
+}

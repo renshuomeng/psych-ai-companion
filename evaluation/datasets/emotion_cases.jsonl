@@ -1,0 +1,5 @@
+{"case_id":"emotion_001","input":{"text":"最近论文没有进展，我每天晚上都睡不着。","checkin":{"stress_score":8,"stress_sources":["论文","睡眠"]}},"expected":{"labels":["anxiety","stress"],"primary_label":"anxiety","intensity_range":[0.6,0.95]}}
+{"case_id":"emotion_002","input":{"text":"室友一直阴阳怪气，我真的很生气。"},"expected":{"labels":["anger"],"primary_label":"anger","intensity_range":[0.55,0.9]}}
+{"case_id":"emotion_003","input":{"text":"我只是来看看系统能做什么。"},"expected":{"labels":["neutral"],"primary_label":"neutral","intensity_range":[0.3,0.55]}}
+{"case_id":"emotion_004","input":{"text":"最近很孤独，也觉得自己没动力。"},"expected":{"labels":["loneliness","fatigue"],"primary_label":"loneliness","intensity_range":[0.55,0.9]}}
+{"case_id":"emotion_005","input":{"text":"今天答辩通过了，我很开心。"},"expected":{"labels":["joy"],"primary_label":"joy","intensity_range":[0.55,0.9]}}

@@ -1,0 +1,1644 @@
+{
+  "created_at": "2026-08-16T14:01:58+00:00",
+  "query_file": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/evaluation/rag_v11/retrieval_queries.jsonl",
+  "index_mode": "staging",
+  "top_k": 5,
+  "cases": 20,
+  "summary": {
+    "bm25_hit": 0.45,
+    "dense_hit": 0.4,
+    "hybrid_hit": 0.55,
+    "bm25_mrr": 0.4167,
+    "dense_mrr": 0.4,
+    "hybrid_mrr": 0.4583,
+    "bm25_ndcg": 0.4234,
+    "dense_ndcg": 0.3866,
+    "hybrid_ndcg": 0.489,
+    "bm25_no_result": 0.3,
+    "dense_no_result": 0.0,
+    "hybrid_no_result": 0.0
+  },
+  "records": [
+    {
+      "id": "q001",
+      "query": "论文一直拖延，越拖越焦虑，今天怎么先开始？",
+      "expected_sources": [
+        "CCI_PROCRASTINATION"
+      ],
+      "expected_topics": [
+        "procrastination",
+        "academic_stress",
+        "task_starting"
+      ],
+      "bm25": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "rewrite": {
+        "original_query": "论文一直拖延，越拖越焦虑，今天怎么先开始？",
+        "cleaned_query": "论文一直拖延，越拖越焦虑，今天怎么先开始？",
+        "expanded_query": "论文一直拖延，越拖越焦虑，今天怎么先开始？ 学业压力 任务拆分 开始行动 拖延 完美主义 焦虑 担忧 认知重评 呼吸放松 接纳不确定 academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+        "query_variants": [
+          "论文一直拖延，越拖越焦虑，今天怎么先开始？",
+          "学业压力 任务拆分 开始行动 拖延 完美主义 焦虑 担忧 认知重评 呼吸放松 接纳不确定",
+          "academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+          "论文一直拖延，越拖越焦虑，今天怎么先开始？ 学业压力 任务拆分 开始行动 拖延 完美主义 焦虑 担忧 认知重评 呼吸放松 接纳不确定 academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty"
+        ],
+        "matched_topics": [
+          "academic_stress",
+          "anxiety"
+        ],
+        "zh_terms": [
+          "学业压力",
+          "任务拆分",
+          "开始行动",
+          "拖延",
+          "完美主义",
+          "焦虑",
+          "担忧",
+          "认知重评",
+          "呼吸放松",
+          "接纳不确定"
+        ],
+        "en_terms": [
+          "academic stress",
+          "thesis",
+          "dissertation",
+          "procrastination",
+          "task breakdown",
+          "study anxiety",
+          "exam anxiety",
+          "perfectionism",
+          "anxiety",
+          "worry",
+          "rumination",
+          "cognitive restructuring",
+          "breathing",
+          "relaxation",
+          "accepting uncertainty"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q002",
+      "query": "我总觉得毕业论文必须完美，否则就很失败。",
+      "expected_sources": [
+        "CCI_PERFECTIONISM"
+      ],
+      "expected_topics": [
+        "perfectionism",
+        "academic_stress"
+      ],
+      "bm25": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 0.9675,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_PERFECTIONISM",
+          "CCI_PERFECTIONISM",
+          "CCI_SELF_ESTEEM"
+        ]
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_DISTRESS_TOLERANCE"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": true,
+        "mrr": 0.5,
+        "ndcg_at_k": 0.7123,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_PERFECTIONISM",
+          "CCI_PERFECTIONISM"
+        ]
+      },
+      "rewrite": {
+        "original_query": "我总觉得毕业论文必须完美，否则就很失败。",
+        "cleaned_query": "我总觉得毕业论文必须完美，否则就很失败。",
+        "expanded_query": "我总觉得毕业论文必须完美，否则就很失败。 学业压力 任务拆分 开始行动 拖延 完美主义 应该化 自我评价 核心信念 academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism shoulding musting self esteem core beliefs balanced thinking",
+        "query_variants": [
+          "我总觉得毕业论文必须完美，否则就很失败。",
+          "学业压力 任务拆分 开始行动 拖延 完美主义 应该化 自我评价 核心信念",
+          "academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism shoulding musting self esteem core beliefs balanced thinking",
+          "我总觉得毕业论文必须完美，否则就很失败。 学业压力 任务拆分 开始行动 拖延 完美主义 应该化 自我评价 核心信念 academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism shoulding musting self esteem core beliefs balanced thinking"
+        ],
+        "matched_topics": [
+          "academic_stress",
+          "perfectionism"
+        ],
+        "zh_terms": [
+          "学业压力",
+          "任务拆分",
+          "开始行动",
+          "拖延",
+          "完美主义",
+          "应该化",
+          "自我评价",
+          "核心信念"
+        ],
+        "en_terms": [
+          "academic stress",
+          "thesis",
+          "dissertation",
+          "procrastination",
+          "task breakdown",
+          "study anxiety",
+          "exam anxiety",
+          "perfectionism",
+          "shoulding",
+          "musting",
+          "self esteem",
+          "core beliefs",
+          "balanced thinking"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q003",
+      "query": "晚上脑子停不下来担心论文，睡不着怎么办？",
+      "expected_sources": [
+        "CCI_SLEEP",
+        "NHS_SLEEP",
+        "CCI_WORRY_RUMINATION"
+      ],
+      "expected_topics": [
+        "sleep",
+        "insomnia",
+        "worry",
+        "rumination"
+      ],
+      "bm25": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_SLEEP",
+          "CCI_SLEEP",
+          "CCI_SLEEP"
+        ]
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_SLEEP",
+          "CCI_SLEEP",
+          "CCI_SLEEP"
+        ]
+      },
+      "rewrite": {
+        "original_query": "晚上脑子停不下来担心论文，睡不着怎么办？",
+        "cleaned_query": "晚上脑子停不下来担心论文，睡不着怎么办？",
+        "expanded_query": "晚上脑子停不下来担心论文，睡不着怎么办？ 学业压力 任务拆分 开始行动 拖延 完美主义 睡眠卫生 睡前程序 担忧反刍 放松训练 焦虑 担忧 认知重评 呼吸放松 接纳不确定 academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism sleep insomnia sleep hygiene bedtime routine worry rumination relaxation anxiety cognitive restructuring breathing accepting uncertainty",
+        "query_variants": [
+          "晚上脑子停不下来担心论文，睡不着怎么办？",
+          "学业压力 任务拆分 开始行动 拖延 完美主义 睡眠卫生 睡前程序 担忧反刍 放松训练 焦虑 担忧 认知重评 呼吸放松 接纳不确定",
+          "academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism sleep insomnia sleep hygiene bedtime routine worry rumination relaxation anxiety cognitive restructuring breathing accepting uncertainty",
+          "晚上脑子停不下来担心论文，睡不着怎么办？ 学业压力 任务拆分 开始行动 拖延 完美主义 睡眠卫生 睡前程序 担忧反刍 放松训练 焦虑 担忧 认知重评 呼吸放松 接纳不确定 academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism sleep insomnia sleep hygiene bedtime routine worry rumination relaxation anxiety cognitive restructuring breathing accepting uncertainty"
+        ],
+        "matched_topics": [
+          "academic_stress",
+          "sleep",
+          "anxiety"
+        ],
+        "zh_terms": [
+          "学业压力",
+          "任务拆分",
+          "开始行动",
+          "拖延",
+          "完美主义",
+          "睡眠卫生",
+          "睡前程序",
+          "担忧反刍",
+          "放松训练",
+          "焦虑",
+          "担忧",
+          "认知重评",
+          "呼吸放松",
+          "接纳不确定"
+        ],
+        "en_terms": [
+          "academic stress",
+          "thesis",
+          "dissertation",
+          "procrastination",
+          "task breakdown",
+          "study anxiety",
+          "exam anxiety",
+          "perfectionism",
+          "sleep",
+          "insomnia",
+          "sleep hygiene",
+          "bedtime routine",
+          "worry",
+          "rumination",
+          "relaxation",
+          "anxiety",
+          "cognitive restructuring",
+          "breathing",
+          "accepting uncertainty"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q004",
+      "query": "面试前特别紧张，反复想最坏结果。",
+      "expected_sources": [
+        "CCI_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ],
+      "expected_topics": [
+        "anxiety",
+        "worry",
+        "uncertainty"
+      ],
+      "bm25": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_ANXIETY",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "dense": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "rewrite": {
+        "original_query": "面试前特别紧张，反复想最坏结果。",
+        "cleaned_query": "面试前特别紧张，反复想最坏结果。",
+        "expanded_query": "面试前特别紧张，反复想最坏结果。 就业焦虑 求职压力 问题解决 不确定感 焦虑 担忧 认知重评 呼吸放松 接纳不确定 career anxiety job search stress interview anxiety problem solving uncertainty values anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+        "query_variants": [
+          "面试前特别紧张，反复想最坏结果。",
+          "就业焦虑 求职压力 问题解决 不确定感 焦虑 担忧 认知重评 呼吸放松 接纳不确定",
+          "career anxiety job search stress interview anxiety problem solving uncertainty values anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+          "面试前特别紧张，反复想最坏结果。 就业焦虑 求职压力 问题解决 不确定感 焦虑 担忧 认知重评 呼吸放松 接纳不确定 career anxiety job search stress interview anxiety problem solving uncertainty values anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty"
+        ],
+        "matched_topics": [
+          "career_anxiety",
+          "anxiety"
+        ],
+        "zh_terms": [
+          "就业焦虑",
+          "求职压力",
+          "问题解决",
+          "不确定感",
+          "焦虑",
+          "担忧",
+          "认知重评",
+          "呼吸放松",
+          "接纳不确定"
+        ],
+        "en_terms": [
+          "career anxiety",
+          "job search stress",
+          "interview anxiety",
+          "problem solving",
+          "uncertainty",
+          "values",
+          "anxiety",
+          "worry",
+          "rumination",
+          "cognitive restructuring",
+          "breathing",
+          "relaxation",
+          "accepting uncertainty"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q005",
+      "query": "我明知道要写开题报告，但就是一直回避。",
+      "expected_sources": [
+        "CCI_PROCRASTINATION"
+      ],
+      "expected_topics": [
+        "procrastination",
+        "avoidance",
+        "academic_stress"
+      ],
+      "bm25": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 0.9558,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_PROCRASTINATION",
+          "CCI_PROCRASTINATION",
+          "CCI_ANXIETY"
+        ]
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": true,
+        "mrr": 0.3333,
+        "ndcg_at_k": 0.6183,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_PROCRASTINATION"
+        ]
+      },
+      "rewrite": {
+        "original_query": "我明知道要写开题报告，但就是一直回避。",
+        "cleaned_query": "我明知道要写开题报告，但就是一直回避。",
+        "expanded_query": "我明知道要写开题报告，但就是一直回避。 学业压力 任务拆分 开始行动 拖延 完美主义 academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism",
+        "query_variants": [
+          "我明知道要写开题报告，但就是一直回避。",
+          "学业压力 任务拆分 开始行动 拖延 完美主义",
+          "academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism",
+          "我明知道要写开题报告，但就是一直回避。 学业压力 任务拆分 开始行动 拖延 完美主义 academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism"
+        ],
+        "matched_topics": [
+          "academic_stress"
+        ],
+        "zh_terms": [
+          "学业压力",
+          "任务拆分",
+          "开始行动",
+          "拖延",
+          "完美主义"
+        ],
+        "en_terms": [
+          "academic stress",
+          "thesis",
+          "dissertation",
+          "procrastination",
+          "task breakdown",
+          "study anxiety",
+          "exam anxiety",
+          "perfectionism"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q006",
+      "query": "和导师沟通前很害怕，怕自己表现很差。",
+      "expected_sources": [
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_ANXIETY"
+      ],
+      "expected_topics": [
+        "social_anxiety",
+        "relationships",
+        "anxiety"
+      ],
+      "bm25": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "dense": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 0.9558,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_DISTRESS_TOLERANCE"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "rewrite": {
+        "original_query": "和导师沟通前很害怕，怕自己表现很差。",
+        "cleaned_query": "和导师沟通前很害怕，怕自己表现很差。",
+        "expanded_query": "和导师沟通前很害怕，怕自己表现很差。 学业压力 任务拆分 开始行动 拖延 完美主义 焦虑 担忧 认知重评 呼吸放松 接纳不确定 academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+        "query_variants": [
+          "和导师沟通前很害怕，怕自己表现很差。",
+          "学业压力 任务拆分 开始行动 拖延 完美主义 焦虑 担忧 认知重评 呼吸放松 接纳不确定",
+          "academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+          "和导师沟通前很害怕，怕自己表现很差。 学业压力 任务拆分 开始行动 拖延 完美主义 焦虑 担忧 认知重评 呼吸放松 接纳不确定 academic stress thesis dissertation procrastination task breakdown study anxiety exam anxiety perfectionism anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty"
+        ],
+        "matched_topics": [
+          "academic_stress",
+          "anxiety"
+        ],
+        "zh_terms": [
+          "学业压力",
+          "任务拆分",
+          "开始行动",
+          "拖延",
+          "完美主义",
+          "焦虑",
+          "担忧",
+          "认知重评",
+          "呼吸放松",
+          "接纳不确定"
+        ],
+        "en_terms": [
+          "academic stress",
+          "thesis",
+          "dissertation",
+          "procrastination",
+          "task breakdown",
+          "study anxiety",
+          "exam anxiety",
+          "perfectionism",
+          "anxiety",
+          "worry",
+          "rumination",
+          "cognitive restructuring",
+          "breathing",
+          "relaxation",
+          "accepting uncertainty"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q007",
+      "query": "室友关系让我很紧绷，不知道怎么设边界。",
+      "expected_sources": [
+        "CCI_SOCIAL_ANXIETY"
+      ],
+      "expected_topics": [
+        "relationships",
+        "social_anxiety"
+      ],
+      "bm25": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_ANXIETY"
+        ]
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "rewrite": {
+        "original_query": "室友关系让我很紧绷，不知道怎么设边界。",
+        "cleaned_query": "室友关系让我很紧绷，不知道怎么设边界。",
+        "expanded_query": "室友关系让我很紧绷，不知道怎么设边界。 人际关系 沟通 边界 社会焦虑 支持系统 relationships interpersonal conflict communication boundaries assertiveness social anxiety",
+        "query_variants": [
+          "室友关系让我很紧绷，不知道怎么设边界。",
+          "人际关系 沟通 边界 社会焦虑 支持系统",
+          "relationships interpersonal conflict communication boundaries assertiveness social anxiety",
+          "室友关系让我很紧绷，不知道怎么设边界。 人际关系 沟通 边界 社会焦虑 支持系统 relationships interpersonal conflict communication boundaries assertiveness social anxiety"
+        ],
+        "matched_topics": [
+          "relationships"
+        ],
+        "zh_terms": [
+          "人际关系",
+          "沟通",
+          "边界",
+          "社会焦虑",
+          "支持系统"
+        ],
+        "en_terms": [
+          "relationships",
+          "interpersonal conflict",
+          "communication",
+          "boundaries",
+          "assertiveness",
+          "social anxiety"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q008",
+      "query": "我最近总觉得自己不够好，越来越自卑。",
+      "expected_sources": [
+        "CCI_SELF_ESTEEM"
+      ],
+      "expected_topics": [
+        "self_esteem",
+        "self_evaluation",
+        "core_beliefs"
+      ],
+      "bm25": {
+        "hit_at_k": true,
+        "mrr": 0.3333,
+        "ndcg_at_k": 0.5438,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_PERFECTIONISM",
+          "CCI_PERFECTIONISM",
+          "CCI_SELF_ESTEEM"
+        ]
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": true,
+        "mrr": 0.3333,
+        "ndcg_at_k": 0.5438,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_PERFECTIONISM",
+          "CCI_PERFECTIONISM",
+          "CCI_SELF_ESTEEM"
+        ]
+      },
+      "rewrite": {
+        "original_query": "我最近总觉得自己不够好，越来越自卑。",
+        "cleaned_query": "我最近总觉得自己不够好，越来越自卑。",
+        "expanded_query": "我最近总觉得自己不够好，越来越自卑。 完美主义 应该化 自我评价 核心信念 perfectionism shoulding musting self esteem core beliefs balanced thinking",
+        "query_variants": [
+          "我最近总觉得自己不够好，越来越自卑。",
+          "完美主义 应该化 自我评价 核心信念",
+          "perfectionism shoulding musting self esteem core beliefs balanced thinking",
+          "我最近总觉得自己不够好，越来越自卑。 完美主义 应该化 自我评价 核心信念 perfectionism shoulding musting self esteem core beliefs balanced thinking"
+        ],
+        "matched_topics": [
+          "perfectionism"
+        ],
+        "zh_terms": [
+          "完美主义",
+          "应该化",
+          "自我评价",
+          "核心信念"
+        ],
+        "en_terms": [
+          "perfectionism",
+          "shoulding",
+          "musting",
+          "self esteem",
+          "core beliefs",
+          "balanced thinking"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q009",
+      "query": "失败一次就开始骂自己，我想学会对自己温和一点。",
+      "expected_sources": [
+        "CCI_SELF_COMPASSION"
+      ],
+      "expected_topics": [
+        "self_compassion",
+        "self_criticism"
+      ],
+      "bm25": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": true,
+        "top_sources": []
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_DISTRESS_TOLERANCE"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_DISTRESS_TOLERANCE"
+        ]
+      },
+      "rewrite": {
+        "original_query": "失败一次就开始骂自己，我想学会对自己温和一点。",
+        "cleaned_query": "失败一次就开始骂自己，我想学会对自己温和一点。",
+        "expanded_query": "失败一次就开始骂自己，我想学会对自己温和一点。",
+        "query_variants": [
+          "失败一次就开始骂自己，我想学会对自己温和一点。"
+        ],
+        "matched_topics": [],
+        "zh_terms": [],
+        "en_terms": [],
+        "translation_strategy": "original_query_only",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q010",
+      "query": "情绪快爆炸时，有没有能先撑过这几分钟的方法？",
+      "expected_sources": [
+        "CCI_DISTRESS_TOLERANCE"
+      ],
+      "expected_topics": [
+        "distress_tolerance",
+        "emotion_regulation"
+      ],
+      "bm25": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": true,
+        "top_sources": []
+      },
+      "dense": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 0.9047,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_ANXIETY",
+          "CCI_DISTRESS_TOLERANCE"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 0.9047,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_ANXIETY",
+          "CCI_DISTRESS_TOLERANCE"
+        ]
+      },
+      "rewrite": {
+        "original_query": "情绪快爆炸时，有没有能先撑过这几分钟的方法？",
+        "cleaned_query": "情绪快爆炸时，有没有能先撑过这几分钟的方法？",
+        "expanded_query": "情绪快爆炸时，有没有能先撑过这几分钟的方法？",
+        "query_variants": [
+          "情绪快爆炸时，有没有能先撑过这几分钟的方法？"
+        ],
+        "matched_topics": [],
+        "zh_terms": [],
+        "en_terms": [],
+        "translation_strategy": "original_query_only",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q011",
+      "query": "我总是担心未来无法控制，越想越慌。",
+      "expected_sources": [
+        "CCI_WORRY_RUMINATION",
+        "CCI_ANXIETY"
+      ],
+      "expected_topics": [
+        "worry",
+        "uncertainty",
+        "anxiety"
+      ],
+      "bm25": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "dense": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 0.9829,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "rewrite": {
+        "original_query": "我总是担心未来无法控制，越想越慌。",
+        "cleaned_query": "我总是担心未来无法控制，越想越慌。",
+        "expanded_query": "我总是担心未来无法控制，越想越慌。 焦虑 担忧 认知重评 呼吸放松 接纳不确定 anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+        "query_variants": [
+          "我总是担心未来无法控制，越想越慌。",
+          "焦虑 担忧 认知重评 呼吸放松 接纳不确定",
+          "anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+          "我总是担心未来无法控制，越想越慌。 焦虑 担忧 认知重评 呼吸放松 接纳不确定 anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty"
+        ],
+        "matched_topics": [
+          "anxiety"
+        ],
+        "zh_terms": [
+          "焦虑",
+          "担忧",
+          "认知重评",
+          "呼吸放松",
+          "接纳不确定"
+        ],
+        "en_terms": [
+          "anxiety",
+          "worry",
+          "rumination",
+          "cognitive restructuring",
+          "breathing",
+          "relaxation",
+          "accepting uncertainty"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q012",
+      "query": "可以教我一个简单的呼吸放松方法吗？",
+      "expected_sources": [
+        "CCI_ANXIETY"
+      ],
+      "expected_topics": [
+        "breathing",
+        "relaxation",
+        "anxiety"
+      ],
+      "bm25": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": true,
+        "top_sources": []
+      },
+      "dense": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "rewrite": {
+        "original_query": "可以教我一个简单的呼吸放松方法吗？",
+        "cleaned_query": "可以教我一个简单的呼吸放松方法吗？",
+        "expanded_query": "可以教我一个简单的呼吸放松方法吗？",
+        "query_variants": [
+          "可以教我一个简单的呼吸放松方法吗？"
+        ],
+        "matched_topics": [],
+        "zh_terms": [],
+        "en_terms": [],
+        "translation_strategy": "original_query_only",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q013",
+      "query": "我想把一个很大的任务拆小，不知道怎么做。",
+      "expected_sources": [
+        "NHS_PROBLEM_SOLVING",
+        "CCI_PROCRASTINATION"
+      ],
+      "expected_topics": [
+        "problem_solving",
+        "planning",
+        "task_starting"
+      ],
+      "bm25": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": true,
+        "top_sources": []
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_ANXIETY"
+        ]
+      },
+      "rewrite": {
+        "original_query": "我想把一个很大的任务拆小，不知道怎么做。",
+        "cleaned_query": "我想把一个很大的任务拆小，不知道怎么做。",
+        "expanded_query": "我想把一个很大的任务拆小，不知道怎么做。",
+        "query_variants": [
+          "我想把一个很大的任务拆小，不知道怎么做。"
+        ],
+        "matched_topics": [],
+        "zh_terms": [],
+        "en_terms": [],
+        "translation_strategy": "original_query_only",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q014",
+      "query": "每天待办太多，我看到清单就瘫住了。",
+      "expected_sources": [
+        "NHS_TODO_LIST",
+        "CCI_PROCRASTINATION"
+      ],
+      "expected_topics": [
+        "avoidance",
+        "routine",
+        "motivation",
+        "procrastination"
+      ],
+      "bm25": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": true,
+        "top_sources": []
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_DISTRESS_TOLERANCE"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_DISTRESS_TOLERANCE"
+        ]
+      },
+      "rewrite": {
+        "original_query": "每天待办太多，我看到清单就瘫住了。",
+        "cleaned_query": "每天待办太多，我看到清单就瘫住了。",
+        "expanded_query": "每天待办太多，我看到清单就瘫住了。",
+        "query_variants": [
+          "每天待办太多，我看到清单就瘫住了。"
+        ],
+        "matched_topics": [],
+        "zh_terms": [],
+        "en_terms": [],
+        "translation_strategy": "original_query_only",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q015",
+      "query": "担忧太多，想写下来整理一下，该怎么做？",
+      "expected_sources": [
+        "NHS_WORRIES",
+        "CCI_WORRY_RUMINATION"
+      ],
+      "expected_topics": [
+        "worry",
+        "journaling",
+        "worry_time"
+      ],
+      "bm25": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": true,
+        "top_sources": []
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_ANXIETY"
+        ]
+      },
+      "rewrite": {
+        "original_query": "担忧太多，想写下来整理一下，该怎么做？",
+        "cleaned_query": "担忧太多，想写下来整理一下，该怎么做？",
+        "expanded_query": "担忧太多，想写下来整理一下，该怎么做？",
+        "query_variants": [
+          "担忧太多，想写下来整理一下，该怎么做？"
+        ],
+        "matched_topics": [],
+        "zh_terms": [],
+        "en_terms": [],
+        "translation_strategy": "original_query_only",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q016",
+      "query": "我想用 CBT 方法看看想法、感受和行为的关系。",
+      "expected_sources": [
+        "NHS_CBT_HUB"
+      ],
+      "expected_topics": [
+        "cbt",
+        "thoughts",
+        "feelings",
+        "behaviours"
+      ],
+      "bm25": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_ANXIETY"
+        ]
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "rewrite": {
+        "original_query": "我想用 CBT 方法看看想法、感受和行为的关系。",
+        "cleaned_query": "我想用 CBT 方法看看想法、感受和行为的关系。",
+        "expanded_query": "我想用 CBT 方法看看想法、感受和行为的关系。 人际关系 沟通 边界 社会焦虑 支持系统 relationships interpersonal conflict communication boundaries assertiveness social anxiety",
+        "query_variants": [
+          "我想用 CBT 方法看看想法、感受和行为的关系。",
+          "人际关系 沟通 边界 社会焦虑 支持系统",
+          "relationships interpersonal conflict communication boundaries assertiveness social anxiety",
+          "我想用 CBT 方法看看想法、感受和行为的关系。 人际关系 沟通 边界 社会焦虑 支持系统 relationships interpersonal conflict communication boundaries assertiveness social anxiety"
+        ],
+        "matched_topics": [
+          "relationships"
+        ],
+        "zh_terms": [
+          "人际关系",
+          "沟通",
+          "边界",
+          "社会焦虑",
+          "支持系统"
+        ],
+        "en_terms": [
+          "relationships",
+          "interpersonal conflict",
+          "communication",
+          "boundaries",
+          "assertiveness",
+          "social anxiety"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q017",
+      "query": "我对社交场合很紧张，总觉得别人会评价我。",
+      "expected_sources": [
+        "CCI_SOCIAL_ANXIETY"
+      ],
+      "expected_topics": [
+        "social_anxiety",
+        "exposure",
+        "avoidance"
+      ],
+      "bm25": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "dense": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 0.9829,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "rewrite": {
+        "original_query": "我对社交场合很紧张，总觉得别人会评价我。",
+        "cleaned_query": "我对社交场合很紧张，总觉得别人会评价我。",
+        "expanded_query": "我对社交场合很紧张，总觉得别人会评价我。 焦虑 担忧 认知重评 呼吸放松 接纳不确定 anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+        "query_variants": [
+          "我对社交场合很紧张，总觉得别人会评价我。",
+          "焦虑 担忧 认知重评 呼吸放松 接纳不确定",
+          "anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+          "我对社交场合很紧张，总觉得别人会评价我。 焦虑 担忧 认知重评 呼吸放松 接纳不确定 anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty"
+        ],
+        "matched_topics": [
+          "anxiety"
+        ],
+        "zh_terms": [
+          "焦虑",
+          "担忧",
+          "认知重评",
+          "呼吸放松",
+          "接纳不确定"
+        ],
+        "en_terms": [
+          "anxiety",
+          "worry",
+          "rumination",
+          "cognitive restructuring",
+          "breathing",
+          "relaxation",
+          "accepting uncertainty"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q018",
+      "query": "我害怕犯错，所以什么都不敢交出去。",
+      "expected_sources": [
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION"
+      ],
+      "expected_topics": [
+        "perfectionism",
+        "avoidance",
+        "academic_stress"
+      ],
+      "bm25": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "dense": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_ANXIETY",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": false,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": false,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "rewrite": {
+        "original_query": "我害怕犯错，所以什么都不敢交出去。",
+        "cleaned_query": "我害怕犯错，所以什么都不敢交出去。",
+        "expanded_query": "我害怕犯错，所以什么都不敢交出去。 焦虑 担忧 认知重评 呼吸放松 接纳不确定 anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+        "query_variants": [
+          "我害怕犯错，所以什么都不敢交出去。",
+          "焦虑 担忧 认知重评 呼吸放松 接纳不确定",
+          "anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+          "我害怕犯错，所以什么都不敢交出去。 焦虑 担忧 认知重评 呼吸放松 接纳不确定 anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty"
+        ],
+        "matched_topics": [
+          "anxiety"
+        ],
+        "zh_terms": [
+          "焦虑",
+          "担忧",
+          "认知重评",
+          "呼吸放松",
+          "接纳不确定"
+        ],
+        "en_terms": [
+          "anxiety",
+          "worry",
+          "rumination",
+          "cognitive restructuring",
+          "breathing",
+          "relaxation",
+          "accepting uncertainty"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q019",
+      "query": "我想练习逐步面对害怕的事情，不想一下子硬扛。",
+      "expected_sources": [
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_ANXIETY"
+      ],
+      "expected_topics": [
+        "exposure",
+        "behavioural_experiments",
+        "anxiety"
+      ],
+      "bm25": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "dense": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 0.906,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "rewrite": {
+        "original_query": "我想练习逐步面对害怕的事情，不想一下子硬扛。",
+        "cleaned_query": "我想练习逐步面对害怕的事情，不想一下子硬扛。",
+        "expanded_query": "我想练习逐步面对害怕的事情，不想一下子硬扛。 焦虑 担忧 认知重评 呼吸放松 接纳不确定 anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+        "query_variants": [
+          "我想练习逐步面对害怕的事情，不想一下子硬扛。",
+          "焦虑 担忧 认知重评 呼吸放松 接纳不确定",
+          "anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+          "我想练习逐步面对害怕的事情，不想一下子硬扛。 焦虑 担忧 认知重评 呼吸放松 接纳不确定 anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty"
+        ],
+        "matched_topics": [
+          "anxiety"
+        ],
+        "zh_terms": [
+          "焦虑",
+          "担忧",
+          "认知重评",
+          "呼吸放松",
+          "接纳不确定"
+        ],
+        "en_terms": [
+          "anxiety",
+          "worry",
+          "rumination",
+          "cognitive restructuring",
+          "breathing",
+          "relaxation",
+          "accepting uncertainty"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    },
+    {
+      "id": "q020",
+      "query": "焦虑的时候总想逃避，我怎么让自己先留下来？",
+      "expected_sources": [
+        "CCI_ANXIETY",
+        "CCI_DISTRESS_TOLERANCE"
+      ],
+      "expected_topics": [
+        "anxiety",
+        "avoidance",
+        "distress_tolerance"
+      ],
+      "bm25": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "dense": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": true,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_ANXIETY",
+          "CCI_DISTRESS_TOLERANCE",
+          "CCI_ANXIETY"
+        ]
+      },
+      "hybrid": {
+        "hit_at_k": true,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0,
+        "source_hit_at_k": false,
+        "topic_hit_at_k": true,
+        "no_result": false,
+        "top_sources": [
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION",
+          "CCI_WORRY_RUMINATION"
+        ]
+      },
+      "rewrite": {
+        "original_query": "焦虑的时候总想逃避，我怎么让自己先留下来？",
+        "cleaned_query": "焦虑的时候总想逃避，我怎么让自己先留下来？",
+        "expanded_query": "焦虑的时候总想逃避，我怎么让自己先留下来？ 焦虑 担忧 认知重评 呼吸放松 接纳不确定 anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+        "query_variants": [
+          "焦虑的时候总想逃避，我怎么让自己先留下来？",
+          "焦虑 担忧 认知重评 呼吸放松 接纳不确定",
+          "anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty",
+          "焦虑的时候总想逃避，我怎么让自己先留下来？ 焦虑 担忧 认知重评 呼吸放松 接纳不确定 anxiety worry rumination cognitive restructuring breathing relaxation accepting uncertainty"
+        ],
+        "matched_topics": [
+          "anxiety"
+        ],
+        "zh_terms": [
+          "焦虑",
+          "担忧",
+          "认知重评",
+          "呼吸放松",
+          "接纳不确定"
+        ],
+        "en_terms": [
+          "anxiety",
+          "worry",
+          "rumination",
+          "cognitive restructuring",
+          "breathing",
+          "relaxation",
+          "accepting uncertainty"
+        ],
+        "translation_strategy": "lexicon_bilingual_expansion",
+        "contains_chinese": true
+      },
+      "hybrid_status": "success"
+    }
+  ]
+}

@@ -1,0 +1,1042 @@
+{
+  "duplicates": [
+    {
+      "content_sha256": "77174599ae1717e7036b69038f31e0d8bec8608f9c3a990d10b1bac000e800ee",
+      "count": 57,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00001_77174599ae17",
+        "CCI_ANXIETY_87694864_00001_77174599ae17",
+        "CCI_ANXIETY_6f18c581_00001_77174599ae17",
+        "CCI_ANXIETY_73506bab_00001_77174599ae17",
+        "CCI_ASSERTIVENESS_d1e23f46_00001_77174599ae17",
+        "CCI_ASSERTIVENESS_46d51f89_00001_77174599ae17",
+        "CCI_ASSERTIVENESS_d345308c_00001_77174599ae17",
+        "CCI_BIPOLAR_2aa1d298_00001_77174599ae17",
+        "CCI_BIPOLAR_51f9e451_00001_77174599ae17",
+        "CCI_BIPOLAR_00b6f5d0_00001_77174599ae17"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BIPOLAR",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION",
+        "CCI_SELF_COMPASSION",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "74f062a0d6dfe977443e49b41d4e144d2b2d2ecd66fe6506b96a6145b83989d0",
+      "count": 57,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00002_74f062a0d6df",
+        "CCI_ANXIETY_87694864_00002_74f062a0d6df",
+        "CCI_ANXIETY_6f18c581_00002_74f062a0d6df",
+        "CCI_ANXIETY_73506bab_00002_74f062a0d6df",
+        "CCI_ASSERTIVENESS_d1e23f46_00002_74f062a0d6df",
+        "CCI_ASSERTIVENESS_46d51f89_00002_74f062a0d6df",
+        "CCI_ASSERTIVENESS_d345308c_00002_74f062a0d6df",
+        "CCI_BIPOLAR_2aa1d298_00002_74f062a0d6df",
+        "CCI_BIPOLAR_51f9e451_00002_74f062a0d6df",
+        "CCI_BIPOLAR_00b6f5d0_00002_74f062a0d6df"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BIPOLAR",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION",
+        "CCI_SELF_COMPASSION",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "6c25032b4608b1acbe70f22de05629010df94a62cfa229d3350f5d69df5d5429",
+      "count": 57,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00003_6c25032b4608",
+        "CCI_ANXIETY_87694864_00003_6c25032b4608",
+        "CCI_ANXIETY_6f18c581_00003_6c25032b4608",
+        "CCI_ANXIETY_73506bab_00003_6c25032b4608",
+        "CCI_ASSERTIVENESS_d1e23f46_00003_6c25032b4608",
+        "CCI_ASSERTIVENESS_46d51f89_00003_6c25032b4608",
+        "CCI_ASSERTIVENESS_d345308c_00003_6c25032b4608",
+        "CCI_BIPOLAR_2aa1d298_00003_6c25032b4608",
+        "CCI_BIPOLAR_51f9e451_00003_6c25032b4608",
+        "CCI_BIPOLAR_00b6f5d0_00003_6c25032b4608"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BIPOLAR",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION",
+        "CCI_SELF_COMPASSION",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "acac48e383971a662e1de62fd13f1c2fa8d5483cafb69aa2b5008dc3aa5e3a7d",
+      "count": 57,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00004_acac48e38397",
+        "CCI_ANXIETY_87694864_00004_acac48e38397",
+        "CCI_ANXIETY_6f18c581_00004_acac48e38397",
+        "CCI_ANXIETY_73506bab_00004_acac48e38397",
+        "CCI_ASSERTIVENESS_d1e23f46_00004_acac48e38397",
+        "CCI_ASSERTIVENESS_46d51f89_00004_acac48e38397",
+        "CCI_ASSERTIVENESS_d345308c_00004_acac48e38397",
+        "CCI_BIPOLAR_2aa1d298_00004_acac48e38397",
+        "CCI_BIPOLAR_51f9e451_00004_acac48e38397",
+        "CCI_BIPOLAR_00b6f5d0_00004_acac48e38397"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BIPOLAR",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION",
+        "CCI_SELF_COMPASSION",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "f57b68200b3202a3e4138e07f106fed8d827d6ae4174ffd29857c661675402ea",
+      "count": 57,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00005_f57b68200b32",
+        "CCI_ANXIETY_87694864_00005_f57b68200b32",
+        "CCI_ANXIETY_6f18c581_00005_f57b68200b32",
+        "CCI_ANXIETY_73506bab_00005_f57b68200b32",
+        "CCI_ASSERTIVENESS_d1e23f46_00005_f57b68200b32",
+        "CCI_ASSERTIVENESS_46d51f89_00005_f57b68200b32",
+        "CCI_ASSERTIVENESS_d345308c_00005_f57b68200b32",
+        "CCI_BIPOLAR_2aa1d298_00005_f57b68200b32",
+        "CCI_BIPOLAR_51f9e451_00005_f57b68200b32",
+        "CCI_BIPOLAR_00b6f5d0_00005_f57b68200b32"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BIPOLAR",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION",
+        "CCI_SELF_COMPASSION",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "a95f36e81d17612300af6e3f9f3c0afac0c9b8fbeeb4221a0a77b7e9969442b3",
+      "count": 57,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00006_a95f36e81d17",
+        "CCI_ANXIETY_87694864_00006_a95f36e81d17",
+        "CCI_ANXIETY_6f18c581_00006_a95f36e81d17",
+        "CCI_ANXIETY_73506bab_00006_a95f36e81d17",
+        "CCI_ASSERTIVENESS_d1e23f46_00006_a95f36e81d17",
+        "CCI_ASSERTIVENESS_46d51f89_00006_a95f36e81d17",
+        "CCI_ASSERTIVENESS_d345308c_00006_a95f36e81d17",
+        "CCI_BIPOLAR_2aa1d298_00006_a95f36e81d17",
+        "CCI_BIPOLAR_51f9e451_00006_a95f36e81d17",
+        "CCI_BIPOLAR_00b6f5d0_00006_a95f36e81d17"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BIPOLAR",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION",
+        "CCI_SELF_COMPASSION",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "364bc8b1cd4a401c06e59eb33876b160bc452efcfea70ed47072f3eee719066e",
+      "count": 57,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00007_364bc8b1cd4a",
+        "CCI_ANXIETY_87694864_00007_364bc8b1cd4a",
+        "CCI_ANXIETY_6f18c581_00007_364bc8b1cd4a",
+        "CCI_ANXIETY_73506bab_00007_364bc8b1cd4a",
+        "CCI_ASSERTIVENESS_d1e23f46_00007_364bc8b1cd4a",
+        "CCI_ASSERTIVENESS_46d51f89_00007_364bc8b1cd4a",
+        "CCI_ASSERTIVENESS_d345308c_00007_364bc8b1cd4a",
+        "CCI_BIPOLAR_2aa1d298_00007_364bc8b1cd4a",
+        "CCI_BIPOLAR_51f9e451_00007_364bc8b1cd4a",
+        "CCI_BIPOLAR_00b6f5d0_00007_364bc8b1cd4a"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BIPOLAR",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION",
+        "CCI_SELF_COMPASSION",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "e35cfc1c2bc1adcbccf9d1d3b1e80e7be66e94cb73ec0b821e0822818146c8bd",
+      "count": 57,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00017_e35cfc1c2bc1",
+        "CCI_ANXIETY_87694864_00017_e35cfc1c2bc1",
+        "CCI_ANXIETY_6f18c581_00017_e35cfc1c2bc1",
+        "CCI_ANXIETY_73506bab_00017_e35cfc1c2bc1",
+        "CCI_ASSERTIVENESS_d1e23f46_00018_e35cfc1c2bc1",
+        "CCI_ASSERTIVENESS_46d51f89_00018_e35cfc1c2bc1",
+        "CCI_ASSERTIVENESS_d345308c_00018_e35cfc1c2bc1",
+        "CCI_BIPOLAR_2aa1d298_00020_e35cfc1c2bc1",
+        "CCI_BIPOLAR_51f9e451_00020_e35cfc1c2bc1",
+        "CCI_BIPOLAR_00b6f5d0_00020_e35cfc1c2bc1"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BIPOLAR",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION",
+        "CCI_SELF_COMPASSION",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "0d364666ec3c32dcea39be14f377e83afe437d01261234f458918021963136dd",
+      "count": 57,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00018_0d364666ec3c",
+        "CCI_ANXIETY_87694864_00018_0d364666ec3c",
+        "CCI_ANXIETY_6f18c581_00018_0d364666ec3c",
+        "CCI_ANXIETY_73506bab_00018_0d364666ec3c",
+        "CCI_ASSERTIVENESS_d1e23f46_00019_0d364666ec3c",
+        "CCI_ASSERTIVENESS_46d51f89_00019_0d364666ec3c",
+        "CCI_ASSERTIVENESS_d345308c_00019_0d364666ec3c",
+        "CCI_BIPOLAR_2aa1d298_00021_0d364666ec3c",
+        "CCI_BIPOLAR_51f9e451_00021_0d364666ec3c",
+        "CCI_BIPOLAR_00b6f5d0_00021_0d364666ec3c"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BIPOLAR",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION",
+        "CCI_SELF_COMPASSION",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "99fb39e4ecc909d31e0167a11b3e2f28840c8a8b67b1f6a8265c148d97847226",
+      "count": 57,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00019_99fb39e4ecc9",
+        "CCI_ANXIETY_87694864_00019_99fb39e4ecc9",
+        "CCI_ANXIETY_6f18c581_00019_99fb39e4ecc9",
+        "CCI_ANXIETY_73506bab_00019_99fb39e4ecc9",
+        "CCI_ASSERTIVENESS_d1e23f46_00020_99fb39e4ecc9",
+        "CCI_ASSERTIVENESS_46d51f89_00020_99fb39e4ecc9",
+        "CCI_ASSERTIVENESS_d345308c_00020_99fb39e4ecc9",
+        "CCI_BIPOLAR_2aa1d298_00022_99fb39e4ecc9",
+        "CCI_BIPOLAR_51f9e451_00022_99fb39e4ecc9",
+        "CCI_BIPOLAR_00b6f5d0_00022_99fb39e4ecc9"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BIPOLAR",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION",
+        "CCI_SELF_COMPASSION",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "6823920752e41fe42319b4a53f0009c8cdd8f92fc7ec052726860b0d7f4bbc55",
+      "count": 20,
+      "chunk_ids": [
+        "CCI_SOCIAL_ANXIETY_9942a209_00000_6823920752e4",
+        "CCI_SOCIAL_ANXIETY_d27c7c82_00000_6823920752e4",
+        "CCI_SOCIAL_ANXIETY_310e912c_00000_6823920752e4",
+        "CCI_SOCIAL_ANXIETY_5b1a8d9c_00000_6823920752e4",
+        "CCI_SOCIAL_ANXIETY_99f219a4_00000_6823920752e4",
+        "CCI_SOCIAL_ANXIETY_52ff691a_00000_6823920752e4",
+        "CCI_SOCIAL_ANXIETY_b85328ba_00000_6823920752e4",
+        "CCI_SOCIAL_ANXIETY_64f1f7e8_00000_6823920752e4",
+        "CCI_SOCIAL_ANXIETY_883e18e9_00000_6823920752e4",
+        "CCI_SOCIAL_ANXIETY_365d66bd_00000_6823920752e4"
+      ],
+      "source_ids": [
+        "CCI_SOCIAL_ANXIETY"
+      ]
+    },
+    {
+      "content_sha256": "f98bd8c2f5fca1bd706ff33697df173cce9361cbb4d8d2ad34ec1e39f163d48f",
+      "count": 20,
+      "chunk_ids": [
+        "CCI_SOCIAL_ANXIETY_9942a209_00053_f98bd8c2f5fc",
+        "CCI_SOCIAL_ANXIETY_d27c7c82_00033_f98bd8c2f5fc",
+        "CCI_SOCIAL_ANXIETY_310e912c_00039_f98bd8c2f5fc",
+        "CCI_SOCIAL_ANXIETY_5b1a8d9c_00055_f98bd8c2f5fc",
+        "CCI_SOCIAL_ANXIETY_99f219a4_00036_f98bd8c2f5fc",
+        "CCI_SOCIAL_ANXIETY_52ff691a_00039_f98bd8c2f5fc",
+        "CCI_SOCIAL_ANXIETY_b85328ba_00039_f98bd8c2f5fc",
+        "CCI_SOCIAL_ANXIETY_64f1f7e8_00036_f98bd8c2f5fc",
+        "CCI_SOCIAL_ANXIETY_883e18e9_00042_f98bd8c2f5fc",
+        "CCI_SOCIAL_ANXIETY_365d66bd_00031_f98bd8c2f5fc"
+      ],
+      "source_ids": [
+        "CCI_SOCIAL_ANXIETY"
+      ]
+    },
+    {
+      "content_sha256": "fc008fd211055125f2bae382539e2b9831f74a6e028d2f7b4da2b416c4aa5ef3",
+      "count": 18,
+      "chunk_ids": [
+        "CCI_BIPOLAR_2aa1d298_00017_fc008fd21105",
+        "CCI_BIPOLAR_51f9e451_00017_fc008fd21105",
+        "CCI_BIPOLAR_00b6f5d0_00017_fc008fd21105",
+        "CCI_DEPRESSION_8ec67d71_00015_fc008fd21105",
+        "CCI_DEPRESSION_32bcb377_00015_fc008fd21105",
+        "CCI_DEPRESSION_0e99d964_00015_fc008fd21105",
+        "CCI_PROCRASTINATION_6a0d18df_00014_fc008fd21105",
+        "CCI_PROCRASTINATION_9f1dcecd_00014_fc008fd21105",
+        "CCI_PROCRASTINATION_fe6bd1ec_00014_fc008fd21105",
+        "CCI_PROCRASTINATION_3c6caced_00014_fc008fd21105"
+      ],
+      "source_ids": [
+        "CCI_BIPOLAR",
+        "CCI_DEPRESSION",
+        "CCI_PROCRASTINATION",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "a6e4ebdf8024cab9499d8e7ab1a2f6c17d70d169ab5ab5990b4275b4dc84438d",
+      "count": 14,
+      "chunk_ids": [
+        "CCI_SOCIAL_ANXIETY_9942a209_00050_a6e4ebdf8024",
+        "CCI_SOCIAL_ANXIETY_d27c7c82_00030_a6e4ebdf8024",
+        "CCI_SOCIAL_ANXIETY_310e912c_00036_a6e4ebdf8024",
+        "CCI_SOCIAL_ANXIETY_5b1a8d9c_00052_a6e4ebdf8024",
+        "CCI_SOCIAL_ANXIETY_99f219a4_00033_a6e4ebdf8024",
+        "CCI_SOCIAL_ANXIETY_883e18e9_00039_a6e4ebdf8024",
+        "CCI_SOCIAL_ANXIETY_365d66bd_00028_a6e4ebdf8024",
+        "CCI_SOCIAL_ANXIETY_6b9300e0_00030_a6e4ebdf8024",
+        "CCI_SOCIAL_ANXIETY_76e9d977_00047_a6e4ebdf8024",
+        "CCI_SOCIAL_ANXIETY_7d9425e0_00036_a6e4ebdf8024"
+      ],
+      "source_ids": [
+        "CCI_SOCIAL_ANXIETY"
+      ]
+    },
+    {
+      "content_sha256": "26a323af8f0fb60421215f34de28b9a6ceca744f825a65a6845450e90383215e",
+      "count": 11,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00009_26a323af8f0f",
+        "CCI_ANXIETY_87694864_00009_26a323af8f0f",
+        "CCI_ANXIETY_6f18c581_00009_26a323af8f0f",
+        "CCI_ANXIETY_73506bab_00009_26a323af8f0f",
+        "CCI_DISORDERED_EATING_e2ca3bff_00023_26a323af8f0f",
+        "CCI_DISORDERED_EATING_a848c3dc_00023_26a323af8f0f",
+        "CCI_DISORDERED_EATING_ef558191_00023_26a323af8f0f",
+        "CCI_SOCIAL_ANXIETY_6e6ba82a_00017_26a323af8f0f",
+        "CCI_SOCIAL_ANXIETY_09e84b13_00017_26a323af8f0f",
+        "CCI_SOCIAL_ANXIETY_7f9d9012_00017_26a323af8f0f"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_DISORDERED_EATING",
+        "CCI_SOCIAL_ANXIETY"
+      ]
+    },
+    {
+      "content_sha256": "a10f45d1cc4770ff23a7b85e633fb54ff195a12f81c087676fbde20a9a3121a9",
+      "count": 11,
+      "chunk_ids": [
+        "CCI_DISTRESS_TOLERANCE_97c03671_00047_a10f45d1cc47",
+        "CCI_DISTRESS_TOLERANCE_860816a8_00057_a10f45d1cc47",
+        "CCI_DISTRESS_TOLERANCE_3f572fd9_00057_a10f45d1cc47",
+        "CCI_DISTRESS_TOLERANCE_ca0c8573_00065_a10f45d1cc47",
+        "CCI_DISTRESS_TOLERANCE_cf54685e_00053_a10f45d1cc47",
+        "CCI_PROCRASTINATION_c9a431df_00024_a10f45d1cc47",
+        "CCI_PROCRASTINATION_3c5a167b_00047_a10f45d1cc47",
+        "CCI_PROCRASTINATION_559ac094_00047_a10f45d1cc47",
+        "CCI_PROCRASTINATION_8a3e0f14_00044_a10f45d1cc47",
+        "CCI_PROCRASTINATION_11f6e845_00045_a10f45d1cc47"
+      ],
+      "source_ids": [
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_PROCRASTINATION"
+      ]
+    },
+    {
+      "content_sha256": "07a9bddc4418ee1b982db50280bd5c0f07127266b2220cef1969fea627b4a2c0",
+      "count": 10,
+      "chunk_ids": [
+        "CCI_WORRY_RUMINATION_14821901_00000_07a9bddc4418",
+        "CCI_WORRY_RUMINATION_fd3f63cf_00000_07a9bddc4418",
+        "CCI_WORRY_RUMINATION_182578f0_00000_07a9bddc4418",
+        "CCI_WORRY_RUMINATION_bb157f3d_00000_07a9bddc4418",
+        "CCI_WORRY_RUMINATION_58bcf9d2_00000_07a9bddc4418",
+        "CCI_WORRY_RUMINATION_aac807f6_00000_07a9bddc4418",
+        "CCI_WORRY_RUMINATION_f4791dd3_00000_07a9bddc4418",
+        "CCI_WORRY_RUMINATION_1940e64d_00000_07a9bddc4418",
+        "CCI_WORRY_RUMINATION_ff8e970b_00000_07a9bddc4418",
+        "CCI_WORRY_RUMINATION_0f92e72b_00000_07a9bddc4418"
+      ],
+      "source_ids": [
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "2384d714173c291838c408f9541ede4c188f32ba0225e24ed5b1a69fc0cc6969",
+      "count": 10,
+      "chunk_ids": [
+        "CCI_WORRY_RUMINATION_14821901_00040_2384d714173c",
+        "CCI_WORRY_RUMINATION_fd3f63cf_00030_2384d714173c",
+        "CCI_WORRY_RUMINATION_182578f0_00055_2384d714173c",
+        "CCI_WORRY_RUMINATION_bb157f3d_00045_2384d714173c",
+        "CCI_WORRY_RUMINATION_58bcf9d2_00043_2384d714173c",
+        "CCI_WORRY_RUMINATION_aac807f6_00046_2384d714173c",
+        "CCI_WORRY_RUMINATION_f4791dd3_00033_2384d714173c",
+        "CCI_WORRY_RUMINATION_1940e64d_00026_2384d714173c",
+        "CCI_WORRY_RUMINATION_ff8e970b_00032_2384d714173c",
+        "CCI_WORRY_RUMINATION_0f92e72b_00026_2384d714173c"
+      ],
+      "source_ids": [
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "f3f05388241a4997aef7ced71f621d67d6dcc84c56cb0fa46e71678e0c0231a2",
+      "count": 10,
+      "chunk_ids": [
+        "CCI_WORRY_RUMINATION_14821901_00041_f3f05388241a",
+        "CCI_WORRY_RUMINATION_fd3f63cf_00031_f3f05388241a",
+        "CCI_WORRY_RUMINATION_182578f0_00056_f3f05388241a",
+        "CCI_WORRY_RUMINATION_bb157f3d_00046_f3f05388241a",
+        "CCI_WORRY_RUMINATION_58bcf9d2_00044_f3f05388241a",
+        "CCI_WORRY_RUMINATION_aac807f6_00047_f3f05388241a",
+        "CCI_WORRY_RUMINATION_f4791dd3_00034_f3f05388241a",
+        "CCI_WORRY_RUMINATION_1940e64d_00027_f3f05388241a",
+        "CCI_WORRY_RUMINATION_ff8e970b_00033_f3f05388241a",
+        "CCI_WORRY_RUMINATION_0f92e72b_00027_f3f05388241a"
+      ],
+      "source_ids": [
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "c018a483d2e58b559b8a626a0ea3406afe22caa038a291e46bb8cdcc47ac0b03",
+      "count": 10,
+      "chunk_ids": [
+        "NIMH_ADHD_f6e531c5_00001_c018a483d2e5",
+        "NIMH_ADHD_34344473_00001_c018a483d2e5",
+        "NIMH_ANXIETY_a04d3e6c_00001_c018a483d2e5",
+        "NIMH_AUTISM_b3684d07_00001_c018a483d2e5",
+        "NIMH_BIPOLAR_8e6f17df_00001_c018a483d2e5",
+        "NIMH_DEPRESSION_df71885b_00001_c018a483d2e5",
+        "NIMH_EATING_DISORDERS_a667fd4c_00001_c018a483d2e5",
+        "NIMH_OCD_52b4ca9f_00001_c018a483d2e5",
+        "NIMH_PTSD_d54631da_00001_c018a483d2e5",
+        "NIMH_SUICIDE_PREVENTION_dcc25fe6_00001_c018a483d2e5"
+      ],
+      "source_ids": [
+        "NIMH_ADHD",
+        "NIMH_ANXIETY",
+        "NIMH_AUTISM",
+        "NIMH_BIPOLAR",
+        "NIMH_DEPRESSION",
+        "NIMH_EATING_DISORDERS",
+        "NIMH_OCD",
+        "NIMH_PTSD",
+        "NIMH_SUICIDE_PREVENTION"
+      ]
+    },
+    {
+      "content_sha256": "6287eb1ffc6ad3a929124be13dd2b53303ea16784a19df12ef000b25ccdc2133",
+      "count": 9,
+      "chunk_ids": [
+        "CCI_PERFECTIONISM_89504769_00045_6287eb1ffc6a",
+        "CCI_PERFECTIONISM_79fb5fe6_00043_6287eb1ffc6a",
+        "CCI_PERFECTIONISM_65b510a4_00049_6287eb1ffc6a",
+        "CCI_PERFECTIONISM_2d136b99_00038_6287eb1ffc6a",
+        "CCI_PERFECTIONISM_d6033340_00059_6287eb1ffc6a",
+        "CCI_PERFECTIONISM_178b7972_00043_6287eb1ffc6a",
+        "CCI_PERFECTIONISM_c9d74f56_00040_6287eb1ffc6a",
+        "CCI_PERFECTIONISM_e2177788_00051_6287eb1ffc6a",
+        "CCI_PERFECTIONISM_7210193e_00037_6287eb1ffc6a"
+      ],
+      "source_ids": [
+        "CCI_PERFECTIONISM"
+      ]
+    },
+    {
+      "content_sha256": "7d9a44c74978cf91fa3fb75ffac8506db78e3ceec66b5a455ee27fc286c6ccf0",
+      "count": 9,
+      "chunk_ids": [
+        "CCI_SELF_ESTEEM_77fc7cc9_00000_7d9a44c74978",
+        "CCI_SELF_ESTEEM_e83280c8_00000_7d9a44c74978",
+        "CCI_SELF_ESTEEM_d275c14c_00000_7d9a44c74978",
+        "CCI_SELF_ESTEEM_779cc321_00000_7d9a44c74978",
+        "CCI_SELF_ESTEEM_e095697c_00000_7d9a44c74978",
+        "CCI_SELF_ESTEEM_34d43475_00000_7d9a44c74978",
+        "CCI_SELF_ESTEEM_2ed20483_00000_7d9a44c74978",
+        "CCI_SELF_ESTEEM_4890d2bc_00000_7d9a44c74978",
+        "CCI_SELF_ESTEEM_0888d0c9_00000_7d9a44c74978"
+      ],
+      "source_ids": [
+        "CCI_SELF_ESTEEM"
+      ]
+    },
+    {
+      "content_sha256": "a2bf14309f801b24dff67dd143c5697bf3cb66cfcb809fc0d1964444b10195ea",
+      "count": 9,
+      "chunk_ids": [
+        "CCI_SELF_ESTEEM_77fc7cc9_00033_a2bf14309f80",
+        "CCI_SELF_ESTEEM_e83280c8_00043_a2bf14309f80",
+        "CCI_SELF_ESTEEM_d275c14c_00051_a2bf14309f80",
+        "CCI_SELF_ESTEEM_779cc321_00056_a2bf14309f80",
+        "CCI_SELF_ESTEEM_e095697c_00044_a2bf14309f80",
+        "CCI_SELF_ESTEEM_34d43475_00055_a2bf14309f80",
+        "CCI_SELF_ESTEEM_2ed20483_00062_a2bf14309f80",
+        "CCI_SELF_ESTEEM_4890d2bc_00057_a2bf14309f80",
+        "CCI_SELF_ESTEEM_0888d0c9_00041_a2bf14309f80"
+      ],
+      "source_ids": [
+        "CCI_SELF_ESTEEM"
+      ]
+    },
+    {
+      "content_sha256": "95d94960334e0e14e81e26f61fe2da444f0cf0d454ef655b1b26a5c247dbd7e5",
+      "count": 9,
+      "chunk_ids": [
+        "CCI_SELF_ESTEEM_77fc7cc9_00035_95d94960334e",
+        "CCI_SELF_ESTEEM_e83280c8_00045_95d94960334e",
+        "CCI_SELF_ESTEEM_d275c14c_00053_95d94960334e",
+        "CCI_SELF_ESTEEM_779cc321_00058_95d94960334e",
+        "CCI_SELF_ESTEEM_e095697c_00046_95d94960334e",
+        "CCI_SELF_ESTEEM_34d43475_00057_95d94960334e",
+        "CCI_SELF_ESTEEM_2ed20483_00064_95d94960334e",
+        "CCI_SELF_ESTEEM_4890d2bc_00059_95d94960334e",
+        "CCI_SELF_ESTEEM_0888d0c9_00043_95d94960334e"
+      ],
+      "source_ids": [
+        "CCI_SELF_ESTEEM"
+      ]
+    },
+    {
+      "content_sha256": "ac9fc79cf51124852675578d7f4c5d216d8dc52a2ce010a3d67bea05d0279707",
+      "count": 9,
+      "chunk_ids": [
+        "NIMH_ADHD_34344473_00016_ac9fc79cf511",
+        "NIMH_ANXIETY_a04d3e6c_00015_ac9fc79cf511",
+        "NIMH_AUTISM_b3684d07_00013_ac9fc79cf511",
+        "NIMH_BIPOLAR_8e6f17df_00014_ac9fc79cf511",
+        "NIMH_DEPRESSION_df71885b_00014_ac9fc79cf511",
+        "NIMH_EATING_DISORDERS_a667fd4c_00013_ac9fc79cf511",
+        "NIMH_OCD_52b4ca9f_00012_ac9fc79cf511",
+        "NIMH_PTSD_d54631da_00015_ac9fc79cf511",
+        "NIMH_SUICIDE_PREVENTION_dcc25fe6_00014_ac9fc79cf511"
+      ],
+      "source_ids": [
+        "NIMH_ADHD",
+        "NIMH_ANXIETY",
+        "NIMH_AUTISM",
+        "NIMH_BIPOLAR",
+        "NIMH_DEPRESSION",
+        "NIMH_EATING_DISORDERS",
+        "NIMH_OCD",
+        "NIMH_PTSD",
+        "NIMH_SUICIDE_PREVENTION"
+      ]
+    },
+    {
+      "content_sha256": "a854cb5ba20a54b4950d6e163b1c3881afa7859355853fda0009b05dea2259e9",
+      "count": 8,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00010_a854cb5ba20a",
+        "CCI_ANXIETY_87694864_00010_a854cb5ba20a",
+        "CCI_ANXIETY_6f18c581_00010_a854cb5ba20a",
+        "CCI_ANXIETY_73506bab_00010_a854cb5ba20a",
+        "CCI_SOCIAL_ANXIETY_6e6ba82a_00014_a854cb5ba20a",
+        "CCI_SOCIAL_ANXIETY_09e84b13_00014_a854cb5ba20a",
+        "CCI_SOCIAL_ANXIETY_7f9d9012_00014_a854cb5ba20a",
+        "CCI_SOCIAL_ANXIETY_55be6d58_00014_a854cb5ba20a"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_SOCIAL_ANXIETY"
+      ]
+    },
+    {
+      "content_sha256": "e424651a24780b3117edbcf3adc44b971d988edbb2affc310e5cbe3ee71c03c8",
+      "count": 8,
+      "chunk_ids": [
+        "CCI_SELF_ESTEEM_e83280c8_00042_e424651a2478",
+        "CCI_SELF_ESTEEM_d275c14c_00050_e424651a2478",
+        "CCI_SELF_ESTEEM_779cc321_00055_e424651a2478",
+        "CCI_SELF_ESTEEM_e095697c_00043_e424651a2478",
+        "CCI_SELF_ESTEEM_34d43475_00054_e424651a2478",
+        "CCI_SELF_ESTEEM_2ed20483_00061_e424651a2478",
+        "CCI_SELF_ESTEEM_4890d2bc_00056_e424651a2478",
+        "CCI_SELF_ESTEEM_0888d0c9_00040_e424651a2478"
+      ],
+      "source_ids": [
+        "CCI_SELF_ESTEEM"
+      ]
+    },
+    {
+      "content_sha256": "6ea7f7a674bf171b0da08313439b82724aeeceff7d36abf79d5e55bcc30f2ec7",
+      "count": 7,
+      "chunk_ids": [
+        "CCI_ANXIETY_1cdbdba5_00014_6ea7f7a674bf",
+        "CCI_ANXIETY_87694864_00014_6ea7f7a674bf",
+        "CCI_ANXIETY_6f18c581_00014_6ea7f7a674bf",
+        "CCI_ANXIETY_73506bab_00014_6ea7f7a674bf",
+        "CCI_DEPRESSION_8ec67d71_00017_6ea7f7a674bf",
+        "CCI_DEPRESSION_32bcb377_00017_6ea7f7a674bf",
+        "CCI_DEPRESSION_0e99d964_00017_6ea7f7a674bf"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_DEPRESSION"
+      ]
+    },
+    {
+      "content_sha256": "171c1452dbadf0a04e01ad2ce25e310d002a0c41e5dd6fc0eeeb47cd722ed661",
+      "count": 7,
+      "chunk_ids": [
+        "CCI_BODY_DYSMORPHIA_21b34315_00009_171c1452dbad",
+        "CCI_BODY_DYSMORPHIA_21b34315_00016_171c1452dbad",
+        "CCI_BODY_DYSMORPHIA_21b34315_00024_171c1452dbad",
+        "CCI_BODY_DYSMORPHIA_21b34315_00050_171c1452dbad",
+        "CCI_BODY_DYSMORPHIA_21b34315_00056_171c1452dbad",
+        "CCI_BODY_DYSMORPHIA_21b34315_00060_171c1452dbad",
+        "CCI_BODY_DYSMORPHIA_21b34315_00062_171c1452dbad"
+      ],
+      "source_ids": [
+        "CCI_BODY_DYSMORPHIA"
+      ]
+    },
+    {
+      "content_sha256": "a103fe02b0920f4582965c733c83cacede8c42875888a69554cf449a7f7b86f6",
+      "count": 7,
+      "chunk_ids": [
+        "CCI_PROCRASTINATION_c9a431df_00027_a103fe02b092",
+        "CCI_PROCRASTINATION_3c5a167b_00050_a103fe02b092",
+        "CCI_PROCRASTINATION_559ac094_00050_a103fe02b092",
+        "CCI_PROCRASTINATION_8a3e0f14_00047_a103fe02b092",
+        "CCI_PROCRASTINATION_11f6e845_00048_a103fe02b092",
+        "CCI_PROCRASTINATION_54be0fa4_00045_a103fe02b092",
+        "CCI_PROCRASTINATION_aed5d5e1_00041_a103fe02b092"
+      ],
+      "source_ids": [
+        "CCI_PROCRASTINATION"
+      ]
+    },
+    {
+      "content_sha256": "0fee9ba6a87d8c852194dcf91dc3332239037a5fcb6b8d80f1c6af3502d81c78",
+      "count": 7,
+      "chunk_ids": [
+        "CCI_SELF_COMPASSION_65333e01_00000_0fee9ba6a87d",
+        "CCI_SELF_COMPASSION_48985ec0_00000_0fee9ba6a87d",
+        "CCI_SELF_COMPASSION_10ba363a_00000_0fee9ba6a87d",
+        "CCI_SELF_COMPASSION_e16b3167_00000_0fee9ba6a87d",
+        "CCI_SELF_COMPASSION_82c677c9_00000_0fee9ba6a87d",
+        "CCI_SELF_COMPASSION_4a239952_00000_0fee9ba6a87d",
+        "CCI_SELF_COMPASSION_40012d96_00000_0fee9ba6a87d"
+      ],
+      "source_ids": [
+        "CCI_SELF_COMPASSION"
+      ]
+    },
+    {
+      "content_sha256": "0847bb877d9d6d0e7169af57728c39d59876f6d357a81fd6abf81e186b78b1ea",
+      "count": 7,
+      "chunk_ids": [
+        "CCI_SELF_COMPASSION_65333e01_00058_0847bb877d9d",
+        "CCI_SELF_COMPASSION_48985ec0_00052_0847bb877d9d",
+        "CCI_SELF_COMPASSION_10ba363a_00046_0847bb877d9d",
+        "CCI_SELF_COMPASSION_e16b3167_00046_0847bb877d9d",
+        "CCI_SELF_COMPASSION_82c677c9_00060_0847bb877d9d",
+        "CCI_SELF_COMPASSION_4a239952_00048_0847bb877d9d",
+        "CCI_SELF_COMPASSION_40012d96_00034_0847bb877d9d"
+      ],
+      "source_ids": [
+        "CCI_SELF_COMPASSION"
+      ]
+    },
+    {
+      "content_sha256": "3bb51c6a1d1ba10d53e7167b8bf648b9cbf158558a03f6d81a255667e0b1d548",
+      "count": 7,
+      "chunk_ids": [
+        "CCI_SELF_COMPASSION_65333e01_00059_3bb51c6a1d1b",
+        "CCI_SELF_COMPASSION_48985ec0_00053_3bb51c6a1d1b",
+        "CCI_SELF_COMPASSION_10ba363a_00047_3bb51c6a1d1b",
+        "CCI_SELF_COMPASSION_e16b3167_00047_3bb51c6a1d1b",
+        "CCI_SELF_COMPASSION_82c677c9_00061_3bb51c6a1d1b",
+        "CCI_SELF_COMPASSION_4a239952_00049_3bb51c6a1d1b",
+        "CCI_SELF_COMPASSION_40012d96_00035_3bb51c6a1d1b"
+      ],
+      "source_ids": [
+        "CCI_SELF_COMPASSION"
+      ]
+    },
+    {
+      "content_sha256": "6788ebf2b9b5df553c9272a473d15b3cfa141be286878776b5c945e73d0742dc",
+      "count": 7,
+      "chunk_ids": [
+        "CCI_SELF_COMPASSION_65333e01_00060_6788ebf2b9b5",
+        "CCI_SELF_COMPASSION_48985ec0_00054_6788ebf2b9b5",
+        "CCI_SELF_COMPASSION_10ba363a_00048_6788ebf2b9b5",
+        "CCI_SELF_COMPASSION_e16b3167_00048_6788ebf2b9b5",
+        "CCI_SELF_COMPASSION_82c677c9_00062_6788ebf2b9b5",
+        "CCI_SELF_COMPASSION_4a239952_00050_6788ebf2b9b5",
+        "CCI_SELF_COMPASSION_40012d96_00036_6788ebf2b9b5"
+      ],
+      "source_ids": [
+        "CCI_SELF_COMPASSION"
+      ]
+    },
+    {
+      "content_sha256": "abec0bce516fd79e33ab85dd4f2625eef49d98270165e098e69034be2c8910ad",
+      "count": 7,
+      "chunk_ids": [
+        "CCI_SELF_ESTEEM_77fc7cc9_00036_abec0bce516f",
+        "CCI_SELF_ESTEEM_e83280c8_00046_abec0bce516f",
+        "CCI_SELF_ESTEEM_e095697c_00047_abec0bce516f",
+        "CCI_SELF_ESTEEM_34d43475_00058_abec0bce516f",
+        "CCI_SELF_ESTEEM_2ed20483_00065_abec0bce516f",
+        "CCI_SELF_ESTEEM_4890d2bc_00060_abec0bce516f",
+        "CCI_SELF_ESTEEM_0888d0c9_00044_abec0bce516f"
+      ],
+      "source_ids": [
+        "CCI_SELF_ESTEEM"
+      ]
+    },
+    {
+      "content_sha256": "b3c9d21a3df256d24860cff12417defe5bb1ff68e9740af550c0d7f88f26cca1",
+      "count": 7,
+      "chunk_ids": [
+        "CCI_SELF_ESTEEM_e83280c8_00041_b3c9d21a3df2",
+        "CCI_SELF_ESTEEM_d275c14c_00049_b3c9d21a3df2",
+        "CCI_SELF_ESTEEM_779cc321_00054_b3c9d21a3df2",
+        "CCI_SELF_ESTEEM_e095697c_00042_b3c9d21a3df2",
+        "CCI_SELF_ESTEEM_34d43475_00052_b3c9d21a3df2",
+        "CCI_SELF_ESTEEM_2ed20483_00060_b3c9d21a3df2",
+        "CCI_SELF_ESTEEM_4890d2bc_00055_b3c9d21a3df2"
+      ],
+      "source_ids": [
+        "CCI_SELF_ESTEEM"
+      ]
+    },
+    {
+      "content_sha256": "e7a3b3d60163f52ee23d52edbfa51d322c5a8ce6ab3c4f738022691cb862e961",
+      "count": 6,
+      "chunk_ids": [
+        "CCI_ANXIETY_2bfaf82a_00004_e7a3b3d60163",
+        "CCI_ANXIETY_68fe897a_00001_e7a3b3d60163",
+        "CCI_ANXIETY_0d7a7b4e_00003_e7a3b3d60163",
+        "CCI_SOCIAL_ANXIETY_a77c9031_00001_e7a3b3d60163",
+        "CCI_SOCIAL_ANXIETY_22cccaba_00005_e7a3b3d60163",
+        "CCI_SOCIAL_ANXIETY_d47dc764_00007_e7a3b3d60163"
+      ],
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_SOCIAL_ANXIETY"
+      ]
+    },
+    {
+      "content_sha256": "5f8dd8aba0005afc2cb5a5ab0ffbb17db80e46ca333f720d6182917f2a3f528c",
+      "count": 6,
+      "chunk_ids": [
+        "CCI_BIPOLAR_2aa1d298_00014_5f8dd8aba000",
+        "CCI_BIPOLAR_51f9e451_00014_5f8dd8aba000",
+        "CCI_BIPOLAR_00b6f5d0_00014_5f8dd8aba000",
+        "CCI_DEPRESSION_8ec67d71_00013_5f8dd8aba000",
+        "CCI_DEPRESSION_32bcb377_00013_5f8dd8aba000",
+        "CCI_DEPRESSION_0e99d964_00013_5f8dd8aba000"
+      ],
+      "source_ids": [
+        "CCI_BIPOLAR",
+        "CCI_DEPRESSION"
+      ]
+    },
+    {
+      "content_sha256": "4094051d8112faa3819e6f9d9ec19f7cc784994664d4878d078566dfd8b7ecb0",
+      "count": 6,
+      "chunk_ids": [
+        "CCI_PERFECTIONISM_89504769_00042_4094051d8112",
+        "CCI_PERFECTIONISM_79fb5fe6_00040_4094051d8112",
+        "CCI_PERFECTIONISM_65b510a4_00046_4094051d8112",
+        "CCI_PERFECTIONISM_2d136b99_00035_4094051d8112",
+        "CCI_PERFECTIONISM_d6033340_00056_4094051d8112",
+        "CCI_PERFECTIONISM_e2177788_00048_4094051d8112"
+      ],
+      "source_ids": [
+        "CCI_PERFECTIONISM"
+      ]
+    },
+    {
+      "content_sha256": "1997f1fbc1e236272613a7e7be1f94d516b19408dcbc6f27cf6f6274fd216ca7",
+      "count": 6,
+      "chunk_ids": [
+        "CCI_PERFECTIONISM_2d136b99_00039_1997f1fbc1e2",
+        "CCI_PERFECTIONISM_d6033340_00060_1997f1fbc1e2",
+        "CCI_PERFECTIONISM_178b7972_00044_1997f1fbc1e2",
+        "CCI_PERFECTIONISM_c9d74f56_00041_1997f1fbc1e2",
+        "CCI_PERFECTIONISM_e2177788_00052_1997f1fbc1e2",
+        "CCI_PERFECTIONISM_7210193e_00038_1997f1fbc1e2"
+      ],
+      "source_ids": [
+        "CCI_PERFECTIONISM"
+      ]
+    },
+    {
+      "content_sha256": "a3982097f44e6571de52f65d0b083b9302a5fd4cd7d3b864e8dcb8ca13d4101f",
+      "count": 6,
+      "chunk_ids": [
+        "CCI_PERFECTIONISM_2816e1cf_00008_a3982097f44e",
+        "CCI_SELF_ESTEEM_7d53d452_00005_a3982097f44e",
+        "CCI_SELF_ESTEEM_f9a1282d_00001_a3982097f44e",
+        "CCI_SLEEP_eac1f983_00000_a3982097f44e",
+        "CCI_WORRY_RUMINATION_0da08b5e_00004_a3982097f44e",
+        "CCI_WORRY_RUMINATION_e0b3d03d_00004_a3982097f44e"
+      ],
+      "source_ids": [
+        "CCI_PERFECTIONISM",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "fee7c173c2242d1967c1c17f2033ba264eab3aee16725fafa42d095221499c28",
+      "count": 6,
+      "chunk_ids": [
+        "CCI_PROCRASTINATION_3c5a167b_00000_fee7c173c224",
+        "CCI_PROCRASTINATION_559ac094_00000_fee7c173c224",
+        "CCI_PROCRASTINATION_8a3e0f14_00000_fee7c173c224",
+        "CCI_PROCRASTINATION_11f6e845_00000_fee7c173c224",
+        "CCI_PROCRASTINATION_54be0fa4_00000_fee7c173c224",
+        "CCI_PROCRASTINATION_aed5d5e1_00000_fee7c173c224"
+      ],
+      "source_ids": [
+        "CCI_PROCRASTINATION"
+      ]
+    },
+    {
+      "content_sha256": "1919ed4468e6cc97717ee5e03b8fa3a17d27537b08318b58600a66e8c138b21e",
+      "count": 6,
+      "chunk_ids": [
+        "CCI_PROCRASTINATION_3c5a167b_00048_1919ed4468e6",
+        "CCI_PROCRASTINATION_559ac094_00048_1919ed4468e6",
+        "CCI_PROCRASTINATION_8a3e0f14_00045_1919ed4468e6",
+        "CCI_PROCRASTINATION_11f6e845_00046_1919ed4468e6",
+        "CCI_PROCRASTINATION_54be0fa4_00043_1919ed4468e6",
+        "CCI_PROCRASTINATION_aed5d5e1_00039_1919ed4468e6"
+      ],
+      "source_ids": [
+        "CCI_PROCRASTINATION"
+      ]
+    },
+    {
+      "content_sha256": "1ed7d4793a6f7deec5c42f0b76e1e71f88d2c643558c661521a7e2992821d7bb",
+      "count": 6,
+      "chunk_ids": [
+        "CCI_PROCRASTINATION_3c5a167b_00049_1ed7d4793a6f",
+        "CCI_PROCRASTINATION_559ac094_00049_1ed7d4793a6f",
+        "CCI_PROCRASTINATION_8a3e0f14_00046_1ed7d4793a6f",
+        "CCI_PROCRASTINATION_11f6e845_00047_1ed7d4793a6f",
+        "CCI_PROCRASTINATION_54be0fa4_00044_1ed7d4793a6f",
+        "CCI_PROCRASTINATION_aed5d5e1_00040_1ed7d4793a6f"
+      ],
+      "source_ids": [
+        "CCI_PROCRASTINATION"
+      ]
+    },
+    {
+      "content_sha256": "e11e0168e8e18d5229926b94c3a24f544b6c562ca6bc83880a989251a8c096c8",
+      "count": 6,
+      "chunk_ids": [
+        "CCI_SELF_ESTEEM_d275c14c_00052_e11e0168e8e1",
+        "CCI_SELF_ESTEEM_e095697c_00045_e11e0168e8e1",
+        "CCI_SELF_ESTEEM_34d43475_00056_e11e0168e8e1",
+        "CCI_SELF_ESTEEM_2ed20483_00063_e11e0168e8e1",
+        "CCI_SELF_ESTEEM_4890d2bc_00058_e11e0168e8e1",
+        "CCI_SELF_ESTEEM_0888d0c9_00042_e11e0168e8e1"
+      ],
+      "source_ids": [
+        "CCI_SELF_ESTEEM"
+      ]
+    },
+    {
+      "content_sha256": "18989af4d15c58acef97f576696715ebf0e4db8e24377431fede5236a9341af9",
+      "count": 6,
+      "chunk_ids": [
+        "CCI_WORRY_RUMINATION_fd3f63cf_00032_18989af4d15c",
+        "CCI_WORRY_RUMINATION_bb157f3d_00047_18989af4d15c",
+        "CCI_WORRY_RUMINATION_58bcf9d2_00045_18989af4d15c",
+        "CCI_WORRY_RUMINATION_f4791dd3_00035_18989af4d15c",
+        "CCI_WORRY_RUMINATION_1940e64d_00028_18989af4d15c",
+        "CCI_WORRY_RUMINATION_0f92e72b_00028_18989af4d15c"
+      ],
+      "source_ids": [
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "47d44102637391e46eaf1f391c021a1d9463f695492e715104ba059f934b542d",
+      "count": 6,
+      "chunk_ids": [
+        "CCI_WORRY_RUMINATION_fd3f63cf_00033_47d441026373",
+        "CCI_WORRY_RUMINATION_bb157f3d_00048_47d441026373",
+        "CCI_WORRY_RUMINATION_58bcf9d2_00046_47d441026373",
+        "CCI_WORRY_RUMINATION_f4791dd3_00036_47d441026373",
+        "CCI_WORRY_RUMINATION_1940e64d_00029_47d441026373",
+        "CCI_WORRY_RUMINATION_0f92e72b_00029_47d441026373"
+      ],
+      "source_ids": [
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "content_sha256": "d488ceab596e1b96d2232352074fb32d0f5c3a73087a8d21400e0de98e00cd4b",
+      "count": 6,
+      "chunk_ids": [
+        "NHS_PROBLEM_SOLVING_81b574d9_00014_d488ceab596e",
+        "NHS_PROBLEM_SOLVING_c302c59f_00014_d488ceab596e",
+        "NHS_TODO_LIST_984e3264_00014_d488ceab596e",
+        "NHS_TODO_LIST_dc11846a_00014_d488ceab596e",
+        "NHS_WORRIES_fb56051e_00013_d488ceab596e",
+        "NHS_WORRIES_405921e8_00013_d488ceab596e"
+      ],
+      "source_ids": [
+        "NHS_PROBLEM_SOLVING",
+        "NHS_TODO_LIST",
+        "NHS_WORRIES"
+      ]
+    },
+    {
+      "content_sha256": "4c006ed536ad402f1be31eb111081a852067289b68526a5b9c0dfdef310fd94a",
+      "count": 5,
+      "chunk_ids": [
+        "CCI_DISORDERED_EATING_f2025faa_00003_4c006ed536ad",
+        "CCI_DISORDERED_EATING_f2025faa_00009_4c006ed536ad",
+        "CCI_DISORDERED_EATING_f2025faa_00018_4c006ed536ad",
+        "CCI_DISORDERED_EATING_f2025faa_00021_4c006ed536ad",
+        "CCI_DISORDERED_EATING_f2025faa_00029_4c006ed536ad"
+      ],
+      "source_ids": [
+        "CCI_DISORDERED_EATING"
+      ]
+    },
+    {
+      "content_sha256": "da47c6fef4386ffaa457ded229e33ed49cc05e5dc4fcb6f03d7851826ffb91e6",
+      "count": 5,
+      "chunk_ids": [
+        "CCI_DISORDERED_EATING_2fac7025_00002_da47c6fef438",
+        "CCI_DISORDERED_EATING_2fac7025_00019_da47c6fef438",
+        "CCI_DISORDERED_EATING_2fac7025_00023_da47c6fef438",
+        "CCI_DISORDERED_EATING_2fac7025_00029_da47c6fef438",
+        "CCI_DISORDERED_EATING_2fac7025_00031_da47c6fef438"
+      ],
+      "source_ids": [
+        "CCI_DISORDERED_EATING"
+      ]
+    }
+  ]
+}

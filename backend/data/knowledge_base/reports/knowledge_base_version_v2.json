@@ -1,0 +1,11 @@
+{
+  "knowledge_base_version": "V2",
+  "registry": "care_psy_knowledge_base_v2",
+  "source_count": 67,
+  "document_count": 315,
+  "chunk_count": 13127,
+  "approved_count": 0,
+  "embedding_model": "configured_in_.env",
+  "index_version": "rag_v2_staging",
+  "build_time": "2026-08-22T15:07:00+00:00"
+}

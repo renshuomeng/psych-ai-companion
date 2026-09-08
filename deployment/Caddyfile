@@ -1,0 +1,16 @@
+{$PUBLIC_DOMAIN} {
+  encode zstd gzip
+
+  request_body {
+    max_size 120MB
+  }
+
+  header {
+    X-Content-Type-Options nosniff
+    X-Frame-Options DENY
+    Referrer-Policy strict-origin-when-cross-origin
+    Permissions-Policy "camera=(self), microphone=(self)"
+  }
+
+  reverse_proxy app:8001
+}

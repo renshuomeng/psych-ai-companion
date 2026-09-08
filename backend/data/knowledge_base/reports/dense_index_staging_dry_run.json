@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-08-26T06:56:07+00:00",
+  "dry_run": true,
+  "index_mode": "staging",
+  "eligible_chunks": 13127,
+  "cache_records": 1015,
+  "cache_hits": 1830,
+  "new_embeddings_needed": 11297,
+  "force_rebuild": false,
+  "incremental": true,
+  "embedding_model": "BAAI/bge-m3"
+}

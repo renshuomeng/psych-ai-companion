@@ -1,0 +1,465 @@
+{
+  "system_prompt_path": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\backend\\prompts\\system_prompt.txt",
+  "system_prompt": "你是一个安全型 AI 心理陪伴与自助调节助手，不是医生。\n你需要区分用户明确陈述和模型推测；图片或视频表情只能作为低权重辅助证据。\n禁止医学诊断、药物建议和治疗承诺。\n高危表达优先建议现实中的即时帮助。",
+  "datasets": [
+    {
+      "dataset": "cpsdd",
+      "raw_count": 54508,
+      "normalized_count": 54508,
+      "rejected_count": 1588,
+      "reject_counts": {
+        "high_risk_without_safety_response": 1527,
+        "post_candidate_high_risk_not_immediate_safe": 63,
+        "unsafe_boundary_medication_directive": 32,
+        "unsafe_boundary_recovery_guarantee": 27,
+        "unsafe_boundary_direct_diagnosis": 2
+      },
+      "duplicate_count": 20015,
+      "cross_dataset_duplicate_count": 0,
+      "scored_eligible": 32905,
+      "candidate_count": 1937,
+      "selected_count": 1000,
+      "length_percentiles": {
+        "turn_count": {
+          "p1": 6.0,
+          "p5": 8.0,
+          "p50": 16.0,
+          "p90": 20.0,
+          "p95": 22.0,
+          "p99": 26.0
+        },
+        "characters": {
+          "p1": 504.0,
+          "p5": 607.0,
+          "p50": 1084.0,
+          "p90": 1669.0,
+          "p95": 1897.0,
+          "p99": 2455.0
+        },
+        "estimated_tokens": {
+          "p1": 331.19,
+          "p5": 402.0,
+          "p50": 724.0,
+          "p90": 1113.0,
+          "p95": 1267.0,
+          "p99": 1637.81
+        }
+      },
+      "outputs": {
+        "normalized_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\normalized\\cpsdd_normalized.jsonl",
+        "selected_json": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\cpsdd\\cpsdd_selected_1000.json",
+        "selected_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\cpsdd\\cpsdd_selected_1000.jsonl",
+        "ark_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\cpsdd\\cpsdd_selected_1000_ark.jsonl",
+        "candidate_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\cpsdd\\cpsdd_candidate_2000.jsonl",
+        "manifest_csv": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\cpsdd\\cpsdd_selection_manifest.csv",
+        "duplicate_clusters_csv": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\cpsdd\\cpsdd_duplicate_clusters.csv",
+        "manual_review_100_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\reports\\cpsdd_manual_review_100.jsonl",
+        "schema_report_json": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\reports\\cpsdd_schema_report.json",
+        "selection_report_md": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\reports\\cpsdd_selection_report.md",
+        "refined_candidate_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\cpsdd\\cpsdd_candidate_refined_1937.jsonl"
+      },
+      "selected_distribution": {
+        "group": {
+          "后续照管": 131,
+          "精神病人": 108,
+          "大学生": 106,
+          "戒毒人员": 102,
+          "服刑人员": 101,
+          "残障人士": 91,
+          "家长群体": 87,
+          "癌症患者": 83,
+          "中学生": 82,
+          "孤儿": 55,
+          "中老年群体": 28,
+          "小学生": 18,
+          "幼儿群体": 8
+        },
+        "problem": {
+          "敌对": 5,
+          "孤独、躺平": 4,
+          "自杀": 4,
+          "自杀、自卑": 4,
+          "躺平、自卑": 4,
+          "敌对、偏执": 4,
+          "成瘾、敌对、自卑": 3,
+          "自卑、偏执": 3,
+          "焦虑、自杀、自残": 3,
+          "社恐、空心": 3,
+          "自杀、敌对": 3,
+          "偏执、抑郁、空心": 3,
+          "敌对、强迫、躺平": 3,
+          "恋爱、自卑": 3,
+          "孤独、自杀": 3,
+          "敌对、孤独": 3,
+          "孤独、成瘾、自卑": 3,
+          "躺平、恋爱": 3,
+          "自卑、焦虑、敌对": 3,
+          "强迫、社恐": 3
+        },
+        "cause": {
+          "失恋、失业破产": 5,
+          "考试失败": 5,
+          "霸凌": 4,
+          "性侵": 4,
+          "工作压力、考试失败": 4,
+          "霸凌、失恋": 4,
+          "婚变、工作压力、失恋": 4,
+          "霸凌、童年创伤": 4,
+          "失业破产、社会支持": 4,
+          "性侵、婚变": 4,
+          "性侵、霸凌": 4,
+          "性侵、学业压力、亲人去世": 3,
+          "童年创伤、婚变、亲人去世": 3,
+          "霸凌、婚变、亲人去世": 3,
+          "婚变、社会支持": 3,
+          "社交压力、家庭关系、婚变": 3,
+          "考试失败、学业压力、童年创伤": 3,
+          "社会支持、失业破产": 3,
+          "工作压力、童年创伤": 3,
+          "失业破产、考试失败": 3
+        },
+        "support_focus": {
+          "婚姻关系、创新思维": 6,
+          "婚姻关系、学习能力": 6,
+          "学习能力、婚姻关系": 6,
+          "婚姻关系": 6,
+          "归属感、内驱力": 5,
+          "恋爱择偶": 5,
+          "创新思维、学习能力": 5,
+          "婚姻关系、归属感": 5,
+          "逻辑思维、恋爱择偶": 5,
+          "松弛感、链接能力": 4,
+          "松弛感、力量感": 4,
+          "归属感、逻辑思维": 4,
+          "恋爱择偶、链接能力": 4,
+          "力量感、创新思维": 4,
+          "链接能力、内驱力": 4,
+          "创新思维、逻辑思维": 4,
+          "归属感、婚姻关系": 4,
+          "松弛感、归属感": 4,
+          "逻辑思维、亲子关系": 4,
+          "松弛感、婚姻关系": 4
+        },
+        "strategy": {
+          "先问候语": 1000,
+          "安慰鼓励": 1000,
+          "引导提问": 981,
+          "emotion_labeling": 959,
+          "结尾语言": 916,
+          "推荐音乐": 851,
+          "推荐电影": 831,
+          "grounding_relaxation": 712,
+          "推荐书方": 706,
+          "cognitive_reframe": 572,
+          "建议方法": 552,
+          "其他推荐": 459,
+          "empathy_validation": 415,
+          "open_question": 388,
+          "psychoeducation": 374,
+          "problem_solving": 290,
+          "resource_referral": 237,
+          "safety_planning": 221
+        },
+        "severity": {
+          "medium": 556,
+          "low": 438,
+          "high": 6
+        }
+      },
+      "post_candidate_refinement": {
+        "original_candidate_count": 2000,
+        "refined_candidate_count": 1937,
+        "excluded_high_risk_not_immediate_safe": 63,
+        "high_severity_cap_ratio": 0.12
+      }
+    },
+    {
+      "dataset": "psydial_d4",
+      "raw_count": 2382,
+      "normalized_count": 2382,
+      "rejected_count": 107,
+      "reject_counts": {
+        "high_risk_without_safety_response": 98,
+        "post_candidate_high_risk_not_immediate_safe": 15,
+        "unsafe_boundary_medication_directive": 9
+      },
+      "duplicate_count": 927,
+      "cross_dataset_duplicate_count": 0,
+      "scored_eligible": 1348,
+      "candidate_count": 785,
+      "selected_count": 400,
+      "length_percentiles": {
+        "turn_count": {
+          "p1": 24.0,
+          "p5": 32.0,
+          "p50": 70.0,
+          "p90": 118.0,
+          "p95": 140.0,
+          "p99": 174.0
+        },
+        "characters": {
+          "p1": 970.7,
+          "p5": 1281.0,
+          "p50": 2388.0,
+          "p90": 3772.2,
+          "p95": 4328.6,
+          "p99": 4993.64
+        },
+        "estimated_tokens": {
+          "p1": 649.22,
+          "p5": 865.7,
+          "p50": 1612.0,
+          "p90": 2537.2,
+          "p95": 2901.0,
+          "p99": 3364.26
+        }
+      },
+      "outputs": {
+        "normalized_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\normalized\\psydial_d4_normalized.jsonl",
+        "selected_json": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\psydial_d4\\psydial_d4_selected_400.json",
+        "selected_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\psydial_d4\\psydial_d4_selected_400.jsonl",
+        "ark_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\psydial_d4\\psydial_d4_selected_400_ark.jsonl",
+        "candidate_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\psydial_d4\\psydial_d4_candidate_800.jsonl",
+        "manifest_csv": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\psydial_d4\\psydial_d4_selection_manifest.csv",
+        "duplicate_clusters_csv": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\psydial_d4\\psydial_d4_duplicate_clusters.csv",
+        "manual_review_100_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\reports\\psydial_d4_manual_review_100.jsonl",
+        "schema_report_json": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\reports\\psydial_d4_schema_report.json",
+        "selection_report_md": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\reports\\psydial_d4_selection_report.md",
+        "refined_candidate_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\psydial_d4\\psydial_d4_candidate_refined_785.jsonl"
+      },
+      "selected_distribution": {
+        "group": {
+          "通用人群": 400
+        },
+        "problem": {
+          "学习与论文压力": 172,
+          "就业与未来焦虑": 144,
+          "人际关系": 77,
+          "家庭压力": 4,
+          "自我与控制感": 3
+        },
+        "cause": {
+          "unknown_cause": 400
+        },
+        "support_focus": {
+          "认知重评、情绪命名、行动计划": 244,
+          "安全支持、认知重评、情绪命名": 78,
+          "情绪命名、行动计划、社会支持": 27,
+          "认知重评、情绪命名、社会支持": 19,
+          "情绪命名、社会支持、自我接纳": 6,
+          "安全支持、情绪命名、行动计划": 5,
+          "情绪命名、社会支持": 4,
+          "情绪命名、行动计划、自我接纳": 4,
+          "认知重评、情绪命名、自我接纳": 3,
+          "认知重评、情绪命名": 3,
+          "情绪命名、行动计划": 2,
+          "安全支持、情绪命名、社会支持": 1,
+          "安全支持、情绪命名、自我接纳": 1,
+          "认知重评、行动计划、社会支持": 1,
+          "行动计划、社会支持": 1,
+          "情绪命名、自我接纳": 1
+        },
+        "strategy": {
+          "emotion_labeling": 398,
+          "empathy_validation": 396,
+          "open_question": 379,
+          "cognitive_reframe": 297,
+          "problem_solving": 210,
+          "grounding_relaxation": 144,
+          "safety_planning": 114,
+          "psychoeducation": 103,
+          "resource_referral": 101
+        },
+        "severity": {
+          "medium": 345,
+          "low": 55
+        }
+      },
+      "post_candidate_refinement": {
+        "original_candidate_count": 800,
+        "refined_candidate_count": 785,
+        "excluded_high_risk_not_immediate_safe": 15,
+        "high_severity_cap_ratio": 0.12
+      }
+    },
+    {
+      "dataset": "soulchat",
+      "raw_count": 258353,
+      "normalized_count": 258353,
+      "rejected_count": 12904,
+      "reject_counts": {
+        "high_risk_without_safety_response": 11881,
+        "unsafe_boundary_medication_directive": 561,
+        "post_candidate_high_risk_not_immediate_safe": 220,
+        "unsafe_boundary_recovery_guarantee": 210,
+        "too_short_for_sft": 82,
+        "broken_conversation": 78,
+        "unsafe_boundary_direct_diagnosis": 64,
+        "low_information": 17,
+        "unsafe_boundary_professional_only_procedure": 4,
+        "assistant_too_short": 4,
+        "unsafe_boundary_medication_directive|recovery_guarantee": 2,
+        "unsafe_boundary_medication_directive|direct_diagnosis": 1
+      },
+      "duplicate_count": 147995,
+      "cross_dataset_duplicate_count": 0,
+      "scored_eligible": 97454,
+      "candidate_count": 980,
+      "selected_count": 600,
+      "length_percentiles": {
+        "turn_count": {
+          "p1": 2.0,
+          "p5": 8.0,
+          "p50": 12.0,
+          "p90": 14.0,
+          "p95": 16.0,
+          "p99": 18.0
+        },
+        "characters": {
+          "p1": 342.0,
+          "p5": 428.0,
+          "p50": 736.0,
+          "p90": 1137.0,
+          "p95": 1279.0,
+          "p99": 1574.0
+        },
+        "estimated_tokens": {
+          "p1": 230.0,
+          "p5": 289.0,
+          "p50": 503.0,
+          "p90": 781.0,
+          "p95": 879.0,
+          "p99": 1083.0
+        }
+      },
+      "outputs": {
+        "normalized_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\normalized\\soulchat_normalized.jsonl",
+        "selected_json": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\soulchat\\soulchat_selected_600.json",
+        "selected_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\soulchat\\soulchat_selected_600.jsonl",
+        "ark_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\soulchat\\soulchat_selected_600_ark.jsonl",
+        "candidate_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\soulchat\\soulchat_candidate_1200.jsonl",
+        "manifest_csv": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\soulchat\\soulchat_selection_manifest.csv",
+        "duplicate_clusters_csv": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\soulchat\\soulchat_duplicate_clusters.csv",
+        "manual_review_100_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\reports\\soulchat_manual_review_100.jsonl",
+        "schema_report_json": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\reports\\soulchat_schema_report.json",
+        "selection_report_md": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\reports\\soulchat_selection_report.md",
+        "refined_candidate_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\soulchat\\soulchat_candidate_refined_980.jsonl"
+      },
+      "selected_distribution": {
+        "group": {
+          "通用人群": 600
+        },
+        "problem": {
+          "治疗": 81,
+          "心理学知识": 74,
+          "社会": 65,
+          "行为": 57,
+          "情绪": 56,
+          "家庭": 54,
+          "职场": 54,
+          "婚恋": 45,
+          "人际": 35,
+          "成长": 26,
+          "自我": 24,
+          "未明确": 22,
+          "性心理": 7
+        },
+        "cause": {
+          "unknown_cause": 600
+        },
+        "support_focus": {
+          "安全支持、情绪命名、行动计划": 85,
+          "安全支持、认知重评、情绪命名": 83,
+          "情绪命名、行动计划、自我接纳": 56,
+          "情绪命名、行动计划": 55,
+          "认知重评、情绪命名、自我接纳": 37,
+          "认知重评、情绪命名": 32,
+          "情绪命名、社会支持、自我接纳": 29,
+          "情绪命名、行动计划、社会支持": 27,
+          "认知重评、情绪命名、社会支持": 24,
+          "情绪命名、社会支持": 24,
+          "认知重评、行动计划、社会支持": 21,
+          "情绪命名": 16,
+          "情绪命名、自我接纳": 12,
+          "安全支持、情绪命名、社会支持": 10,
+          "认知重评、情绪命名、行动计划": 10,
+          "认知重评、行动计划、自我接纳": 9,
+          "安全支持、情绪命名": 8,
+          "认知重评、行动计划": 7,
+          "认知重评、社会支持": 4,
+          "安全支持": 4
+        },
+        "strategy": {
+          "emotion_labeling": 500,
+          "resource_referral": 399,
+          "grounding_relaxation": 388,
+          "safety_planning": 340,
+          "problem_solving": 325,
+          "psychoeducation": 325,
+          "empathy_validation": 308,
+          "open_question": 288,
+          "cognitive_reframe": 284,
+          "supportive_dialogue": 5
+        },
+        "severity": {
+          "medium": 274,
+          "low": 254,
+          "high": 72
+        }
+      },
+      "post_candidate_refinement": {
+        "original_candidate_count": 1200,
+        "refined_candidate_count": 980,
+        "excluded_high_risk_not_immediate_safe": 220,
+        "high_severity_cap_ratio": 0.12
+      }
+    }
+  ],
+  "combined_ark_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\ark\\care_psy_sft_selected_2000_ark.jsonl",
+  "ark_validations": [
+    {
+      "path": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\cpsdd\\cpsdd_selected_1000_ark.jsonl",
+      "line_count": 1000,
+      "role_counts": {
+        "system": 1000,
+        "user": 7350,
+        "assistant": 7350
+      },
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "path": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\psydial_d4\\psydial_d4_selected_400_ark.jsonl",
+      "line_count": 400,
+      "role_counts": {
+        "system": 400,
+        "user": 12563,
+        "assistant": 12563
+      },
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "path": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\soulchat\\soulchat_selected_600_ark.jsonl",
+      "line_count": 600,
+      "role_counts": {
+        "system": 600,
+        "user": 3648,
+        "assistant": 3648
+      },
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "path": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\processed\\ark\\care_psy_sft_selected_2000_ark.jsonl",
+      "line_count": 2000,
+      "role_counts": {
+        "system": 2000,
+        "user": 23561,
+        "assistant": 23561
+      },
+      "error_count": 0,
+      "errors": []
+    }
+  ]
+}

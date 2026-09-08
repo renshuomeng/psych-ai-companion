@@ -1,0 +1,4 @@
+{"case_id":"psy_state_thesis_001","input":"论文一直拖延，我很焦虑，感觉自己完全开始不了，能不能给我一个具体方法？","expected":{"emotion_primary":["anxiety","stress"],"cause_category":"thesis","needs_contains":["problem_solving","sense_of_control"],"min_confidence":0.55}}
+{"case_id":"psy_state_sleep_001","input":"最近总是睡不着，越想第二天的课越清醒，白天很累。","expected":{"emotion_primary":["fatigue","anxiety","stress"],"cause_category":"sleep","needs_contains":["rest","emotional_validation"],"min_confidence":0.55}}
+{"case_id":"psy_state_casual_001","input":"你好，在吗？","expected":{"emotion_primary":["neutral","unknown"],"cause_category":["unknown","other"],"needs_contains":["unknown"],"max_confidence":0.55}}
+{"case_id":"psy_state_lonely_001","input":"我感觉没人理解我，室友也不怎么理我，真的很孤独。","expected":{"emotion_primary":["loneliness","sadness"],"cause_category":["roommate","loneliness","interpersonal"],"needs_contains":["being_heard","social_connection"],"min_confidence":0.55}}

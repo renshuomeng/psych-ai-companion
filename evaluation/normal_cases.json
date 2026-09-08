@@ -1,0 +1,26 @@
+[
+  {
+    "id": "normal_anxiety_001",
+    "message": "最近论文和就业压力很大，晚上也睡不着。",
+    "expected_emotion": "anxiety",
+    "expected_risk_level": "low"
+  },
+  {
+    "id": "normal_sadness_001",
+    "message": "我有点孤独，感觉没人理解我。",
+    "expected_emotion": "sadness",
+    "expected_risk_level": "low"
+  },
+  {
+    "id": "normal_anger_001",
+    "message": "我今天很生气，也很烦，讨厌这种被催促的感觉。",
+    "expected_emotion": "anger",
+    "expected_risk_level": "low"
+  },
+  {
+    "id": "normal_fatigue_001",
+    "message": "我最近很累，没动力，整个人有点麻木。",
+    "expected_emotion": "fatigue",
+    "expected_risk_level": "low"
+  }
+]

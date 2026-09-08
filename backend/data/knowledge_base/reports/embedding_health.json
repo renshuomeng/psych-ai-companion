@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-08-16T14:00:41+00:00",
+  "embedding_cache": {
+    "exists": true,
+    "records": 492,
+    "sampled": 200,
+    "dimensions": [
+      1024
+    ],
+    "zero_vectors": 0,
+    "invalid_records_sample": 0,
+    "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/chroma/embedding_cache.jsonl"
+  },
+  "chroma": {
+    "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/chroma",
+    "collections": {
+      "psych_professional_knowledge_staging": 0,
+      "psych_helping_skills_staging": 0,
+      "psych_evidence_staging": 0,
+      "psych_safety_staging": 0,
+      "psych_campus_support_staging": 0,
+      "psych_governance_staging": 0,
+      "psych_interventions_staging": 512
+    },
+    "total_vectors": 512
+  },
+  "status": "ready",
+  "warnings": []
+}

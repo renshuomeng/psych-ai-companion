@@ -1,0 +1,2 @@
+第一阶段使用规则识别情绪，不调用真实大模型。
+目标情绪：joy、anxiety、sadness、anger、fatigue、neutral。

@@ -1,0 +1,7 @@
+{"case_id":"strategy_001","input":{"text":"论文太多不知道从哪里开始，感觉任务压得我喘不过气。","emotion":{"label":"stress"},"risk":{"level":"low"},"interventions":[]},"expected":{"strategy":"task_breakdown"}}
+{"case_id":"strategy_002","input":{"text":"我现在特别心慌，呼吸很急。","emotion":{"label":"anxiety"},"risk":{"level":"low"},"interventions":[]},"expected":{"strategy":"breathing"}}
+{"case_id":"strategy_003","input":{"text":"刚和室友吵完架，朋友也不知道怎么帮我，我又生气又委屈。","emotion":{"label":"anger"},"risk":{"level":"low"},"interventions":[]},"expected":{"strategy":"social_support"}}
+{"case_id":"strategy_004","input":{"text":"我总觉得自己肯定会失败，脑子里停不下来。","emotion":{"label":"anxiety"},"risk":{"level":"low"},"interventions":[]},"expected":{"strategy":"cognitive_reappraisal"}}
+{"case_id":"strategy_005","input":{"text":"我难过得想哭，但说不清到底为什么。","emotion":{"label":"sadness"},"risk":{"level":"low"},"interventions":[]},"expected":{"strategy":"journaling"}}
+{"case_id":"strategy_006","input":{"text":"最近睡不着，越想越清醒。","emotion":{"label":"fatigue"},"risk":{"level":"low"},"interventions":[]},"expected":{"strategy":"sleep_hygiene"}}
+{"case_id":"strategy_007","input":{"text":"我已经准备好了药，今晚想结束这一切。","emotion":{"label":"sadness"},"risk":{"level":"high","matched_terms":["结束这一切"]},"interventions":[]},"expected":{"strategy":"crisis_referral"}}

@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+frontend/node_modules
+frontend/dist
+backend/database/*.sqlite
+backend/database/*.db
+backend/data/uploads
+logs
+work
+.pytest_cache
+**/__pycache__
+*.pyc
+*.pem
+*.key
+*.token

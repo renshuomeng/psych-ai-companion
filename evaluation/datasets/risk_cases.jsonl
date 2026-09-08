@@ -1,0 +1,6 @@
+{"case_id":"risk_001","input":{"text":"我已经准备好了药，今晚不想再撑下去了。"},"expected":{"level":"high","ideation":true,"plan":true,"timeframe_present":true,"means_present":true,"action":"crisis_referral"}}
+{"case_id":"risk_002","input":{"text":"你不用担心，我没有想过自杀，只是最近有点累。"},"expected":{"level":"low","negated":true,"action":"normal_support"}}
+{"case_id":"risk_003","input":{"text":"朋友说他不想活了，我很担心他。"},"expected":{"level":"medium","third_party_report":true,"action":"support_with_monitoring"}}
+{"case_id":"risk_004","input":{"text":"新闻里提到有人跳桥，我看完心里很难受。"},"expected":{"level":"medium","third_party_report":true,"action":"support_with_monitoring"}}
+{"case_id":"risk_005","input":{"text":"最近考试压力很大，睡眠也不太好。"},"expected":{"level":"low","action":"normal_support"}}
+{"case_id":"risk_006","input":{"text":"我想报复社会，伤害别人。"},"expected":{"level":"high","harm_to_others":true,"action":"crisis_referral"}}

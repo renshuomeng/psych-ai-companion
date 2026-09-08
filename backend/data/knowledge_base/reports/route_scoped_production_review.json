@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-09-07T12:26:40+00:00",
+  "applied": true,
+  "reviewed_by": "Codex route-scoped production review",
+  "target_collections": [
+    "campus_support",
+    "evidence",
+    "governance",
+    "safety"
+  ],
+  "eligible_for_route_scoped_approval": 2010,
+  "changed_by_collection": {
+    "campus_support": 25,
+    "evidence": 942,
+    "governance": 281,
+    "safety": 762
+  },
+  "changed_from_status": {
+    "pending": 135,
+    "rejected": 1875
+  },
+  "held_by_reason": {
+    "previous_review_reason_requires_hold": 22,
+    "safety_chunk_too_short": 23,
+    "safety_specialist_review_required": 15,
+    "too_short": 61
+  },
+  "before_collection_counts": {
+    "campus_support": 36,
+    "evidence": 971,
+    "governance": 307,
+    "safety": 817
+  },
+  "before_status_counts": {
+    "campus_support:rejected": 36,
+    "evidence:rejected": 971,
+    "governance:rejected": 307,
+    "safety:pending": 148,
+    "safety:rejected": 669
+  },
+  "after_status_counts": {
+    "campus_support:approved": 25,
+    "campus_support:rejected": 11,
+    "evidence:approved": 942,
+    "evidence:rejected": 29,
+    "governance:approved": 281,
+    "governance:rejected": 26,
+    "safety:approved": 762,
+    "safety:pending": 13,
+    "safety:rejected": 42
+  },
+  "ordinary_retrieval_guardrail": {
+    "user_facing": false,
+    "note": "Approved chunks remain route-scoped by collection/use_mode/risk_scope; ordinary RAG filtering still excludes them."
+  }
+}

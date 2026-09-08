@@ -1,0 +1,720 @@
+# CARE-Psy / psych-ai-companion
+# RAG Knowledge Source Registry v1
+#
+# Purpose:
+#   This file is the ONLY allowlist for automatic downloading in the first RAG build.
+#   Codex must NOT expand beyond these URLs/domains unless the user edits this registry.
+#
+# Design:
+#   - Public official sources: auto_download=true
+#   - Copyrighted books / paid papers / user-owned files: NEVER auto-download;
+#     place them in the manual_drop_zones below.
+#   - "user_facing=false" means the material may inform policy/safety/system design,
+#     but should not be quoted/retrieved as ordinary self-help advice without an
+#     explicit routing rule.
+#
+# Download safety:
+#   - Respect robots.txt, site terms, rate limits, redirects, and authentication.
+#   - Never bypass paywalls, login, CAPTCHA, access controls, or anti-bot protections.
+#   - Only follow download/assets links on the exact official pages below.
+#   - Record final URL, HTTP status, SHA256, MIME type, byte size, and downloaded_at.
+#
+version: 1
+registry_name: care_psy_first_rag_sources
+created_for: psych-ai-companion
+default_language_preference:
+  - zh-CN
+  - en
+default_review_status: pending
+default_chunk_review_required: true
+
+paths:
+  root: backend/data/knowledge_base
+  raw_auto: backend/data/knowledge_base/raw/auto
+  raw_manual: backend/data/knowledge_base/raw/manual
+  parsed: backend/data/knowledge_base/parsed
+  cleaned: backend/data/knowledge_base/cleaned
+  chunks_pending: backend/data/knowledge_base/chunks/pending
+  chunks_approved: backend/data/knowledge_base/chunks/approved
+  chunks_rejected: backend/data/knowledge_base/chunks/rejected
+  indexes_chroma: backend/data/knowledge_base/indexes/chroma
+  indexes_bm25: backend/data/knowledge_base/indexes/bm25
+  reports: backend/data/knowledge_base/reports
+
+manual_drop_zones:
+  - id: manual_textbooks
+    path: backend/data/knowledge_base/raw/manual/textbooks
+    purpose: >
+      Legally obtained psychology/counselling/CBT/ACT/MI textbooks or selected chapters.
+      Codex must never search for pirated copies. The user places files here manually.
+    allowed_extensions: [".pdf", ".docx", ".txt", ".md", ".epub"]
+    target_collection: professional_knowledge
+
+  - id: manual_papers
+    path: backend/data/knowledge_base/raw/manual/papers
+    purpose: >
+      Systematic reviews, meta-analyses, guidelines, and papers legally obtained by the user.
+      Prefer open-access or institutionally licensed copies supplied by the user.
+    allowed_extensions: [".pdf", ".docx", ".txt", ".md"]
+    target_collection: evidence
+
+  - id: manual_campus
+    path: backend/data/knowledge_base/raw/manual/campus
+    purpose: >
+      Reviewed university mental-health-center materials and user-authored campus-specific
+      knowledge cards for thesis stress, research setbacks, exams, employment, roommates,
+      relationships, loneliness, procrastination, perfectionism, and sleep.
+    allowed_extensions: [".pdf", ".docx", ".txt", ".md", ".json", ".yaml", ".yml"]
+    target_collection: campus_support
+
+  - id: manual_official
+    path: backend/data/knowledge_base/raw/manual/official
+    purpose: >
+      Official WHO/MOE or other registry-listed sources that cannot be automatically fetched
+      because of robots.txt, redirects, CAPTCHA, login, or anti-bot controls. Place files under
+      raw/manual/official/<source_id>/ so the pipeline can reuse the registry metadata.
+    allowed_extensions: [".pdf", ".docx", ".txt", ".md", ".html", ".htm"]
+    target_collection: registry_source_target_collection
+
+  - id: manual_cases
+    path: backend/data/knowledge_base/raw/manual/cases
+    purpose: >
+      Licensed/public psychological-support conversation datasets or curated examples.
+      These MUST go to Case RAG, not the professional Knowledge RAG.
+    allowed_extensions: [".json", ".jsonl", ".csv", ".parquet", ".txt"]
+    target_collection: case_rag
+
+collections:
+  professional_knowledge:
+    description: General psychoeducation and evidence-based low-risk support knowledge.
+  interventions:
+    description: Actionable self-help techniques and structured exercises.
+  helping_skills:
+    description: Empathy, listening, collaboration, reflection and safe helping behaviours.
+  campus_support:
+    description: University-student context, policy and campus-specific support knowledge.
+  safety:
+    description: Self-harm/suicide safety guidance; routed only by the safety subsystem.
+  evidence:
+    description: Guidelines/reviews used for evidence checking, not ordinary answer retrieval.
+  governance:
+    description: Implementation/policy/boundary documents; not ordinary user-facing retrieval.
+  case_rag:
+    description: Psychological support conversation cases/examples; indexed separately.
+
+sources:
+
+  # ---------------------------------------------------------------------------
+  # WHO — Core self-help / helping skills / safety
+  # ---------------------------------------------------------------------------
+
+  - id: WHO_SELFHELP_2026
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: World Health Organization
+    title: "Psychological self-help interventions: delivering self-help for individuals, featuring Step-by-Step and Doing What Matters in Times of Stress"
+    year: 2026
+    language_preference: [en]
+    source_type: manual
+    target_collection: interventions
+    topics: [self_help, stress, psychological_distress, guided_self_help]
+    user_facing: true
+    evidence_level: A
+    official_page_url: "https://www.who.int/publications/i/item/9789240120785"
+    download:
+      mode: follow_official_download_link
+      allowed_domains: ["who.int", "iris.who.int"]
+      preferred_mime_types: ["application/pdf"]
+      max_assets: 2
+    license_note: "WHO publication page states CC BY-NC-SA 3.0 IGO; preserve attribution and licence metadata."
+    notes: "Core first-version intervention manual."
+
+  - id: WHO_DWM_STRESS_2020
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: World Health Organization
+    title: "Doing What Matters in Times of Stress: An Illustrated Guide"
+    year: 2020
+    language_preference: [zh-CN, en]
+    source_type: self_help_guide
+    target_collection: interventions
+    topics: [stress, grounding, unhooking, acceptance, self_kindness, values]
+    user_facing: true
+    evidence_level: A
+    official_page_url: "https://www.who.int/publications/i/item/9789240003927"
+    download:
+      mode: follow_official_download_link
+      allowed_domains: ["who.int", "iris.who.int", "tdr.who.int"]
+      preferred_languages: [Chinese, English]
+      preferred_mime_types: ["application/pdf"]
+      max_assets: 3
+    license_note: "WHO publication; preserve attribution/licence metadata."
+    notes: "Prefer the Chinese edition when an official Chinese PDF is discoverable from the WHO page."
+
+  - id: WHO_HELPING_SKILLS_2025
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "World Health Organization / UNICEF"
+    title: "Foundational helping skills training manual: a competency-based approach for training helpers to support adults"
+    year: 2025
+    language_preference: [en]
+    source_type: training_manual
+    target_collection: helping_skills
+    topics: [empathy, active_listening, communication, collaboration, hope, non_harmful_helping]
+    user_facing: false
+    evidence_level: A
+    official_page_url: "https://www.who.int/publications/i/item/9789240105935"
+    download:
+      mode: follow_official_download_link
+      allowed_domains: ["who.int", "iris.who.int"]
+      preferred_mime_types: ["application/pdf"]
+      max_assets: 2
+    license_note: "WHO/UNICEF publication; preserve attribution/licence metadata."
+    notes: "Use primarily to inform Counselor/Strategy/Critic behaviour and evaluation rubrics."
+
+  - id: WHO_PSYCH_IMPLEMENTATION_2024
+    enabled: true
+    auto_download: true
+    priority: P1
+    organization: World Health Organization
+    title: "Psychological interventions implementation manual: integrating evidence-based psychological interventions into existing services"
+    year: 2024
+    language_preference: [en]
+    source_type: implementation_manual
+    target_collection: governance
+    topics: [implementation, adaptation, monitoring, service_boundaries]
+    user_facing: false
+    evidence_level: A
+    official_page_url: "https://www.who.int/publications/i/item/9789240087149"
+    download:
+      mode: follow_official_download_link
+      allowed_domains: ["who.int", "iris.who.int"]
+      preferred_mime_types: ["application/pdf"]
+      max_assets: 2
+    license_note: "WHO publication; preserve attribution/licence metadata."
+    notes: "Useful for implementation and boundary design, not normal chat retrieval."
+
+  - id: WHO_MHGAP_2023
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: World Health Organization
+    title: "Mental Health Gap Action Programme (mhGAP) guideline for mental, neurological and substance use disorders, third edition"
+    year: 2023
+    language_preference: [en]
+    source_type: guideline
+    target_collection: safety
+    topics: [safety, referral, self_harm, suicide, non_specialist_care]
+    user_facing: false
+    evidence_level: A
+    official_page_url: "https://www.who.int/publications/i/item/9789240084278"
+    download:
+      mode: follow_official_download_link
+      allowed_domains: ["who.int", "iris.who.int"]
+      preferred_mime_types: ["application/pdf"]
+      max_assets: 2
+    license_note: "WHO publication; preserve attribution/licence metadata."
+    notes: "Safety-only collection. Must never replace deterministic RiskAgent rules."
+
+  - id: WHO_SAFETY_PLANNING_2023
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: World Health Organization
+    title: "Safety planning interventions"
+    year: 2023
+    language_preference: [en]
+    source_type: evidence_recommendation
+    target_collection: safety
+    topics: [self_harm, suicide, safety_planning, follow_up]
+    user_facing: false
+    evidence_level: A
+    official_page_url: "https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme/evidence-centre/self-harm-and-suicide/safety-planning-interventions"
+    download:
+      mode: html_plus_linked_assets
+      allowed_domains: ["who.int", "iris.who.int"]
+      include_link_text_patterns: ["Evidence profile", "Safety planning"]
+      preferred_mime_types: ["text/html", "application/pdf"]
+      max_assets: 3
+    license_note: "WHO evidence-centre content; preserve source URL and publication metadata."
+    notes: "Safety subsystem only. Do not expose detailed crisis instructions as ordinary RAG."
+
+  - id: WHO_LIVE_LIFE_2021
+    enabled: true
+    auto_download: true
+    priority: P1
+    organization: World Health Organization
+    title: "LIVE LIFE: An implementation guide for suicide prevention in countries"
+    year: 2021
+    language_preference: [zh-CN, en]
+    source_type: implementation_guide
+    target_collection: safety
+    topics: [suicide_prevention, early_identification, support, population_prevention]
+    user_facing: false
+    evidence_level: A
+    official_page_url: "https://www.who.int/publications/i/item/9789240026629"
+    download:
+      mode: follow_official_download_link
+      allowed_domains: ["who.int", "iris.who.int"]
+      preferred_languages: [Chinese, English]
+      preferred_mime_types: ["application/pdf"]
+      max_assets: 3
+    license_note: "WHO publication; preserve attribution/licence metadata."
+    notes: "Policy/safety reference; not ordinary self-help retrieval."
+
+  # ---------------------------------------------------------------------------
+  # CCI — High-frequency university-student themes
+  # Each page exposes workbook / information-sheet / worksheet download links.
+  # Codex may only follow download links from the exact official topic page.
+  # ---------------------------------------------------------------------------
+
+  - id: CCI_ANXIETY
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "Centre for Clinical Interventions, Government of Western Australia"
+    title: "Anxiety self-help resources"
+    year: 2025
+    language_preference: [en]
+    source_type: workbook_and_sheets
+    target_collection: interventions
+    topics: [anxiety, stress, breathing, relaxation, cognitive_reframing, exposure]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.cci.health.wa.gov.au/Resources/Looking-after-yourself/anxiety"
+    download:
+      mode: html_plus_linked_assets
+      allowed_domains: ["cci.health.wa.gov.au", "www.cci.health.wa.gov.au"]
+      include_link_text_patterns: ["Download", "Information sheet", "Worksheet", "workbook"]
+      allowed_extensions: [".pdf", ".zip"]
+      max_assets: 40
+    license_note: "Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default."
+
+  - id: CCI_WORRY_RUMINATION
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "Centre for Clinical Interventions, Government of Western Australia"
+    title: "Worry and Rumination self-help resources"
+    year: 2023
+    language_preference: [en]
+    source_type: workbook_and_sheets
+    target_collection: interventions
+    topics: [worry, rumination, anxiety, mindfulness, uncertainty, attention]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Worry-and-Rumination"
+    download:
+      mode: html_plus_linked_assets
+      allowed_domains: ["cci.health.wa.gov.au", "www.cci.health.wa.gov.au"]
+      include_link_text_patterns: ["Download", "Module", "Information sheet", "Worksheet", "workbook"]
+      allowed_extensions: [".pdf", ".zip"]
+      max_assets: 50
+    license_note: "Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default."
+
+  - id: CCI_PROCRASTINATION
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "Centre for Clinical Interventions, Government of Western Australia"
+    title: "Procrastination self-help resources"
+    year: 2025
+    language_preference: [en]
+    source_type: workbook_and_sheets
+    target_collection: interventions
+    topics: [procrastination, academic_stress, task_starting, avoidance, discomfort_tolerance]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Procrastination"
+    download:
+      mode: html_plus_linked_assets
+      allowed_domains: ["cci.health.wa.gov.au", "www.cci.health.wa.gov.au"]
+      include_link_text_patterns: ["Download", "Module", "Information sheet", "Worksheet", "workbook"]
+      allowed_extensions: [".pdf", ".zip"]
+      max_assets: 40
+    license_note: "Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default."
+
+  - id: CCI_PERFECTIONISM
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "Centre for Clinical Interventions, Government of Western Australia"
+    title: "Perfectionism self-help resources"
+    year: 2019
+    language_preference: [en]
+    source_type: workbook_and_sheets
+    target_collection: interventions
+    topics: [perfectionism, academic_stress, self_worth, behavioural_experiments, cognition]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.cci.health.wa.gov.au/resources/looking-after-yourself/perfectionism"
+    download:
+      mode: html_plus_linked_assets
+      allowed_domains: ["cci.health.wa.gov.au", "www.cci.health.wa.gov.au"]
+      include_link_text_patterns: ["Download", "Module", "Information sheet", "Worksheet", "workbook"]
+      allowed_extensions: [".pdf", ".zip"]
+      max_assets: 50
+    license_note: "Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default."
+
+  - id: CCI_SELF_COMPASSION
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "Centre for Clinical Interventions, Government of Western Australia"
+    title: "Self-Compassion self-help resources"
+    year: 2019
+    language_preference: [en]
+    source_type: workbook_and_sheets
+    target_collection: interventions
+    topics: [self_compassion, self_criticism, shame, self_kindness, coping]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Self-Compassion"
+    download:
+      mode: html_plus_linked_assets
+      allowed_domains: ["cci.health.wa.gov.au", "www.cci.health.wa.gov.au"]
+      include_link_text_patterns: ["Download", "Module", "Information sheet", "Worksheet", "workbook"]
+      allowed_extensions: [".pdf", ".zip"]
+      max_assets: 40
+    license_note: "Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default."
+
+  - id: CCI_SELF_ESTEEM
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "Centre for Clinical Interventions, Government of Western Australia"
+    title: "Self-Esteem self-help resources"
+    year: 2025
+    language_preference: [en]
+    source_type: workbook_and_sheets
+    target_collection: interventions
+    topics: [self_esteem, self_evaluation, core_beliefs, self_acceptance]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.cci.health.wa.gov.au/resources/looking-after-yourself/self-esteem"
+    download:
+      mode: html_plus_linked_assets
+      allowed_domains: ["cci.health.wa.gov.au", "www.cci.health.wa.gov.au"]
+      include_link_text_patterns: ["Download", "Module", "Information sheet", "Worksheet", "workbook"]
+      allowed_extensions: [".pdf", ".zip"]
+      max_assets: 50
+    license_note: "Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default."
+
+  - id: CCI_SLEEP
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "Centre for Clinical Interventions, Government of Western Australia"
+    title: "Sleep and insomnia self-help resources"
+    year: null
+    language_preference: [en]
+    source_type: workbook_and_sheets
+    target_collection: interventions
+    topics: [sleep, insomnia, sleep_hygiene, sleep_thoughts]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.cci.health.wa.gov.au/resources/looking-after-yourself/sleep"
+    download:
+      mode: html_plus_linked_assets
+      allowed_domains: ["cci.health.wa.gov.au", "www.cci.health.wa.gov.au"]
+      include_link_text_patterns: ["Download", "Information sheet", "Worksheet", "workbook"]
+      allowed_extensions: [".pdf", ".zip"]
+      max_assets: 30
+    license_note: "Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default."
+
+  - id: CCI_SOCIAL_ANXIETY
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "Centre for Clinical Interventions, Government of Western Australia"
+    title: "Social Anxiety self-help resources"
+    year: 2021
+    language_preference: [en]
+    source_type: workbook_and_sheets
+    target_collection: interventions
+    topics: [social_anxiety, avoidance, behavioural_experiments, relationships, exposure]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.cci.health.wa.gov.au/resources/looking-after-yourself/social-anxiety"
+    download:
+      mode: html_plus_linked_assets
+      allowed_domains: ["cci.health.wa.gov.au", "www.cci.health.wa.gov.au"]
+      include_link_text_patterns: ["Download", "Module", "Information sheet", "Worksheet", "workbook"]
+      allowed_extensions: [".pdf", ".zip"]
+      max_assets: 60
+    license_note: "Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default."
+
+  - id: CCI_DISTRESS_TOLERANCE
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "Centre for Clinical Interventions, Government of Western Australia"
+    title: "Tolerating Distress self-help resources"
+    year: 2019
+    language_preference: [en]
+    source_type: workbook_and_sheets
+    target_collection: interventions
+    topics: [distress_tolerance, emotion_regulation, acceptance, emotion_surfing]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Tolerating-Distress"
+    download:
+      mode: html_plus_linked_assets
+      allowed_domains: ["cci.health.wa.gov.au", "www.cci.health.wa.gov.au"]
+      include_link_text_patterns: ["Download", "Module", "Information sheet", "Worksheet", "workbook"]
+      allowed_extensions: [".pdf", ".zip"]
+      max_assets: 30
+    license_note: "Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default."
+
+  # ---------------------------------------------------------------------------
+  # NHS — concise, actionable self-help pages
+  # ---------------------------------------------------------------------------
+
+  - id: NHS_CBT_HUB
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "NHS / Every Mind Matters"
+    title: "Self-help CBT techniques"
+    year: null
+    language_preference: [en]
+    source_type: official_web_guide
+    target_collection: professional_knowledge
+    topics: [cbt, thoughts, feelings, behaviours, anxiety, stress, low_mood]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/"
+    download:
+      mode: html_page
+      allowed_domains: ["nhs.uk", "www.nhs.uk"]
+      max_assets: 1
+    license_note: "Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use."
+
+  - id: NHS_THOUGHT_RECORD
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "NHS / Every Mind Matters"
+    title: "Thought record"
+    year: null
+    language_preference: [en]
+    source_type: official_web_guide
+    target_collection: interventions
+    topics: [cognitive_reappraisal, thought_record, self_evaluation, anxiety]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/thought-record/"
+    download:
+      mode: html_plus_linked_assets
+      allowed_domains: ["nhs.uk", "www.nhs.uk"]
+      include_link_text_patterns: ["Download thought record"]
+      allowed_extensions: [".doc", ".docx", ".pdf"]
+      max_assets: 3
+    license_note: "Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use."
+
+  - id: NHS_PROBLEM_SOLVING
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "NHS / Every Mind Matters"
+    title: "Problem solving"
+    year: null
+    language_preference: [en]
+    source_type: official_web_guide
+    target_collection: interventions
+    topics: [problem_solving, overwhelm, planning, values, stress]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/problem-solving/"
+    download:
+      mode: html_page
+      allowed_domains: ["nhs.uk", "www.nhs.uk"]
+      max_assets: 1
+    license_note: "Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use."
+
+  - id: NHS_WORRIES
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "NHS / Every Mind Matters"
+    title: "Tackling your worries"
+    year: null
+    language_preference: [en]
+    source_type: official_web_guide
+    target_collection: interventions
+    topics: [worry, anxiety, worry_time, journaling]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/tackling-your-worries/"
+    download:
+      mode: html_page
+      allowed_domains: ["nhs.uk", "www.nhs.uk"]
+      max_assets: 1
+    license_note: "Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use."
+
+  - id: NHS_TODO_LIST
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "NHS / Every Mind Matters"
+    title: "Tackling your to-do list"
+    year: null
+    language_preference: [en]
+    source_type: official_web_guide
+    target_collection: interventions
+    topics: [avoidance, procrastination, behavioural_activation, routine, motivation]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/tackling-your-to-do-list/"
+    download:
+      mode: html_page
+      allowed_domains: ["nhs.uk", "www.nhs.uk"]
+      max_assets: 1
+    license_note: "Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use."
+
+  - id: NHS_SLEEP
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "NHS / Every Mind Matters"
+    title: "How to fall asleep faster and sleep better"
+    year: null
+    language_preference: [en]
+    source_type: official_web_guide
+    target_collection: interventions
+    topics: [sleep, sleep_hygiene, worry, routine]
+    user_facing: true
+    evidence_level: B
+    official_page_url: "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/how-to-fall-asleep-faster-and-sleep-better/"
+    download:
+      mode: html_page
+      allowed_domains: ["nhs.uk", "www.nhs.uk"]
+      max_assets: 1
+    license_note: "Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use."
+
+  # ---------------------------------------------------------------------------
+  # China Ministry of Education — campus framing / governance
+  # These pages are useful for scope and campus context, not ordinary advice retrieval.
+  # ---------------------------------------------------------------------------
+
+  - id: MOE_HIGHER_ED_MH_GUIDE_2018
+    enabled: true
+    auto_download: true
+    priority: P0
+    organization: "中华人民共和国教育部"
+    title: "高等学校学生心理健康教育指导纲要"
+    year: 2018
+    language_preference: [zh-CN]
+    source_type: policy_guideline
+    target_collection: campus_support
+    topics: [university_students, mental_health_education, counselling_services, campus_support]
+    user_facing: false
+    evidence_level: A
+    official_page_url: "https://www.moe.gov.cn/srcsite/A12/moe_1407/s3020/201807/t20180713_342992.html"
+    download:
+      mode: html_page
+      allowed_domains: ["moe.gov.cn", "www.moe.gov.cn"]
+      max_assets: 2
+    license_note: "Official government page; preserve source and publication metadata."
+    notes: "Use for campus scope/boundaries and policy context."
+
+  - id: MOE_STUDENT_MH_ACTION_2023_2025
+    enabled: true
+    auto_download: true
+    priority: P1
+    organization: "中华人民共和国教育部等十七部门"
+    title: "全面加强和改进新时代学生心理健康工作专项行动计划（2023—2025年）"
+    year: 2023
+    language_preference: [zh-CN]
+    source_type: policy_plan
+    target_collection: campus_support
+    topics: [student_mental_health, prevention, monitoring, counselling, intervention, campus_support]
+    user_facing: false
+    evidence_level: A
+    official_page_url: "https://www.moe.gov.cn/srcsite/A17/moe_943/moe_946/202305/t20230511_1059219.html"
+    download:
+      mode: html_page
+      allowed_domains: ["moe.gov.cn", "www.moe.gov.cn"]
+      max_assets: 2
+    license_note: "Official government page; preserve source and publication metadata."
+    notes: "Use for system framing, not normal therapeutic advice."
+
+build_policy:
+  download_only_enabled_sources: true
+  forbid_unlisted_domains: true
+  forbid_search_engine_expansion: true
+  forbid_paywall_bypass: true
+  forbid_login_bypass: true
+  forbid_captcha_bypass: true
+  max_concurrent_downloads: 2
+  minimum_delay_seconds_per_domain: 1.0
+  retries: 2
+  request_timeout_seconds: 30
+  save_html_pages: true
+  save_downloaded_assets: true
+  compute_sha256: true
+  deduplicate_by_sha256: true
+  keep_original_files: true
+  unpack_zip_files: true
+  retain_zip_after_unpack: true
+
+processing_policy:
+  supported_extensions: [".html", ".htm", ".pdf", ".doc", ".docx", ".txt", ".md", ".json", ".jsonl", ".zip"]
+  do_not_ocr_unless_needed: true
+  remove_navigation_and_boilerplate: true
+  preserve_headings: true
+  preserve_source_metadata: true
+  preserve_section_hierarchy: true
+  strip_repeated_headers_footers: true
+  strip_page_numbers_when_safe: true
+  do_not_index_references_by_default: true
+  chunking:
+    strategy: heading_paragraph_sentence_then_fallback
+    target_chars: 500
+    overlap_chars: 80
+    min_chars: 120
+    max_chars: 900
+  review:
+    require_review_before_production_index: true
+    initial_status: pending
+    sample_review_size: 150
+  metadata_fields:
+    - source_id
+    - organization
+    - title
+    - year
+    - source_type
+    - target_collection
+    - topics
+    - language
+    - section
+    - subsection
+    - evidence_level
+    - user_facing
+    - official_page_url
+    - downloaded_url
+    - sha256
+    - review_status
+
+index_policy:
+  first_version:
+    dense_vector_store: chromadb
+    keyword_index: bm25
+    only_index_review_status: [approved]
+  collections:
+    - professional_knowledge
+    - interventions
+    - helping_skills
+    - campus_support
+    - safety
+    - evidence
+    - governance
+    - case_rag
+  safety_rules:
+    - "Safety collection must be queried only by Risk/Safety routing, never by generic similarity search alone."
+    - "Case RAG must remain separate from professional knowledge."
+    - "Governance/policy documents must not be treated as user-facing self-help instructions."
+    - "A retrieved source must retain exact provenance metadata."

@@ -1,0 +1,212 @@
+version: 2
+name: care_psy_knowledge_base_v2_coverage_matrix
+description: >
+  Coverage targets for CARE-Psy Knowledge Base V2. These labels are retrieval
+  and governance metadata, not clinical diagnoses or psychological scales.
+
+collections:
+  - professional_knowledge
+  - interventions
+  - helping_skills
+  - campus_support
+  - safety
+  - evidence
+  - governance
+  - case_rag
+
+use_modes:
+  - direct_user_support
+  - psychoeducation_only
+  - helping_skills_only
+  - agent_policy_only
+  - safety_only
+  - evidence_only
+  - clinical_reference_only
+
+chunk_types:
+  - psychoeducation
+  - coping_skill
+  - intervention_step
+  - exercise
+  - communication_skill
+  - helping_skill
+  - caregiver_support
+  - population_guidance
+  - safety_guidance
+  - referral_guidance
+  - policy
+  - clinical_reference
+  - evidence_summary
+
+populations:
+  - children
+  - adolescents
+  - young_adults
+  - adults
+  - middle_aged
+  - older_adults
+  - students
+  - university_students
+  - workers
+  - job_seekers
+  - parents
+  - caregivers
+  - pregnant_people
+  - postpartum_people
+  - people_experiencing_grief
+  - people_exposed_to_trauma
+  - people_with_chronic_illness
+  - family_members_supporting_others
+
+topics:
+  - stress
+  - anxiety
+  - low_mood
+  - depressive_feelings
+  - worry
+  - rumination
+  - panic
+  - sleep
+  - insomnia
+  - loneliness
+  - social_isolation
+  - anger
+  - frustration
+  - shame
+  - guilt
+  - grief
+  - bereavement
+  - self_criticism
+  - self_compassion
+  - self_esteem
+  - perfectionism
+  - procrastination
+  - avoidance
+  - motivation
+  - decision_making
+  - problem_solving
+  - emotion_regulation
+  - distress_tolerance
+  - friendship
+  - social_relationships
+  - romantic_relationships
+  - marriage
+  - family_relationships
+  - parent_child_relationship
+  - roommate_conflict
+  - communication
+  - assertiveness
+  - conflict_management
+  - breakup
+  - divorce
+  - caregiving_stress
+  - academic_pressure
+  - exam_stress
+  - thesis_pressure
+  - research_failure
+  - career_uncertainty
+  - employment_anxiety
+  - job_search
+  - work_stress
+  - burnout_related_distress
+  - workplace_relationship
+  - return_to_work
+  - retirement_transition
+  - depression
+  - anxiety_disorders
+  - social_anxiety
+  - OCD
+  - BDD
+  - PTSD
+  - eating_disorders
+  - bipolar_disorder
+  - psychosis
+  - ADHD
+  - autism
+  - dementia
+  - substance_use
+
+life_stages:
+  - child_development
+  - adolescent_development
+  - transition_to_adulthood
+  - college_transition
+  - career_transition
+  - marriage_transition
+  - parenthood
+  - pregnancy
+  - postpartum
+  - midlife_transition
+  - retirement
+  - aging
+  - bereavement
+
+safety_topics:
+  - self_harm
+  - suicidal_thoughts
+  - suicidal_plan
+  - harm_to_others
+  - abuse
+  - domestic_violence
+  - acute_crisis
+  - severe_psychosis
+  - mania
+  - severe_eating_disorder_risk
+  - substance_crisis
+  - minor_safeguarding
+  - perinatal_crisis
+
+intervention_families:
+  - psychoeducation
+  - cognitive_reappraisal
+  - behavioral_activation
+  - problem_solving
+  - grounding
+  - breathing_relaxation
+  - mindfulness_acceptance
+  - self_compassion
+  - sleep_hygiene
+  - communication_skills
+  - assertiveness
+  - social_support
+  - caregiver_self_care
+  - safety_planning_principles
+  - referral_guidance
+
+rating_policy:
+  strong:
+    min_trusted_source_families: 3
+    min_direct_chunks: 12
+  adequate:
+    min_trusted_source_families: 2
+    min_direct_chunks: 5
+  weak:
+    min_trusted_source_families: 1
+    min_direct_chunks: 1
+  missing:
+    min_trusted_source_families: 0
+    min_direct_chunks: 0
+
+retrieval_policy:
+  ordinary_advice_allowed:
+    user_facing: true
+    clinical_only: false
+    use_mode:
+      - direct_user_support
+    risk_scope:
+      - normal
+      - general
+  safety_route_only:
+    collection: safety
+    use_mode:
+      - safety_only
+    risk_scope:
+      - safety_route_only
+  excluded_from_ordinary_retrieval:
+    use_mode:
+      - safety_only
+      - evidence_only
+      - clinical_reference_only
+      - agent_policy_only
+      - helping_skills_only
+    clinical_only: true

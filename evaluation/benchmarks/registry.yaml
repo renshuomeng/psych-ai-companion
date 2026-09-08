@@ -1,0 +1,137 @@
+version: care_psy_benchmark_registry_v1
+frozen: true
+frozen_date: "2026-09-07"
+default_pack: care_psy_core_v1
+principle: >
+  CARE-Psy Benchmark V1 separates internal held-out evaluation cases from
+  training, RAG, and few-shot prompts. External benchmark datasets are registered
+  with official source links and local availability status, but are not treated
+  as integrated official results until the licensed raw files are present.
+systems:
+  direct_doubao:
+    name: Direct Doubao
+    description: Direct base-model response without CARE-Psy agent modules.
+  full_agent:
+    name: Current Full Agent
+    description: RiskAgent + EmotionAgent + PsychologicalStateAnalyzer + StrategyPlanner + RAG + CounselorAgent + SafetyAgent.
+  agent_without_rag:
+    name: Agent without RAG
+    description: Full agent with retrieval disabled.
+  agent_without_strategy:
+    name: Agent without StrategyPlanner
+    description: Full agent with strategy planner disabled.
+  agent_without_psychological_state:
+    name: Agent without PsychologicalStateAnalyzer
+    description: Full agent with psychological state analyzer disabled.
+  custom_agent:
+    name: Custom Ablation
+    description: User-selected module switches.
+benchmark_packs:
+  care_psy_core_v1:
+    name: CARE-Psy Core Benchmark V1
+    status: READY
+    pack_path: evaluation/benchmarks/packs/care_psy_core_v1.yaml
+    enabled_datasets:
+      - care_psy_internal_normal_v1
+      - care_psy_internal_safety_v1
+    total_ready_cases: 160
+external_benchmarks:
+  cpsycound_heldout:
+    name: CPsyCounD Held-out
+    status: DOWNLOAD_REQUIRED
+    local_raw_path: evaluation/benchmarks/raw/cpsycoun
+    official_source: https://github.com/CAS-SIAT-XinHai/CPsyCoun
+    role: external_generalization_test
+    note: Registered only. No local official rows are claimed in V1.
+  cpsycoune:
+    name: CPsyCounE
+    status: DOWNLOAD_REQUIRED
+    local_raw_path: evaluation/benchmarks/raw/cpsycoune
+    official_source: https://github.com/CAS-SIAT-XinHai/CPsyCoun
+    role: external_evaluation_axes
+    note: Metrics are represented in the compatible scorer; official evaluator/data are not vendored.
+  psydial_d101:
+    name: PsyDial-D101
+    status: DOWNLOAD_REQUIRED
+    local_raw_path: evaluation/benchmarks/raw/psydial_d101
+    official_source: https://github.com/qiuhuachuan/PsyDial
+    role: external_dialogue_test
+    note: Do not reuse training/normalized/psydial_d4_normalized.jsonl as benchmark data.
+  esc_eval_zh:
+    name: ESC-Eval Chinese
+    status: DOWNLOAD_REQUIRED
+    local_raw_path: evaluation/benchmarks/raw/esc_eval_zh
+    official_source: https://github.com/AIFlames/ESC-Eval
+    role: external_emotional_support_test
+    note: Registered for future licensed integration.
+  counselbench:
+    name: CounselBench
+    status: LICENSE_REVIEW_REQUIRED
+    local_raw_path: evaluation/benchmarks/raw/counselbench
+    official_source: https://arxiv.org/abs/2506.08584
+    role: external_counseling_quality_test
+    note: Manual acquisition and license review required before enabling.
+  care_bench:
+    name: CARE-Bench
+    status: PARTIAL_COMPATIBLE_ONLY
+    local_raw_path: evaluation/benchmarks/raw/care_bench
+    official_source: https://arxiv.org/abs/2511.09407
+    role: official_dimension_mapping
+    note: V1 keeps dimension names and reports compatible local heuristic scores only.
+frameworks:
+  care_bench:
+    name: CARE-Bench
+    official_status: Partial
+    local_status: Compatible
+    external_dir: evaluation/external/care_bench
+    metrics:
+      - {name: WAI Goal, direction: higher_is_better, scale: [1, 5]}
+      - {name: WAI Task, direction: higher_is_better, scale: [1, 5]}
+      - {name: WAI Bond, direction: higher_is_better, scale: [1, 5]}
+      - {name: BLRI Cognitive Empathy, direction: higher_is_better, scale: [1, 5]}
+      - {name: BLRI Affective Empathy, direction: higher_is_better, scale: [1, 5]}
+      - {name: BLRI Differentiated Empathy, direction: higher_is_better, scale: [1, 5]}
+      - {name: BLRI Inner Pattern, direction: higher_is_better, scale: [1, 5]}
+      - {name: CCS-R Probing, direction: higher_is_better, scale: [1, 5]}
+      - {name: CCS-R Therapeutic Environment, direction: higher_is_better, scale: [1, 5]}
+      - {name: CCS-R Reflecting, direction: higher_is_better, scale: [1, 5]}
+      - {name: CCS-R Change Facilitation, direction: higher_is_better, scale: [1, 5]}
+  esc_eval:
+    name: ESC-Eval
+    official_status: Unavailable
+    local_status: Compatible
+    external_dir: evaluation/external/esc_eval
+    metrics:
+      - {name: Fluency, direction: higher_is_better, scale: [1, 5]}
+      - {name: Expression, direction: higher_is_better, scale: [1, 5]}
+      - {name: Empathy, direction: higher_is_better, scale: [1, 5]}
+      - {name: Information, direction: higher_is_better, scale: [1, 5]}
+      - {name: Humanoid, direction: higher_is_better, scale: [1, 5]}
+      - {name: Skillful, direction: higher_is_better, scale: [1, 5]}
+      - {name: Overall, direction: higher_is_better, scale: [1, 5]}
+  cpsycoun:
+    name: CPsyCounE
+    official_status: Partial
+    local_status: Compatible
+    external_dir: evaluation/external/cpsycoun
+    metrics:
+      - {name: Comprehensiveness, direction: higher_is_better, scale: [1, 5]}
+      - {name: Professionalism, direction: higher_is_better, scale: [1, 5]}
+      - {name: Authenticity, direction: higher_is_better, scale: [1, 5]}
+      - {name: Safety, direction: higher_is_better, scale: [1, 5]}
+  counselbench:
+    name: CounselBench
+    official_status: Unavailable
+    local_status: Compatible
+    external_dir: evaluation/external/counselbench
+    metrics:
+      - {name: Overall Quality, direction: higher_is_better, scale: [1, 5]}
+      - {name: Empathy, direction: higher_is_better, scale: [1, 5]}
+      - {name: Specificity, direction: higher_is_better, scale: [1, 5]}
+      - {name: Medical Advice, direction: lower_is_better, scale: [0, 5]}
+      - {name: Factual Consistency, direction: higher_is_better, scale: [1, 5]}
+      - {name: Toxicity, direction: lower_is_better, scale: [0, 5]}
+judge:
+  default_provider: heuristic_local
+  default_model_id: ""
+  self_judge_policy: Candidate model and judge model must be configured independently. Mark self_judge=true if they resolve to the same paid model.

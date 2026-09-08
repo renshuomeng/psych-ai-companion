@@ -1,0 +1,106 @@
+{
+  "dataset": "psydial_d4",
+  "raw_file": "C:\\Users\\renshuomeng\\Downloads\\PsyDial-D4.json",
+  "raw_count": 2382,
+  "normalized_count": 2382,
+  "first_item_keys": [
+    "messages"
+  ],
+  "top_level_key_counts": {
+    "messages": 2382
+  },
+  "role_counts_after_normalization": {
+    "user": 90031,
+    "assistant": 90031
+  },
+  "first_pass_reject_counts": {
+    "high_risk_without_safety_response": 98,
+    "unsafe_boundary_medication_directive": 9
+  },
+  "length_percentiles_after_hard_filters": {
+    "turn_count": {
+      "p1": 24.0,
+      "p5": 32.0,
+      "p50": 70.0,
+      "p90": 118.0,
+      "p95": 140.0,
+      "p99": 174.0
+    },
+    "characters": {
+      "p1": 970.7,
+      "p5": 1281.0,
+      "p50": 2388.0,
+      "p90": 3772.2,
+      "p95": 4328.6,
+      "p99": 4993.64
+    },
+    "estimated_tokens": {
+      "p1": 649.22,
+      "p5": 865.7,
+      "p50": 1612.0,
+      "p90": 2537.2,
+      "p95": 2901.0,
+      "p99": 3364.26
+    }
+  },
+  "eligible_label_counts_top20": {
+    "group": {
+      "通用人群": 2275
+    },
+    "problem": {
+      "学习与论文压力": 942,
+      "就业与未来焦虑": 818,
+      "人际关系": 468,
+      "家庭压力": 26,
+      "孤独与低落": 9,
+      "自我与控制感": 5,
+      "亲密关系": 4,
+      "睡眠困扰": 1,
+      "情绪调节": 1,
+      "通用心理支持": 1
+    },
+    "cause": {
+      "unknown_cause": 2275
+    },
+    "support_focus": {
+      "认知重评、情绪命名、行动计划": 1399,
+      "安全支持、认知重评、情绪命名": 472,
+      "认知重评、情绪命名、社会支持": 148,
+      "情绪命名、行动计划、社会支持": 124,
+      "认知重评、情绪命名": 20,
+      "情绪命名、行动计划、自我接纳": 20,
+      "安全支持、情绪命名、行动计划": 20,
+      "情绪命名、行动计划": 14,
+      "认知重评、情绪命名、自我接纳": 13,
+      "情绪命名、社会支持、自我接纳": 12,
+      "安全支持、情绪命名、社会支持": 11,
+      "情绪命名、社会支持": 8,
+      "情绪命名、自我接纳": 4,
+      "认知重评、行动计划、社会支持": 3,
+      "情绪命名": 2,
+      "安全支持、情绪命名、自我接纳": 2,
+      "认知重评、行动计划、自我接纳": 1,
+      "认知重评、行动计划": 1,
+      "行动计划、社会支持": 1
+    },
+    "severity": {
+      "medium": 1960,
+      "low": 292,
+      "high": 23
+    },
+    "strategy": {
+      "empathy_validation": 2265,
+      "emotion_labeling": 2263,
+      "open_question": 2169,
+      "cognitive_reframe": 1505,
+      "problem_solving": 958,
+      "grounding_relaxation": 623,
+      "safety_planning": 513,
+      "resource_referral": 458,
+      "psychoeducation": 448,
+      "supportive_dialogue": 1
+    }
+  },
+  "normalization_error_examples": [],
+  "normalized_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\normalized\\psydial_d4_normalized.jsonl"
+}

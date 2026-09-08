@@ -1,0 +1,384 @@
+{
+  "created_at": "2026-09-03T02:07:38+00:00",
+  "project_root": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion",
+  "git": {
+    "available": false,
+    "status": "not_a_git_repository"
+  },
+  "registry": {
+    "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/sources/knowledge_sources.yaml",
+    "hash": "460caea0b4822d91f57af8c3a41cb8aceff690a0ca345b358d8ed310d40154da",
+    "version": 2,
+    "name": "care_psy_knowledge_base_v2",
+    "sources": 67,
+    "enabled_sources": 67,
+    "auto_download_sources": 67,
+    "collections": [
+      "campus_support",
+      "case_rag",
+      "evidence",
+      "governance",
+      "helping_skills",
+      "interventions",
+      "professional_knowledge",
+      "safety"
+    ]
+  },
+  "documents": {
+    "cleaned_json": 320,
+    "last_build_parsed_documents": 320
+  },
+  "chunks": {
+    "total": 13166,
+    "pending": 1648,
+    "approved": 6631,
+    "rejected": 4887,
+    "indexable_staging": 8279,
+    "indexable_production": 6631,
+    "counters": {
+      "review_status": {
+        "pending": 1648,
+        "approved": 6631,
+        "rejected": 4887
+      },
+      "collection": {
+        "professional_knowledge": 1626,
+        "interventions": 6909,
+        "safety": 817,
+        "helping_skills": 2500,
+        "governance": 307,
+        "campus_support": 36,
+        "evidence": 971
+      },
+      "language": {
+        "en": 12088,
+        "zh-CN": 1078
+      },
+      "source": {
+        "CCI_BIPOLAR": 240,
+        "CCI_BODY_DYSMORPHIA": 310,
+        "CCI_DISORDERED_EATING": 273,
+        "CCI_SELF_ESTEEM": 587,
+        "NICE_SELF_HARM": 198,
+        "NIMH_AUTISM": 17,
+        "NIMH_EATING_DISORDERS": 15,
+        "NIMH_SUICIDE_PREVENTION": 18,
+        "VA_SKILLS_PSYCHOLOGICAL_RECOVERY": 77,
+        "WHO_EASE_INTERVENTION_2023": 611,
+        "WHO_EASE_TRAINING_2025": 812,
+        "WHO_GROUP_PM_PLUS_2020": 538,
+        "WHO_GROUP_PM_PLUS_TRAINING_2026": 584,
+        "WHO_HELPING_SKILLS_2025": 458,
+        "WHO_PFA_FACILITATOR_2013": 3,
+        "WHO_PM_PLUS_TRAINING_2025": 563,
+        "WHO_SAFETY_PLANNING_2023": 4,
+        "WHO_SELFHELP_2026": 418,
+        "WHO_THINKING_HEALTHY_2015": 1,
+        "CCI_ANXIETY": 365,
+        "CCI_ASSERTIVENESS": 194,
+        "CCI_DEPRESSION": 208,
+        "CCI_DISTRESS_TOLERANCE": 372,
+        "CCI_HEALTH_ANXIETY": 290,
+        "CCI_PANIC": 217,
+        "CCI_PERFECTIONISM": 577,
+        "CCI_PROCRASTINATION": 450,
+        "CCI_SELF_COMPASSION": 445,
+        "CCI_SLEEP": 119,
+        "CCI_SOCIAL_ANXIETY": 1017,
+        "CCI_WORRY_RUMINATION": 584,
+        "NHS_CBT_HUB": 26,
+        "NHS_PROBLEM_SOLVING": 30,
+        "NHS_SLEEP": 26,
+        "NHS_THOUGHT_RECORD": 19,
+        "NHS_TODO_LIST": 30,
+        "NHS_WORRIES": 28,
+        "NIMH_ADHD": 30,
+        "NIMH_ANXIETY": 17,
+        "NIMH_BIPOLAR": 16,
+        "NIMH_DEPRESSION": 18,
+        "NIMH_OCD": 14,
+        "NIMH_PTSD": 18,
+        "UNICEF_PARENTING_MH": 19,
+        "WHO_DEMENTIA_ACTION_PLAN_2017": 114,
+        "WHO_DWM_STRESS_2020": 270,
+        "WHO_PM_PLUS_2018": 7,
+        "CN_MOE_SCHOOL_MH_GUIDE": 39,
+        "MOE_HIGHER_ED_MH_GUIDE_2018": 17,
+        "MOE_STUDENT_MH_ACTION_2023_2025": 19,
+        "NICE_DEPRESSION": 229,
+        "NICE_GAD_PANIC": 104,
+        "WHO_LIVE_LIFE_2021": 597,
+        "WHO_MHGAP_2023": 635,
+        "WHO_PFA_GUIDE_2011": 3,
+        "WHO_PSYCH_IMPLEMENTATION_2024": 265,
+        "WHO_SH_PLUS_2021": 5,
+        "WHO_WORK_GUIDELINE_2022": 3,
+        "WHO_WORK_POLICY_BRIEF_2022": 3
+      },
+      "chunk_type": {
+        "exercise": 792,
+        "psychoeducation": 7334,
+        "safety_guidance": 817,
+        "helping_skill": 2500,
+        "intervention_step": 187,
+        "communication_skill": 214,
+        "policy": 351,
+        "clinical_reference": 968,
+        "evidence_summary": 3
+      },
+      "use_mode": {
+        "psychoeducation_only": 1581,
+        "direct_user_support": 6954,
+        "safety_only": 817,
+        "helping_skills_only": 2500,
+        "agent_policy_only": 343,
+        "clinical_reference_only": 968,
+        "evidence_only": 3
+      },
+      "risk_scope": {
+        "normal": 12349,
+        "safety_route_only": 817
+      }
+    }
+  },
+  "indexes": {
+    "bm25_staging_documents": 8279,
+    "bm25_staging_dir": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/bm25/staging",
+    "bm25_production_documents": 6631,
+    "bm25_production_dir": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/bm25/production",
+    "chroma_path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/chroma",
+    "chroma_collections": {
+      "psych_professional_knowledge_production": 990,
+      "psych_helping_skills_staging": 1355,
+      "psych_professional_knowledge_staging": 1174,
+      "psych_governance_staging": 0,
+      "psych_helping_skills_production": 673,
+      "psych_campus_support_staging": 0,
+      "psych_safety_production": 0,
+      "psych_evidence_production": 0,
+      "psych_evidence_staging": 0,
+      "psych_governance_production": 0,
+      "psych_interventions_staging": 5602,
+      "psych_safety_staging": 148,
+      "psych_interventions_production": 4968,
+      "psych_campus_support_production": 0
+    },
+    "dense_staging_vectors": 8279,
+    "dense_production_vectors": 6631
+  },
+  "embedding": {
+    "provider": "local",
+    "model": "BAAI/bge-m3",
+    "batch_size": 16,
+    "cache_dir": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/models",
+    "cache": {
+      "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/chroma/embedding_cache.jsonl",
+      "exists": true,
+      "records": 11208,
+      "dimensions_sample": [
+        1024
+      ],
+      "models_sample": {}
+    }
+  },
+  "retrieval": {
+    "index_mode": "production",
+    "bm25_enabled": true,
+    "dense_enabled": true,
+    "bm25_top_k": 16,
+    "dense_top_k": 12,
+    "final_top_k": 4,
+    "min_relevance_score": 0.26,
+    "min_vector_score": 0.46,
+    "hybrid_fusion": "rrf",
+    "rrf_k": 45,
+    "legacy_max_dense_chunks": 512,
+    "build_sample_mode": false,
+    "build_sample_limit": 512
+  },
+  "benchmark": {
+    "exists": true,
+    "created_at": "2026-09-02T15:53:49+00:00",
+    "cases": 162,
+    "index_mode": "staging",
+    "top_k": 5,
+    "summary": {
+      "bm25_hit_at_1": 0.9568,
+      "bm25_hit_at_3": 0.9568,
+      "bm25_hit_at_5": 0.9568,
+      "bm25_recall_at_1": 0.5317,
+      "bm25_recall_at_3": 0.5626,
+      "bm25_recall_at_5": 0.5914,
+      "bm25_mrr_at_5": 0.9568,
+      "bm25_ndcg_at_5": 0.9552,
+      "bm25_no_result": 0.0185,
+      "bm25_wrong_population_retrieval_rate": 0.184,
+      "bm25_wrong_use_mode_retrieval_rate": 0.0,
+      "bm25_safety_leakage_rate": 0.0,
+      "bm25_duplicate_retrieval_rate": 0.0852,
+      "bm25_language_preference_accuracy": 0.0136,
+      "dense_hit_at_1": 0.7037,
+      "dense_hit_at_3": 0.8086,
+      "dense_hit_at_5": 0.8395,
+      "dense_recall_at_1": 0.3134,
+      "dense_recall_at_3": 0.4163,
+      "dense_recall_at_5": 0.4787,
+      "dense_mrr_at_5": 0.7572,
+      "dense_ndcg_at_5": 0.7721,
+      "dense_no_result": 0.0062,
+      "dense_wrong_population_retrieval_rate": 0.1827,
+      "dense_wrong_use_mode_retrieval_rate": 0.0,
+      "dense_safety_leakage_rate": 0.0,
+      "dense_duplicate_retrieval_rate": 0.0988,
+      "dense_language_preference_accuracy": 0.0222,
+      "hybrid_hit_at_1": 0.9136,
+      "hybrid_hit_at_3": 0.9506,
+      "hybrid_hit_at_5": 0.9568,
+      "hybrid_recall_at_1": 0.5353,
+      "hybrid_recall_at_3": 0.6011,
+      "hybrid_recall_at_5": 0.6274,
+      "hybrid_mrr_at_5": 0.9333,
+      "hybrid_ndcg_at_5": 0.9249,
+      "hybrid_no_result": 0.0062,
+      "hybrid_wrong_population_retrieval_rate": 0.1321,
+      "hybrid_wrong_use_mode_retrieval_rate": 0.0,
+      "hybrid_safety_leakage_rate": 0.0,
+      "hybrid_duplicate_retrieval_rate": 0.0,
+      "hybrid_language_preference_accuracy": 0.0407,
+      "ordinary_rag_safety_leakage_rate": 0.0,
+      "ordinary_rag_wrong_use_mode_rate": 0.0,
+      "hybrid_wrong_use_mode_rate": 0.0
+    }
+  },
+  "build_report": {
+    "exists": true,
+    "created_at": "2026-09-02T15:16:30.923824+00:00",
+    "index_mode": "staging",
+    "sample_mode": false,
+    "sample_limit": 512,
+    "registry_sources": 67,
+    "parsed_documents": 320,
+    "chunks": 13166,
+    "embedding": {
+      "provider": "local",
+      "model": "BAAI/bge-m3",
+      "dimension": 1024,
+      "total": 8279,
+      "cache_hits": 8279,
+      "new_embeddings": 0,
+      "duration_ms": 6611,
+      "status": "ready",
+      "indexed_chunks": 8279,
+      "eligible_chunks": 8279,
+      "total_chunks": 13166,
+      "scope": "all_eligible_chunks",
+      "sample_mode": false
+    },
+    "bm25": {
+      "status": "ready",
+      "documents": 8279,
+      "average_tokens": 373.08
+    },
+    "chroma_collections": {
+      "psych_campus_support_staging": {
+        "collection": "campus_support",
+        "count": 0,
+        "status": "ready"
+      },
+      "psych_evidence_staging": {
+        "collection": "evidence",
+        "count": 0,
+        "status": "ready"
+      },
+      "psych_governance_staging": {
+        "collection": "governance",
+        "count": 0,
+        "status": "ready"
+      },
+      "psych_helping_skills_staging": {
+        "collection": "helping_skills",
+        "count": 1355,
+        "status": "ready"
+      },
+      "psych_interventions_staging": {
+        "collection": "interventions",
+        "count": 5602,
+        "status": "ready"
+      },
+      "psych_professional_knowledge_staging": {
+        "collection": "professional_knowledge",
+        "count": 1174,
+        "status": "ready"
+      },
+      "psych_safety_staging": {
+        "collection": "safety",
+        "count": 148,
+        "status": "ready"
+      }
+    }
+  },
+  "queries": {
+    "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/evaluation/rag_v2/retrieval_queries.jsonl",
+    "count": 162
+  },
+  "chinese_direct_support": {
+    "count": 282,
+    "by_topic": {
+      "stress": 282
+    },
+    "by_collection": {
+      "interventions": 282
+    },
+    "by_population": {
+      "adults": 282,
+      "adolescents": 270,
+      "young_adults": 270,
+      "older_adults": 270,
+      "people_exposed_to_trauma": 12,
+      "children": 5,
+      "workers": 5
+    }
+  },
+  "review_priority": {
+    "exists": true,
+    "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_summary.json",
+    "created_at": "2026-09-01T08:34:37+00:00",
+    "buckets": {
+      "p0_safety": {
+        "rows": 150,
+        "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p0_safety.csv"
+      },
+      "p1_interventions": {
+        "rows": 49,
+        "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p1_interventions.csv"
+      },
+      "p1_children": {
+        "rows": 1260,
+        "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p1_children.csv"
+      },
+      "p1_perinatal": {
+        "rows": 0,
+        "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p1_perinatal.csv"
+      },
+      "p2_general": {
+        "rows": 189,
+        "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p2_general.csv"
+      },
+      "high_risk": {
+        "rows": 150,
+        "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_high_risk.csv"
+      },
+      "p1": {
+        "rows": 864,
+        "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p1.csv"
+      },
+      "p2": {
+        "rows": 0,
+        "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p2.csv"
+      }
+    }
+  },
+  "production_ready": true,
+  "staging_ready": true,
+  "production_blockers": []
+}

@@ -1,0 +1,1403 @@
+{
+  "created_at": "2026-08-22T15:06:57+00:00",
+  "knowledge_base_version": "V2",
+  "population": [
+    {
+      "label": "children",
+      "rating": "Strong",
+      "trusted_source_count": 3,
+      "chunk_count": 66,
+      "direct_or_psychoeducation_chunks": 66,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "NIMH_ADHD",
+        "NIMH_AUTISM",
+        "UNICEF_PARENTING_MH"
+      ]
+    },
+    {
+      "label": "adolescents",
+      "rating": "Strong",
+      "trusted_source_count": 17,
+      "chunk_count": 3566,
+      "direct_or_psychoeducation_chunks": 1302,
+      "chinese_chunks": 867,
+      "source_ids": [
+        "CCI_DISORDERED_EATING",
+        "NICE_SELF_HARM",
+        "NIMH_ADHD",
+        "NIMH_ANXIETY",
+        "NIMH_AUTISM",
+        "NIMH_DEPRESSION",
+        "NIMH_EATING_DISORDERS",
+        "NIMH_OCD",
+        "NIMH_PTSD",
+        "NIMH_SUICIDE_PREVENTION"
+      ]
+    },
+    {
+      "label": "young_adults",
+      "rating": "Strong",
+      "trusted_source_count": 33,
+      "chunk_count": 7287,
+      "direct_or_psychoeducation_chunks": 6968,
+      "chinese_chunks": 306,
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION"
+      ]
+    },
+    {
+      "label": "adults",
+      "rating": "Strong",
+      "trusted_source_count": 49,
+      "chunk_count": 11484,
+      "direct_or_psychoeducation_chunks": 7790,
+      "chinese_chunks": 918,
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_BIPOLAR",
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_DEPRESSION",
+        "CCI_DISORDERED_EATING",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_PERFECTIONISM"
+      ]
+    },
+    {
+      "label": "middle_aged",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "older_adults",
+      "rating": "Strong",
+      "trusted_source_count": 9,
+      "chunk_count": 2083,
+      "direct_or_psychoeducation_chunks": 402,
+      "chinese_chunks": 981,
+      "source_ids": [
+        "NICE_DEPRESSION",
+        "NICE_SELF_HARM",
+        "NIMH_DEPRESSION",
+        "NIMH_SUICIDE_PREVENTION",
+        "WHO_DEMENTIA_ACTION_PLAN_2017",
+        "WHO_DWM_STRESS_2020",
+        "WHO_LIVE_LIFE_2021",
+        "WHO_MHGAP_2023",
+        "WHO_SAFETY_PLANNING_2023"
+      ]
+    },
+    {
+      "label": "students",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "university_students",
+      "rating": "Strong",
+      "trusted_source_count": 20,
+      "chunk_count": 5588,
+      "direct_or_psychoeducation_chunks": 5287,
+      "chinese_chunks": 36,
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_ASSERTIVENESS",
+        "CCI_DISTRESS_TOLERANCE",
+        "CCI_PERFECTIONISM",
+        "CCI_PROCRASTINATION",
+        "CCI_SELF_COMPASSION",
+        "CCI_SELF_ESTEEM",
+        "CCI_SLEEP",
+        "CCI_SOCIAL_ANXIETY",
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "label": "workers",
+      "rating": "Strong",
+      "trusted_source_count": 4,
+      "chunk_count": 429,
+      "direct_or_psychoeducation_chunks": 423,
+      "chinese_chunks": 8,
+      "source_ids": [
+        "WHO_SELFHELP_2026",
+        "WHO_SH_PLUS_2021",
+        "WHO_WORK_GUIDELINE_2022",
+        "WHO_WORK_POLICY_BRIEF_2022"
+      ]
+    },
+    {
+      "label": "job_seekers",
+      "rating": "Missing",
+      "trusted_source_count": 2,
+      "chunk_count": 6,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 3,
+      "source_ids": [
+        "WHO_WORK_GUIDELINE_2022",
+        "WHO_WORK_POLICY_BRIEF_2022"
+      ]
+    },
+    {
+      "label": "parents",
+      "rating": "Strong",
+      "trusted_source_count": 5,
+      "chunk_count": 725,
+      "direct_or_psychoeducation_chunks": 648,
+      "chinese_chunks": 1,
+      "source_ids": [
+        "NIMH_AUTISM",
+        "UNICEF_PARENTING_MH",
+        "VA_SKILLS_PSYCHOLOGICAL_RECOVERY",
+        "WHO_EASE_INTERVENTION_2023",
+        "WHO_THINKING_HEALTHY_2015"
+      ]
+    },
+    {
+      "label": "caregivers",
+      "rating": "Strong",
+      "trusted_source_count": 6,
+      "chunk_count": 1650,
+      "direct_or_psychoeducation_chunks": 761,
+      "chinese_chunks": 114,
+      "source_ids": [
+        "NIMH_AUTISM",
+        "UNICEF_PARENTING_MH",
+        "VA_SKILLS_PSYCHOLOGICAL_RECOVERY",
+        "WHO_DEMENTIA_ACTION_PLAN_2017",
+        "WHO_EASE_INTERVENTION_2023",
+        "WHO_EASE_TRAINING_2025"
+      ]
+    },
+    {
+      "label": "pregnant_people",
+      "rating": "Adequate",
+      "trusted_source_count": 1,
+      "chunk_count": 1,
+      "direct_or_psychoeducation_chunks": 1,
+      "chinese_chunks": 1,
+      "source_ids": [
+        "WHO_THINKING_HEALTHY_2015"
+      ]
+    },
+    {
+      "label": "postpartum_people",
+      "rating": "Adequate",
+      "trusted_source_count": 1,
+      "chunk_count": 1,
+      "direct_or_psychoeducation_chunks": 1,
+      "chinese_chunks": 1,
+      "source_ids": [
+        "WHO_THINKING_HEALTHY_2015"
+      ]
+    },
+    {
+      "label": "people_experiencing_grief",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "people_exposed_to_trauma",
+      "rating": "Strong",
+      "trusted_source_count": 7,
+      "chunk_count": 651,
+      "direct_or_psychoeducation_chunks": 568,
+      "chinese_chunks": 18,
+      "source_ids": [
+        "NIMH_PTSD",
+        "VA_SKILLS_PSYCHOLOGICAL_RECOVERY",
+        "WHO_GROUP_PM_PLUS_2020",
+        "WHO_PFA_FACILITATOR_2013",
+        "WHO_PFA_GUIDE_2011",
+        "WHO_PM_PLUS_2018",
+        "WHO_SH_PLUS_2021"
+      ]
+    },
+    {
+      "label": "people_with_chronic_illness",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "family_members_supporting_others",
+      "rating": "Strong",
+      "trusted_source_count": 5,
+      "chunk_count": 1141,
+      "direct_or_psychoeducation_chunks": 114,
+      "chinese_chunks": 120,
+      "source_ids": [
+        "WHO_DEMENTIA_ACTION_PLAN_2017",
+        "WHO_HELPING_SKILLS_2025",
+        "WHO_PFA_FACILITATOR_2013",
+        "WHO_PFA_GUIDE_2011",
+        "WHO_PM_PLUS_TRAINING_2025"
+      ]
+    }
+  ],
+  "topic": [
+    {
+      "label": "stress",
+      "rating": "Strong",
+      "trusted_source_count": 9,
+      "chunk_count": 2270,
+      "direct_or_psychoeducation_chunks": 2270,
+      "chinese_chunks": 282,
+      "source_ids": [
+        "CCI_ANXIETY",
+        "NHS_CBT_HUB",
+        "NHS_PROBLEM_SOLVING",
+        "WHO_DWM_STRESS_2020",
+        "WHO_EASE_INTERVENTION_2023",
+        "WHO_GROUP_PM_PLUS_2020",
+        "WHO_PM_PLUS_2018",
+        "WHO_SELFHELP_2026",
+        "WHO_SH_PLUS_2021"
+      ]
+    },
+    {
+      "label": "anxiety",
+      "rating": "Strong",
+      "trusted_source_count": 10,
+      "chunk_count": 2164,
+      "direct_or_psychoeducation_chunks": 2164,
+      "chinese_chunks": 7,
+      "source_ids": [
+        "CCI_ANXIETY",
+        "CCI_HEALTH_ANXIETY",
+        "CCI_PANIC",
+        "CCI_WORRY_RUMINATION",
+        "NHS_CBT_HUB",
+        "NHS_THOUGHT_RECORD",
+        "NHS_WORRIES",
+        "NIMH_ANXIETY",
+        "WHO_EASE_INTERVENTION_2023",
+        "WHO_PM_PLUS_2018"
+      ]
+    },
+    {
+      "label": "low_mood",
+      "rating": "Strong",
+      "trusted_source_count": 5,
+      "chunk_count": 870,
+      "direct_or_psychoeducation_chunks": 870,
+      "chinese_chunks": 7,
+      "source_ids": [
+        "CCI_DEPRESSION",
+        "NHS_CBT_HUB",
+        "NIMH_DEPRESSION",
+        "WHO_EASE_INTERVENTION_2023",
+        "WHO_PM_PLUS_2018"
+      ]
+    },
+    {
+      "label": "depressive_feelings",
+      "rating": "Adequate",
+      "trusted_source_count": 1,
+      "chunk_count": 1,
+      "direct_or_psychoeducation_chunks": 1,
+      "chinese_chunks": 1,
+      "source_ids": [
+        "WHO_THINKING_HEALTHY_2015"
+      ]
+    },
+    {
+      "label": "worry",
+      "rating": "Strong",
+      "trusted_source_count": 4,
+      "chunk_count": 928,
+      "direct_or_psychoeducation_chunks": 928,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_HEALTH_ANXIETY",
+        "CCI_WORRY_RUMINATION",
+        "NHS_SLEEP",
+        "NHS_WORRIES"
+      ]
+    },
+    {
+      "label": "rumination",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 584,
+      "direct_or_psychoeducation_chunks": 584,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_WORRY_RUMINATION"
+      ]
+    },
+    {
+      "label": "panic",
+      "rating": "Strong",
+      "trusted_source_count": 3,
+      "chunk_count": 338,
+      "direct_or_psychoeducation_chunks": 234,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_PANIC",
+        "NICE_GAD_PANIC",
+        "NIMH_ANXIETY"
+      ]
+    },
+    {
+      "label": "sleep",
+      "rating": "Strong",
+      "trusted_source_count": 4,
+      "chunk_count": 462,
+      "direct_or_psychoeducation_chunks": 385,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_BIPOLAR",
+        "CCI_SLEEP",
+        "NHS_SLEEP",
+        "VA_SKILLS_PSYCHOLOGICAL_RECOVERY"
+      ]
+    },
+    {
+      "label": "insomnia",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 119,
+      "direct_or_psychoeducation_chunks": 119,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_SLEEP"
+      ]
+    },
+    {
+      "label": "loneliness",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "social_isolation",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "anger",
+      "rating": "Missing",
+      "trusted_source_count": 1,
+      "chunk_count": 77,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "VA_SKILLS_PSYCHOLOGICAL_RECOVERY"
+      ]
+    },
+    {
+      "label": "frustration",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "shame",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 445,
+      "direct_or_psychoeducation_chunks": 445,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_SELF_COMPASSION"
+      ]
+    },
+    {
+      "label": "guilt",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "grief",
+      "rating": "Missing",
+      "trusted_source_count": 1,
+      "chunk_count": 77,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "VA_SKILLS_PSYCHOLOGICAL_RECOVERY"
+      ]
+    },
+    {
+      "label": "bereavement",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "self_criticism",
+      "rating": "Adequate",
+      "trusted_source_count": 2,
+      "chunk_count": 755,
+      "direct_or_psychoeducation_chunks": 755,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_BODY_DYSMORPHIA",
+        "CCI_SELF_COMPASSION"
+      ]
+    },
+    {
+      "label": "self_compassion",
+      "rating": "Strong",
+      "trusted_source_count": 4,
+      "chunk_count": 1007,
+      "direct_or_psychoeducation_chunks": 1007,
+      "chinese_chunks": 270,
+      "source_ids": [
+        "CCI_DISORDERED_EATING",
+        "CCI_SELF_COMPASSION",
+        "UNICEF_PARENTING_MH",
+        "WHO_DWM_STRESS_2020"
+      ]
+    },
+    {
+      "label": "self_esteem",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 587,
+      "direct_or_psychoeducation_chunks": 587,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_SELF_ESTEEM"
+      ]
+    },
+    {
+      "label": "perfectionism",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 577,
+      "direct_or_psychoeducation_chunks": 577,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_PERFECTIONISM"
+      ]
+    },
+    {
+      "label": "procrastination",
+      "rating": "Adequate",
+      "trusted_source_count": 2,
+      "chunk_count": 480,
+      "direct_or_psychoeducation_chunks": 480,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_PROCRASTINATION",
+        "NHS_TODO_LIST"
+      ]
+    },
+    {
+      "label": "avoidance",
+      "rating": "Strong",
+      "trusted_source_count": 3,
+      "chunk_count": 1497,
+      "direct_or_psychoeducation_chunks": 1497,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_PROCRASTINATION",
+        "CCI_SOCIAL_ANXIETY",
+        "NHS_TODO_LIST"
+      ]
+    },
+    {
+      "label": "motivation",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 30,
+      "direct_or_psychoeducation_chunks": 30,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "NHS_TODO_LIST"
+      ]
+    },
+    {
+      "label": "decision_making",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "problem_solving",
+      "rating": "Strong",
+      "trusted_source_count": 5,
+      "chunk_count": 1070,
+      "direct_or_psychoeducation_chunks": 993,
+      "chinese_chunks": 7,
+      "source_ids": [
+        "NHS_PROBLEM_SOLVING",
+        "VA_SKILLS_PSYCHOLOGICAL_RECOVERY",
+        "WHO_GROUP_PM_PLUS_2020",
+        "WHO_PM_PLUS_2018",
+        "WHO_SELFHELP_2026"
+      ]
+    },
+    {
+      "label": "emotion_regulation",
+      "rating": "Strong",
+      "trusted_source_count": 3,
+      "chunk_count": 1253,
+      "direct_or_psychoeducation_chunks": 1253,
+      "chinese_chunks": 270,
+      "source_ids": [
+        "CCI_DISTRESS_TOLERANCE",
+        "WHO_DWM_STRESS_2020",
+        "WHO_EASE_INTERVENTION_2023"
+      ]
+    },
+    {
+      "label": "distress_tolerance",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 372,
+      "direct_or_psychoeducation_chunks": 372,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_DISTRESS_TOLERANCE"
+      ]
+    },
+    {
+      "label": "friendship",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "social_relationships",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "romantic_relationships",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "marriage",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "family_relationships",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "parent_child_relationship",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 19,
+      "direct_or_psychoeducation_chunks": 19,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "UNICEF_PARENTING_MH"
+      ]
+    },
+    {
+      "label": "roommate_conflict",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "communication",
+      "rating": "Strong",
+      "trusted_source_count": 8,
+      "chunk_count": 2636,
+      "direct_or_psychoeducation_chunks": 213,
+      "chinese_chunks": 6,
+      "source_ids": [
+        "CCI_ASSERTIVENESS",
+        "UNICEF_PARENTING_MH",
+        "WHO_EASE_TRAINING_2025",
+        "WHO_GROUP_PM_PLUS_TRAINING_2026",
+        "WHO_HELPING_SKILLS_2025",
+        "WHO_PFA_FACILITATOR_2013",
+        "WHO_PFA_GUIDE_2011",
+        "WHO_PM_PLUS_TRAINING_2025"
+      ]
+    },
+    {
+      "label": "assertiveness",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 194,
+      "direct_or_psychoeducation_chunks": 194,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_ASSERTIVENESS"
+      ]
+    },
+    {
+      "label": "conflict_management",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 194,
+      "direct_or_psychoeducation_chunks": 194,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_ASSERTIVENESS"
+      ]
+    },
+    {
+      "label": "breakup",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "divorce",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "caregiving_stress",
+      "rating": "Adequate",
+      "trusted_source_count": 2,
+      "chunk_count": 133,
+      "direct_or_psychoeducation_chunks": 133,
+      "chinese_chunks": 114,
+      "source_ids": [
+        "UNICEF_PARENTING_MH",
+        "WHO_DEMENTIA_ACTION_PLAN_2017"
+      ]
+    },
+    {
+      "label": "academic_pressure",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "exam_stress",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "thesis_pressure",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "research_failure",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "career_uncertainty",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "employment_anxiety",
+      "rating": "Missing",
+      "trusted_source_count": 1,
+      "chunk_count": 3,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 3,
+      "source_ids": [
+        "WHO_WORK_GUIDELINE_2022"
+      ]
+    },
+    {
+      "label": "job_search",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "work_stress",
+      "rating": "Missing",
+      "trusted_source_count": 2,
+      "chunk_count": 6,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 3,
+      "source_ids": [
+        "WHO_WORK_GUIDELINE_2022",
+        "WHO_WORK_POLICY_BRIEF_2022"
+      ]
+    },
+    {
+      "label": "burnout_related_distress",
+      "rating": "Missing",
+      "trusted_source_count": 1,
+      "chunk_count": 3,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 3,
+      "source_ids": [
+        "WHO_WORK_GUIDELINE_2022"
+      ]
+    },
+    {
+      "label": "workplace_relationship",
+      "rating": "Missing",
+      "trusted_source_count": 1,
+      "chunk_count": 3,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "WHO_WORK_POLICY_BRIEF_2022"
+      ]
+    },
+    {
+      "label": "return_to_work",
+      "rating": "Missing",
+      "trusted_source_count": 2,
+      "chunk_count": 6,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 3,
+      "source_ids": [
+        "WHO_WORK_GUIDELINE_2022",
+        "WHO_WORK_POLICY_BRIEF_2022"
+      ]
+    },
+    {
+      "label": "retirement_transition",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "depression",
+      "rating": "Strong",
+      "trusted_source_count": 5,
+      "chunk_count": 1091,
+      "direct_or_psychoeducation_chunks": 227,
+      "chinese_chunks": 1,
+      "source_ids": [
+        "CCI_DEPRESSION",
+        "NICE_DEPRESSION",
+        "NIMH_DEPRESSION",
+        "WHO_MHGAP_2023",
+        "WHO_THINKING_HEALTHY_2015"
+      ]
+    },
+    {
+      "label": "anxiety_disorders",
+      "rating": "Strong",
+      "trusted_source_count": 4,
+      "chunk_count": 770,
+      "direct_or_psychoeducation_chunks": 31,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "NICE_GAD_PANIC",
+        "NIMH_ANXIETY",
+        "NIMH_OCD",
+        "WHO_MHGAP_2023"
+      ]
+    },
+    {
+      "label": "social_anxiety",
+      "rating": "Adequate",
+      "trusted_source_count": 2,
+      "chunk_count": 1034,
+      "direct_or_psychoeducation_chunks": 1034,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_SOCIAL_ANXIETY",
+        "NIMH_ANXIETY"
+      ]
+    },
+    {
+      "label": "OCD",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 14,
+      "direct_or_psychoeducation_chunks": 14,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "NIMH_OCD"
+      ]
+    },
+    {
+      "label": "BDD",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 310,
+      "direct_or_psychoeducation_chunks": 310,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_BODY_DYSMORPHIA"
+      ]
+    },
+    {
+      "label": "PTSD",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 18,
+      "direct_or_psychoeducation_chunks": 18,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "NIMH_PTSD"
+      ]
+    },
+    {
+      "label": "eating_disorders",
+      "rating": "Adequate",
+      "trusted_source_count": 2,
+      "chunk_count": 288,
+      "direct_or_psychoeducation_chunks": 288,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_DISORDERED_EATING",
+        "NIMH_EATING_DISORDERS"
+      ]
+    },
+    {
+      "label": "bipolar_disorder",
+      "rating": "Strong",
+      "trusted_source_count": 3,
+      "chunk_count": 891,
+      "direct_or_psychoeducation_chunks": 256,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_BIPOLAR",
+        "NIMH_BIPOLAR",
+        "WHO_MHGAP_2023"
+      ]
+    },
+    {
+      "label": "psychosis",
+      "rating": "Missing",
+      "trusted_source_count": 1,
+      "chunk_count": 635,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "WHO_MHGAP_2023"
+      ]
+    },
+    {
+      "label": "ADHD",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 30,
+      "direct_or_psychoeducation_chunks": 30,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "NIMH_ADHD"
+      ]
+    },
+    {
+      "label": "autism",
+      "rating": "Weak",
+      "trusted_source_count": 1,
+      "chunk_count": 17,
+      "direct_or_psychoeducation_chunks": 17,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "NIMH_AUTISM"
+      ]
+    },
+    {
+      "label": "dementia",
+      "rating": "Adequate",
+      "trusted_source_count": 2,
+      "chunk_count": 749,
+      "direct_or_psychoeducation_chunks": 114,
+      "chinese_chunks": 114,
+      "source_ids": [
+        "WHO_DEMENTIA_ACTION_PLAN_2017",
+        "WHO_MHGAP_2023"
+      ]
+    },
+    {
+      "label": "substance_use",
+      "rating": "Missing",
+      "trusted_source_count": 1,
+      "chunk_count": 635,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "WHO_MHGAP_2023"
+      ]
+    }
+  ],
+  "life_stage": [
+    {
+      "label": "child_development",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "adolescent_development",
+      "rating": "Adequate",
+      "trusted_source_count": 2,
+      "chunk_count": 1423,
+      "direct_or_psychoeducation_chunks": 611,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "WHO_EASE_INTERVENTION_2023",
+        "WHO_EASE_TRAINING_2025"
+      ]
+    },
+    {
+      "label": "transition_to_adulthood",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "college_transition",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "career_transition",
+      "rating": "Missing",
+      "trusted_source_count": 2,
+      "chunk_count": 6,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 3,
+      "source_ids": [
+        "WHO_WORK_GUIDELINE_2022",
+        "WHO_WORK_POLICY_BRIEF_2022"
+      ]
+    },
+    {
+      "label": "marriage_transition",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "parenthood",
+      "rating": "Adequate",
+      "trusted_source_count": 2,
+      "chunk_count": 20,
+      "direct_or_psychoeducation_chunks": 20,
+      "chinese_chunks": 1,
+      "source_ids": [
+        "UNICEF_PARENTING_MH",
+        "WHO_THINKING_HEALTHY_2015"
+      ]
+    },
+    {
+      "label": "pregnancy",
+      "rating": "Adequate",
+      "trusted_source_count": 1,
+      "chunk_count": 1,
+      "direct_or_psychoeducation_chunks": 1,
+      "chinese_chunks": 1,
+      "source_ids": [
+        "WHO_THINKING_HEALTHY_2015"
+      ]
+    },
+    {
+      "label": "postpartum",
+      "rating": "Adequate",
+      "trusted_source_count": 1,
+      "chunk_count": 1,
+      "direct_or_psychoeducation_chunks": 1,
+      "chinese_chunks": 1,
+      "source_ids": [
+        "WHO_THINKING_HEALTHY_2015"
+      ]
+    },
+    {
+      "label": "midlife_transition",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "retirement",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "aging",
+      "rating": "Adequate",
+      "trusted_source_count": 1,
+      "chunk_count": 114,
+      "direct_or_psychoeducation_chunks": 114,
+      "chinese_chunks": 114,
+      "source_ids": [
+        "WHO_DEMENTIA_ACTION_PLAN_2017"
+      ]
+    },
+    {
+      "label": "bereavement",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    }
+  ],
+  "safety": [
+    {
+      "label": "self_harm",
+      "rating": "Missing",
+      "trusted_source_count": 5,
+      "chunk_count": 1452,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 597,
+      "source_ids": [
+        "NICE_SELF_HARM",
+        "NIMH_SUICIDE_PREVENTION",
+        "WHO_LIVE_LIFE_2021",
+        "WHO_MHGAP_2023",
+        "WHO_SAFETY_PLANNING_2023"
+      ]
+    },
+    {
+      "label": "suicidal_thoughts",
+      "rating": "Missing",
+      "trusted_source_count": 4,
+      "chunk_count": 817,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 597,
+      "source_ids": [
+        "NICE_SELF_HARM",
+        "NIMH_SUICIDE_PREVENTION",
+        "WHO_LIVE_LIFE_2021",
+        "WHO_SAFETY_PLANNING_2023"
+      ]
+    },
+    {
+      "label": "suicidal_plan",
+      "rating": "Missing",
+      "trusted_source_count": 1,
+      "chunk_count": 4,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "WHO_SAFETY_PLANNING_2023"
+      ]
+    },
+    {
+      "label": "harm_to_others",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "abuse",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "domestic_violence",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "acute_crisis",
+      "rating": "Missing",
+      "trusted_source_count": 4,
+      "chunk_count": 621,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 603,
+      "source_ids": [
+        "NIMH_SUICIDE_PREVENTION",
+        "WHO_LIVE_LIFE_2021",
+        "WHO_PFA_FACILITATOR_2013",
+        "WHO_PFA_GUIDE_2011"
+      ]
+    },
+    {
+      "label": "severe_psychosis",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "mania",
+      "rating": "Adequate",
+      "trusted_source_count": 2,
+      "chunk_count": 256,
+      "direct_or_psychoeducation_chunks": 256,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_BIPOLAR",
+        "NIMH_BIPOLAR"
+      ]
+    },
+    {
+      "label": "severe_eating_disorder_risk",
+      "rating": "Adequate",
+      "trusted_source_count": 2,
+      "chunk_count": 288,
+      "direct_or_psychoeducation_chunks": 288,
+      "chinese_chunks": 0,
+      "source_ids": [
+        "CCI_DISORDERED_EATING",
+        "NIMH_EATING_DISORDERS"
+      ]
+    },
+    {
+      "label": "substance_crisis",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "minor_safeguarding",
+      "rating": "Missing",
+      "trusted_source_count": 0,
+      "chunk_count": 0,
+      "direct_or_psychoeducation_chunks": 0,
+      "chinese_chunks": 0,
+      "source_ids": []
+    },
+    {
+      "label": "perinatal_crisis",
+      "rating": "Adequate",
+      "trusted_source_count": 1,
+      "chunk_count": 1,
+      "direct_or_psychoeducation_chunks": 1,
+      "chinese_chunks": 1,
+      "source_ids": [
+        "WHO_THINKING_HEALTHY_2015"
+      ]
+    }
+  ],
+  "language": {
+    "en": 12088,
+    "zh-CN": 1039
+  },
+  "registry_candidate_coverage": {
+    "population": {
+      "children": 6,
+      "adolescents": 21,
+      "young_adults": 34,
+      "adults": 50,
+      "middle_aged": 0,
+      "older_adults": 12,
+      "students": 2,
+      "university_students": 22,
+      "workers": 4,
+      "job_seekers": 2,
+      "parents": 8,
+      "caregivers": 11,
+      "pregnant_people": 1,
+      "postpartum_people": 1,
+      "people_experiencing_grief": 0,
+      "people_exposed_to_trauma": 8,
+      "people_with_chronic_illness": 0,
+      "family_members_supporting_others": 7
+    },
+    "topic": {
+      "stress": 10,
+      "anxiety": 12,
+      "low_mood": 7,
+      "depressive_feelings": 1,
+      "worry": 4,
+      "rumination": 1,
+      "panic": 3,
+      "sleep": 5,
+      "insomnia": 1,
+      "loneliness": 1,
+      "social_isolation": 1,
+      "anger": 1,
+      "frustration": 0,
+      "shame": 1,
+      "guilt": 0,
+      "grief": 1,
+      "bereavement": 0,
+      "self_criticism": 2,
+      "self_compassion": 4,
+      "self_esteem": 1,
+      "perfectionism": 1,
+      "procrastination": 2,
+      "avoidance": 3,
+      "motivation": 1,
+      "decision_making": 0,
+      "problem_solving": 5,
+      "emotion_regulation": 3,
+      "distress_tolerance": 1,
+      "friendship": 0,
+      "social_relationships": 1,
+      "romantic_relationships": 0,
+      "marriage": 0,
+      "family_relationships": 1,
+      "parent_child_relationship": 1,
+      "roommate_conflict": 0,
+      "communication": 10,
+      "assertiveness": 1,
+      "conflict_management": 1,
+      "breakup": 0,
+      "divorce": 0,
+      "caregiving_stress": 3,
+      "academic_pressure": 1,
+      "exam_stress": 0,
+      "thesis_pressure": 0,
+      "research_failure": 0,
+      "career_uncertainty": 0,
+      "employment_anxiety": 1,
+      "job_search": 0,
+      "work_stress": 2,
+      "burnout_related_distress": 1,
+      "workplace_relationship": 1,
+      "return_to_work": 2,
+      "retirement_transition": 0,
+      "depression": 7,
+      "anxiety_disorders": 4,
+      "social_anxiety": 2,
+      "OCD": 1,
+      "BDD": 1,
+      "PTSD": 1,
+      "eating_disorders": 2,
+      "bipolar_disorder": 3,
+      "psychosis": 1,
+      "ADHD": 1,
+      "autism": 1,
+      "dementia": 2,
+      "substance_use": 1
+    },
+    "life_stage": {
+      "child_development": 2,
+      "adolescent_development": 5,
+      "transition_to_adulthood": 0,
+      "college_transition": 2,
+      "career_transition": 2,
+      "marriage_transition": 0,
+      "parenthood": 2,
+      "pregnancy": 1,
+      "postpartum": 1,
+      "midlife_transition": 0,
+      "retirement": 2,
+      "aging": 3,
+      "bereavement": 0
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{"query_id":"rag_001","query":"论文压力让我晚上睡不着，有什么简单办法？","psychological_context":{"emotion":"anxiety","cause":"academic_stress","strategy":"task_breakdown","risk_level":"low"},"relevant_source_ids":["kb_sleep_001","kb_study_001"],"relevant_chunk_ids":[]}
+{"query_id":"rag_002","query":"就业焦虑，简历和面试都不知道怎么开始。","psychological_context":{"emotion":"anxiety","cause":"career_anxiety","strategy":"problem_solving","risk_level":"low"},"relevant_source_ids":["kb_job_001"],"relevant_chunk_ids":[]}
+{"query_id":"rag_003","query":"和室友关系紧张，我应该怎么表达边界？","psychological_context":{"emotion":"stress","cause":"interpersonal_conflict","strategy":"social_support","risk_level":"low"},"relevant_source_ids":["kb_relationship_001"],"relevant_chunk_ids":[]}
+{"query_id":"rag_004","query":"高危情况下 AI 应该怎么处理？","psychological_context":{"emotion":"sadness","cause":"crisis_safety","strategy":"crisis_referral","risk_level":"high"},"relevant_source_ids":["kb_crisis_001"],"relevant_chunk_ids":[]}
+{"query_id":"rag_005","query":"量子计算硬件退相干参数怎么测？","psychological_context":{"emotion":"neutral","cause":"general","strategy":"supportive_listening","risk_level":"low"},"relevant_source_ids":[],"relevant_chunk_ids":[]}

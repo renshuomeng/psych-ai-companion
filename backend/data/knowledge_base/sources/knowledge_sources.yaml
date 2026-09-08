@@ -1,0 +1,4388 @@
+version: 2
+registry_name: care_psy_knowledge_base_v2
+created_for: psych-ai-companion
+default_language_preference:
+- zh-CN
+- en
+default_review_status: pending
+default_chunk_review_required: true
+paths:
+  root: backend/data/knowledge_base
+  raw_auto: backend/data/knowledge_base/raw/auto
+  raw_manual: backend/data/knowledge_base/raw/manual
+  parsed: backend/data/knowledge_base/parsed
+  cleaned: backend/data/knowledge_base/cleaned
+  chunks_pending: backend/data/knowledge_base/chunks/pending
+  chunks_approved: backend/data/knowledge_base/chunks/approved
+  chunks_rejected: backend/data/knowledge_base/chunks/rejected
+  indexes_chroma: backend/data/knowledge_base/indexes/chroma
+  indexes_bm25: backend/data/knowledge_base/indexes/bm25
+  reports: backend/data/knowledge_base/reports
+manual_drop_zones:
+- id: manual_textbooks
+  path: backend/data/knowledge_base/raw/manual/textbooks
+  purpose: 'Legally obtained psychology/counselling/CBT/ACT/MI textbooks or selected chapters. Codex must never search for
+    pirated copies. The user places files here manually.
+
+    '
+  allowed_extensions:
+  - .pdf
+  - .docx
+  - .txt
+  - .md
+  - .epub
+  target_collection: professional_knowledge
+- id: manual_papers
+  path: backend/data/knowledge_base/raw/manual/papers
+  purpose: 'Systematic reviews, meta-analyses, guidelines, and papers legally obtained by the user. Prefer open-access or
+    institutionally licensed copies supplied by the user.
+
+    '
+  allowed_extensions:
+  - .pdf
+  - .docx
+  - .txt
+  - .md
+  target_collection: evidence
+- id: manual_campus
+  path: backend/data/knowledge_base/raw/manual/campus
+  purpose: 'Reviewed university mental-health-center materials and user-authored campus-specific knowledge cards for thesis
+    stress, research setbacks, exams, employment, roommates, relationships, loneliness, procrastination, perfectionism, and
+    sleep.
+
+    '
+  allowed_extensions:
+  - .pdf
+  - .docx
+  - .txt
+  - .md
+  - .json
+  - .yaml
+  - .yml
+  target_collection: campus_support
+- id: manual_official
+  path: backend/data/knowledge_base/raw/manual/official
+  purpose: 'Official WHO/MOE or other registry-listed sources that cannot be automatically fetched because of robots.txt,
+    redirects, CAPTCHA, login, or anti-bot controls. Place files under raw/manual/official/<source_id>/ so the pipeline can
+    reuse the registry metadata.
+
+    '
+  allowed_extensions:
+  - .pdf
+  - .docx
+  - .txt
+  - .md
+  - .html
+  - .htm
+  target_collection: registry_source_target_collection
+- id: manual_cases
+  path: backend/data/knowledge_base/raw/manual/cases
+  purpose: 'Licensed/public psychological-support conversation datasets or curated examples. These MUST go to Case RAG, not
+    the professional Knowledge RAG.
+
+    '
+  allowed_extensions:
+  - .json
+  - .jsonl
+  - .csv
+  - .parquet
+  - .txt
+  target_collection: case_rag
+collections:
+  professional_knowledge:
+    description: General psychoeducation and evidence-based low-risk support knowledge.
+  interventions:
+    description: Actionable self-help techniques and structured exercises.
+  helping_skills:
+    description: Empathy, listening, collaboration, reflection and safe helping behaviours.
+  campus_support:
+    description: University-student context, policy and campus-specific support knowledge.
+  safety:
+    description: Self-harm/suicide safety guidance; routed only by the safety subsystem.
+  evidence:
+    description: Guidelines/reviews used for evidence checking, not ordinary answer retrieval.
+  governance:
+    description: Implementation/policy/boundary documents; not ordinary user-facing retrieval.
+  case_rag:
+    description: Psychological support conversation cases/examples; indexed separately.
+sources:
+- id: CCI_ANXIETY
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Anxiety self-help resources
+  year: 2025
+  language_preference:
+  - en
+  source_type: workbook_and_sheets
+  target_collection: interventions
+  topics:
+  - anxiety
+  - stress
+  - breathing
+  - relaxation
+  - cognitive_reframing
+  - exposure
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-after-yourself/anxiety
+  download:
+    mode: html_plus_linked_assets
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    include_link_text_patterns:
+    - Download
+    - Information sheet
+    - Worksheet
+    - workbook
+    allowed_extensions:
+    - .pdf
+    - .zip
+    max_assets: 40
+  license_note: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  version: v2
+  collection: interventions
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-after-yourself/anxiety
+  download_url: ''
+  language: en
+  translation_group_id: CCI_ANXIETY
+  topic_tags:
+  - anxiety
+  - stress
+  - breathing
+  - relaxation
+  - cognitive_reframing
+  - exposure
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: CCI_ASSERTIVENESS
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Assertiveness self-help resources
+  version: v2
+  year: 2025
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_9B89374C72
+  source_type: workbook_and_sheets
+  target_collection: interventions
+  collection: interventions
+  topics:
+  - assertiveness
+  - communication
+  - conflict_management
+  - relationships
+  topic_tags:
+  - assertiveness
+  - communication
+  - conflict_management
+  - relationships
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  user_facing: true
+  clinical_only: false
+  evidence_level: B
+  source_authority: tier_a
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Assertiveness
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Assertiveness
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: CCI_BIPOLAR
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Bipolar self-help resources
+  version: v2
+  year: 2025
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_D22660EEB8
+  source_type: workbook_and_sheets
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - bipolar_disorder
+  - mania
+  - sleep
+  topic_tags:
+  - bipolar_disorder
+  - mania
+  - sleep
+  population_tags:
+  - adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: B
+  source_authority: tier_a
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Bipolar
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Bipolar
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: CCI_BODY_DYSMORPHIA
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Body Dysmorphia self-help resources
+  version: v2
+  year: 2025
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_DA52412CD8
+  source_type: workbook_and_sheets
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - BDD
+  - appearance_concerns
+  - self_criticism
+  topic_tags:
+  - BDD
+  - appearance_concerns
+  - self_criticism
+  population_tags:
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: B
+  source_authority: tier_a
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Body-Dysmorphia
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Body-Dysmorphia
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: CCI_DEPRESSION
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Depression self-help resources
+  version: v2
+  year: 2025
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_89584AA611
+  source_type: workbook_and_sheets
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - depression
+  - low_mood
+  - behavioral_activation
+  topic_tags:
+  - depression
+  - low_mood
+  - behavioral_activation
+  population_tags:
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: B
+  source_authority: tier_a
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Depression
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Depression
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: CCI_DISORDERED_EATING
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Disordered Eating self-help resources
+  version: v2
+  year: 2025
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_650F95F392
+  source_type: workbook_and_sheets
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - eating_disorders
+  - body_image
+  - self_compassion
+  - severe_eating_disorder_risk
+  topic_tags:
+  - eating_disorders
+  - body_image
+  - self_compassion
+  - severe_eating_disorder_risk
+  population_tags:
+  - adolescents
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: B
+  source_authority: tier_a
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Disordered-Eating
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Disordered-Eating
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: CCI_DISTRESS_TOLERANCE
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Tolerating Distress self-help resources
+  year: 2019
+  language_preference:
+  - en
+  source_type: workbook_and_sheets
+  target_collection: interventions
+  topics:
+  - distress_tolerance
+  - emotion_regulation
+  - acceptance
+  - emotion_surfing
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Tolerating-Distress
+  download:
+    mode: html_plus_linked_assets
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    include_link_text_patterns:
+    - Download
+    - Module
+    - Information sheet
+    - Worksheet
+    - workbook
+    allowed_extensions:
+    - .pdf
+    - .zip
+    max_assets: 30
+  license_note: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  version: v2
+  collection: interventions
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Tolerating-Distress
+  download_url: ''
+  language: en
+  translation_group_id: CCI_DISTRESS_TOLERANCE
+  topic_tags:
+  - distress_tolerance
+  - emotion_regulation
+  - acceptance
+  - emotion_surfing
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: CCI_HEALTH_ANXIETY
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Health Anxiety self-help resources
+  version: v2
+  year: 2025
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_BDD4938EFE
+  source_type: workbook_and_sheets
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - anxiety
+  - worry
+  - health_anxiety
+  topic_tags:
+  - anxiety
+  - worry
+  - health_anxiety
+  population_tags:
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: B
+  source_authority: tier_a
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Health-Anxiety
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Health-Anxiety
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: CCI_PANIC
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Panic self-help resources
+  version: v2
+  year: 2025
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_EDF7AC8929
+  source_type: workbook_and_sheets
+  target_collection: interventions
+  collection: interventions
+  topics:
+  - panic
+  - anxiety
+  - breathing_relaxation
+  topic_tags:
+  - panic
+  - anxiety
+  - breathing_relaxation
+  population_tags:
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  user_facing: true
+  clinical_only: false
+  evidence_level: B
+  source_authority: tier_a
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Panic
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Panic
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: CCI_PERFECTIONISM
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Perfectionism self-help resources
+  year: 2019
+  language_preference:
+  - en
+  source_type: workbook_and_sheets
+  target_collection: interventions
+  topics:
+  - perfectionism
+  - academic_stress
+  - self_worth
+  - behavioural_experiments
+  - cognition
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.cci.health.wa.gov.au/resources/looking-after-yourself/perfectionism
+  download:
+    mode: html_plus_linked_assets
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    include_link_text_patterns:
+    - Download
+    - Module
+    - Information sheet
+    - Worksheet
+    - workbook
+    allowed_extensions:
+    - .pdf
+    - .zip
+    max_assets: 50
+  license_note: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  version: v2
+  collection: interventions
+  official_url: https://www.cci.health.wa.gov.au/resources/looking-after-yourself/perfectionism
+  download_url: ''
+  language: en
+  translation_group_id: CCI_PERFECTIONISM
+  topic_tags:
+  - perfectionism
+  - academic_stress
+  - self_worth
+  - behavioural_experiments
+  - cognition
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: CCI_PROCRASTINATION
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Procrastination self-help resources
+  year: 2025
+  language_preference:
+  - en
+  source_type: workbook_and_sheets
+  target_collection: interventions
+  topics:
+  - procrastination
+  - academic_stress
+  - task_starting
+  - avoidance
+  - discomfort_tolerance
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Procrastination
+  download:
+    mode: html_plus_linked_assets
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    include_link_text_patterns:
+    - Download
+    - Module
+    - Information sheet
+    - Worksheet
+    - workbook
+    allowed_extensions:
+    - .pdf
+    - .zip
+    max_assets: 40
+  license_note: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  version: v2
+  collection: interventions
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Procrastination
+  download_url: ''
+  language: en
+  translation_group_id: CCI_PROCRASTINATION
+  topic_tags:
+  - procrastination
+  - academic_stress
+  - task_starting
+  - avoidance
+  - discomfort_tolerance
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: CCI_SELF_COMPASSION
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Self-Compassion self-help resources
+  year: 2019
+  language_preference:
+  - en
+  source_type: workbook_and_sheets
+  target_collection: interventions
+  topics:
+  - self_compassion
+  - self_criticism
+  - shame
+  - self_kindness
+  - coping
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Self-Compassion
+  download:
+    mode: html_plus_linked_assets
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    include_link_text_patterns:
+    - Download
+    - Module
+    - Information sheet
+    - Worksheet
+    - workbook
+    allowed_extensions:
+    - .pdf
+    - .zip
+    max_assets: 40
+  license_note: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  version: v2
+  collection: interventions
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Self-Compassion
+  download_url: ''
+  language: en
+  translation_group_id: CCI_SELF_COMPASSION
+  topic_tags:
+  - self_compassion
+  - self_criticism
+  - shame
+  - self_kindness
+  - coping
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: CCI_SELF_ESTEEM
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Self-Esteem self-help resources
+  year: 2025
+  language_preference:
+  - en
+  source_type: workbook_and_sheets
+  target_collection: interventions
+  topics:
+  - self_esteem
+  - self_evaluation
+  - core_beliefs
+  - self_acceptance
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.cci.health.wa.gov.au/resources/looking-after-yourself/self-esteem
+  download:
+    mode: html_plus_linked_assets
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    include_link_text_patterns:
+    - Download
+    - Module
+    - Information sheet
+    - Worksheet
+    - workbook
+    allowed_extensions:
+    - .pdf
+    - .zip
+    max_assets: 50
+  license_note: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  version: v2
+  collection: interventions
+  official_url: https://www.cci.health.wa.gov.au/resources/looking-after-yourself/self-esteem
+  download_url: ''
+  language: en
+  translation_group_id: CCI_SELF_ESTEEM
+  topic_tags:
+  - self_esteem
+  - self_evaluation
+  - core_beliefs
+  - self_acceptance
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: CCI_SLEEP
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Sleep and insomnia self-help resources
+  year: null
+  language_preference:
+  - en
+  source_type: workbook_and_sheets
+  target_collection: interventions
+  topics:
+  - sleep
+  - insomnia
+  - sleep_hygiene
+  - sleep_thoughts
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.cci.health.wa.gov.au/resources/looking-after-yourself/sleep
+  download:
+    mode: html_plus_linked_assets
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    include_link_text_patterns:
+    - Download
+    - Information sheet
+    - Worksheet
+    - workbook
+    allowed_extensions:
+    - .pdf
+    - .zip
+    max_assets: 30
+  license_note: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  version: v2
+  collection: interventions
+  official_url: https://www.cci.health.wa.gov.au/resources/looking-after-yourself/sleep
+  download_url: ''
+  language: en
+  translation_group_id: CCI_SLEEP
+  topic_tags:
+  - sleep
+  - insomnia
+  - sleep_hygiene
+  - sleep_thoughts
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: CCI_SOCIAL_ANXIETY
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Social Anxiety self-help resources
+  year: 2021
+  language_preference:
+  - en
+  source_type: workbook_and_sheets
+  target_collection: interventions
+  topics:
+  - social_anxiety
+  - avoidance
+  - behavioural_experiments
+  - relationships
+  - exposure
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.cci.health.wa.gov.au/resources/looking-after-yourself/social-anxiety
+  download:
+    mode: html_plus_linked_assets
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    include_link_text_patterns:
+    - Download
+    - Module
+    - Information sheet
+    - Worksheet
+    - workbook
+    allowed_extensions:
+    - .pdf
+    - .zip
+    max_assets: 60
+  license_note: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  version: v2
+  collection: interventions
+  official_url: https://www.cci.health.wa.gov.au/resources/looking-after-yourself/social-anxiety
+  download_url: ''
+  language: en
+  translation_group_id: CCI_SOCIAL_ANXIETY
+  topic_tags:
+  - social_anxiety
+  - avoidance
+  - behavioural_experiments
+  - relationships
+  - exposure
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: CCI_WORRY_RUMINATION
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Centre for Clinical Interventions, Government of Western Australia
+  title: Worry and Rumination self-help resources
+  year: 2023
+  language_preference:
+  - en
+  source_type: workbook_and_sheets
+  target_collection: interventions
+  topics:
+  - worry
+  - rumination
+  - anxiety
+  - mindfulness
+  - uncertainty
+  - attention
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Worry-and-Rumination
+  download:
+    mode: html_plus_linked_assets
+    allowed_domains:
+    - cci.health.wa.gov.au
+    - www.cci.health.wa.gov.au
+    include_link_text_patterns:
+    - Download
+    - Module
+    - Information sheet
+    - Worksheet
+    - workbook
+    allowed_extensions:
+    - .pdf
+    - .zip
+    max_assets: 50
+  license_note: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  version: v2
+  collection: interventions
+  official_url: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Worry-and-Rumination
+  download_url: ''
+  language: en
+  translation_group_id: CCI_WORRY_RUMINATION
+  topic_tags:
+  - worry
+  - rumination
+  - anxiety
+  - mindfulness
+  - uncertainty
+  - attention
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Review CCI copyright/disclaimer before redistribution; local RAG ingestion only by default.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: CN_MOE_HIGHER_ED_MH_GUIDE_2018
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: 中华人民共和国教育部
+  title: 高等学校学生心理健康教育指导纲要
+  version: v2
+  year: 2018
+  language_preference:
+  - zh-CN
+  language: zh-CN
+  translation_group_id: TRG_65E2464601
+  source_type: policy_guideline
+  target_collection: campus_support
+  collection: campus_support
+  topics:
+  - university_students
+  - campus_support
+  - academic_pressure
+  - counselling_services
+  topic_tags:
+  - university_students
+  - campus_support
+  - academic_pressure
+  - counselling_services
+  population_tags:
+  - university_students
+  - students
+  life_stage_tags:
+  - college_transition
+  use_mode: agent_policy_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.moe.gov.cn/srcsite/A12/moe_1407/s3020/201807/t20180713_342992.html
+  official_url: https://www.moe.gov.cn/srcsite/A12/moe_1407/s3020/201807/t20180713_342992.html
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - moe.gov.cn
+    - www.moe.gov.cn
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: CN_MOE_SCHOOL_MH_GUIDE
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: 中华人民共和国教育部
+  title: 中小学心理健康教育指导纲要
+  version: v2
+  year: 2012
+  language_preference:
+  - zh-CN
+  language: zh-CN
+  translation_group_id: TRG_411B663905
+  source_type: policy_guideline
+  target_collection: governance
+  collection: governance
+  topics:
+  - children
+  - adolescents
+  - school_support
+  - parent_support
+  topic_tags:
+  - children
+  - adolescents
+  - school_support
+  - parent_support
+  population_tags:
+  - children
+  - adolescents
+  - parents
+  - caregivers
+  life_stage_tags:
+  - child_development
+  - adolescent_development
+  use_mode: agent_policy_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.moe.gov.cn/srcsite/A06/s3325/201212/t20121211_145679.html
+  official_url: https://www.moe.gov.cn/srcsite/A06/s3325/201212/t20121211_145679.html
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - moe.gov.cn
+    - www.moe.gov.cn
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: Exact official page confirmed from Ministry of Education source page; still requires human review before production use.
+- id: CN_MOE_STUDENT_MH_ACTION_2023_2025
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: 中华人民共和国教育部等十七部门
+  title: 全面加强和改进新时代学生心理健康工作专项行动计划（2023—2025年）
+  version: v2
+  year: 2023
+  language_preference:
+  - zh-CN
+  language: zh-CN
+  translation_group_id: TRG_4B4CD56A16
+  source_type: policy_plan
+  target_collection: campus_support
+  collection: campus_support
+  topics:
+  - student_mental_health
+  - campus_support
+  - children
+  - adolescents
+  - university_students
+  topic_tags:
+  - student_mental_health
+  - campus_support
+  - children
+  - adolescents
+  - university_students
+  population_tags:
+  - children
+  - adolescents
+  - students
+  - university_students
+  life_stage_tags:
+  - child_development
+  - adolescent_development
+  - college_transition
+  use_mode: agent_policy_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.moe.gov.cn/srcsite/A17/moe_943/moe_946/202305/t20230511_1059219.html
+  official_url: https://www.moe.gov.cn/srcsite/A17/moe_943/moe_946/202305/t20230511_1059219.html
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - moe.gov.cn
+    - www.moe.gov.cn
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: CN_NHC_HEALTH_LITERACY_2024
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: 国家卫生健康委员会
+  title: 中国公民健康素养——基本知识与技能（2024年版）
+  version: v2
+  year: 2024
+  language_preference:
+  - zh-CN
+  language: zh-CN
+  translation_group_id: TRG_9A0E1DABB6
+  source_type: official_policy
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - mental_health_literacy
+  - sleep
+  - anxiety
+  - depression
+  - scientific_help_seeking
+  topic_tags:
+  - mental_health_literacy
+  - sleep
+  - anxiety
+  - depression
+  - scientific_help_seeking
+  population_tags:
+  - children
+  - adolescents
+  - young_adults
+  - adults
+  - older_adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nhc.gov.cn/xcs/c100123/202405/73a4927142f34152abed875634a3c13b.shtml
+  official_url: https://www.nhc.gov.cn/xcs/c100123/202405/73a4927142f34152abed875634a3c13b.shtml
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nhc.gov.cn
+    - www.nhc.gov.cn
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: Exact official page confirmed from National Health Commission source page; psychoeducation-only and pending human review.
+- id: MOE_HIGHER_ED_MH_GUIDE_2018
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: 中华人民共和国教育部
+  title: 高等学校学生心理健康教育指导纲要
+  year: 2018
+  language_preference:
+  - zh-CN
+  source_type: policy_guideline
+  target_collection: campus_support
+  topics:
+  - university_students
+  - mental_health_education
+  - counselling_services
+  - campus_support
+  user_facing: false
+  evidence_level: A
+  official_page_url: https://www.moe.gov.cn/srcsite/A12/moe_1407/s3020/201807/t20180713_342992.html
+  download:
+    mode: html_page
+    allowed_domains:
+    - moe.gov.cn
+    - www.moe.gov.cn
+    max_assets: 2
+  license_note: Official government page; preserve source and publication metadata.
+  notes: Use for campus scope/boundaries and policy context.
+  version: v2
+  collection: campus_support
+  official_url: https://www.moe.gov.cn/srcsite/A12/moe_1407/s3020/201807/t20180713_342992.html
+  download_url: ''
+  language: zh-CN
+  translation_group_id: MOE_HIGHER_ED_MH_GUIDE_2018
+  topic_tags:
+  - university_students
+  - mental_health_education
+  - counselling_services
+  - campus_support
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: agent_policy_only
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Official government page; preserve source and publication metadata.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: MOE_STUDENT_MH_ACTION_2023_2025
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: 中华人民共和国教育部等十七部门
+  title: 全面加强和改进新时代学生心理健康工作专项行动计划（2023—2025年）
+  year: 2023
+  language_preference:
+  - zh-CN
+  source_type: policy_plan
+  target_collection: campus_support
+  topics:
+  - student_mental_health
+  - prevention
+  - monitoring
+  - counselling
+  - intervention
+  - campus_support
+  user_facing: false
+  evidence_level: A
+  official_page_url: https://www.moe.gov.cn/srcsite/A17/moe_943/moe_946/202305/t20230511_1059219.html
+  download:
+    mode: html_page
+    allowed_domains:
+    - moe.gov.cn
+    - www.moe.gov.cn
+    max_assets: 2
+  license_note: Official government page; preserve source and publication metadata.
+  notes: Use for system framing, not normal therapeutic advice.
+  version: v2
+  collection: campus_support
+  official_url: https://www.moe.gov.cn/srcsite/A17/moe_943/moe_946/202305/t20230511_1059219.html
+  download_url: ''
+  language: zh-CN
+  translation_group_id: MOE_STUDENT_MH_ACTION_2023_2025
+  topic_tags:
+  - student_mental_health
+  - prevention
+  - monitoring
+  - counselling
+  - intervention
+  - campus_support
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: agent_policy_only
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Official government page; preserve source and publication metadata.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: NHS_CBT_HUB
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: NHS / Every Mind Matters
+  title: Self-help CBT techniques
+  year: null
+  language_preference:
+  - en
+  source_type: official_web_guide
+  target_collection: professional_knowledge
+  topics:
+  - cbt
+  - thoughts
+  - feelings
+  - behaviours
+  - anxiety
+  - stress
+  - low_mood
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/
+  download:
+    mode: html_page
+    allowed_domains:
+    - nhs.uk
+    - www.nhs.uk
+    - assets.nhs.uk
+    max_assets: 1
+  license_note: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  version: v2
+  collection: professional_knowledge
+  official_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/
+  download_url: ''
+  language: en
+  translation_group_id: NHS_CBT_HUB
+  topic_tags:
+  - cbt
+  - thoughts
+  - feelings
+  - behaviours
+  - anxiety
+  - stress
+  - low_mood
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: NHS_PROBLEM_SOLVING
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: NHS / Every Mind Matters
+  title: Problem solving
+  year: null
+  language_preference:
+  - en
+  source_type: official_web_guide
+  target_collection: interventions
+  topics:
+  - problem_solving
+  - overwhelm
+  - planning
+  - values
+  - stress
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/problem-solving/
+  download:
+    mode: html_page
+    allowed_domains:
+    - nhs.uk
+    - www.nhs.uk
+    - assets.nhs.uk
+    max_assets: 1
+  license_note: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  version: v2
+  collection: interventions
+  official_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/problem-solving/
+  download_url: ''
+  language: en
+  translation_group_id: NHS_PROBLEM_SOLVING
+  topic_tags:
+  - problem_solving
+  - overwhelm
+  - planning
+  - values
+  - stress
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: NHS_SLEEP
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: NHS / Every Mind Matters
+  title: How to fall asleep faster and sleep better
+  year: null
+  language_preference:
+  - en
+  source_type: official_web_guide
+  target_collection: interventions
+  topics:
+  - sleep
+  - sleep_hygiene
+  - worry
+  - routine
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/how-to-fall-asleep-faster-and-sleep-better/
+  download:
+    mode: html_page
+    allowed_domains:
+    - nhs.uk
+    - www.nhs.uk
+    - assets.nhs.uk
+    max_assets: 1
+  license_note: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  version: v2
+  collection: interventions
+  official_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/how-to-fall-asleep-faster-and-sleep-better/
+  download_url: ''
+  language: en
+  translation_group_id: NHS_SLEEP
+  topic_tags:
+  - sleep
+  - sleep_hygiene
+  - worry
+  - routine
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: NHS_THOUGHT_RECORD
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: NHS / Every Mind Matters
+  title: Thought record
+  year: null
+  language_preference:
+  - en
+  source_type: official_web_guide
+  target_collection: interventions
+  topics:
+  - cognitive_reappraisal
+  - thought_record
+  - self_evaluation
+  - anxiety
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/thought-record/
+  download:
+    mode: html_plus_linked_assets
+    allowed_domains:
+    - nhs.uk
+    - www.nhs.uk
+    - assets.nhs.uk
+    include_link_text_patterns:
+    - Download thought record
+    allowed_extensions:
+    - .doc
+    - .docx
+    - .pdf
+    max_assets: 3
+  license_note: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  version: v2
+  collection: interventions
+  official_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/thought-record/
+  download_url: ''
+  language: en
+  translation_group_id: NHS_THOUGHT_RECORD
+  topic_tags:
+  - cognitive_reappraisal
+  - thought_record
+  - self_evaluation
+  - anxiety
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: NHS_TODO_LIST
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: NHS / Every Mind Matters
+  title: Tackling your to-do list
+  year: null
+  language_preference:
+  - en
+  source_type: official_web_guide
+  target_collection: interventions
+  topics:
+  - avoidance
+  - procrastination
+  - behavioural_activation
+  - routine
+  - motivation
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/tackling-your-to-do-list/
+  download:
+    mode: html_page
+    allowed_domains:
+    - nhs.uk
+    - www.nhs.uk
+    - assets.nhs.uk
+    max_assets: 1
+  license_note: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  version: v2
+  collection: interventions
+  official_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/tackling-your-to-do-list/
+  download_url: ''
+  language: en
+  translation_group_id: NHS_TODO_LIST
+  topic_tags:
+  - avoidance
+  - procrastination
+  - behavioural_activation
+  - routine
+  - motivation
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: NHS_WORRIES
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: NHS / Every Mind Matters
+  title: Tackling your worries
+  year: null
+  language_preference:
+  - en
+  source_type: official_web_guide
+  target_collection: interventions
+  topics:
+  - worry
+  - anxiety
+  - worry_time
+  - journaling
+  user_facing: true
+  evidence_level: B
+  official_page_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/tackling-your-worries/
+  download:
+    mode: html_page
+    allowed_domains:
+    - nhs.uk
+    - www.nhs.uk
+    - assets.nhs.uk
+    max_assets: 1
+  license_note: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  version: v2
+  collection: interventions
+  official_url: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/tackling-your-worries/
+  download_url: ''
+  language: en
+  translation_group_id: NHS_WORRIES
+  topic_tags:
+  - worry
+  - anxiety
+  - worry_time
+  - journaling
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: Preserve NHS/Crown source attribution; do not redistribute source content beyond permitted use.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: NIA_DEPRESSION_OLDER_ADULTS
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: National Institute on Aging
+  title: Depression and Older Adults
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_7B490C7ED3
+  source_type: official_web_guide
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - depression
+  - low_mood
+  - aging
+  - professional_help
+  topic_tags:
+  - depression
+  - low_mood
+  - aging
+  - professional_help
+  population_tags:
+  - older_adults
+  - caregivers
+  life_stage_tags:
+  - aging
+  - retirement
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nia.nih.gov/health/mental-and-emotional-health/depression-and-older-adults
+  official_url: https://www.nia.nih.gov/health/mental-and-emotional-health/depression-and-older-adults
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nia.nih.gov
+    - www.nia.nih.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NIA_LONELINESS
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: National Institute on Aging
+  title: Loneliness and Social Isolation
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_A8297B002A
+  source_type: official_web_guide
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - loneliness
+  - social_isolation
+  - social_support
+  topic_tags:
+  - loneliness
+  - social_isolation
+  - social_support
+  population_tags:
+  - older_adults
+  - caregivers
+  life_stage_tags:
+  - aging
+  - retirement
+  use_mode: direct_user_support
+  risk_scope: normal
+  user_facing: true
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nia.nih.gov/health/loneliness-and-social-isolation
+  official_url: https://www.nia.nih.gov/health/loneliness-and-social-isolation
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nia.nih.gov
+    - www.nia.nih.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NICE_DEPRESSION
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: National Institute for Health and Care Excellence
+  title: 'Depression in adults: treatment and management'
+  version: v2
+  year: 2022
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_6468649287
+  source_type: clinical_guideline
+  target_collection: evidence
+  collection: evidence
+  topics:
+  - depression
+  - professional_help
+  - clinical_boundary
+  topic_tags:
+  - depression
+  - professional_help
+  - clinical_boundary
+  population_tags:
+  - adults
+  - older_adults
+  life_stage_tags: []
+  use_mode: clinical_reference_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: true
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nice.org.uk/guidance/ng222
+  official_url: https://www.nice.org.uk/guidance/ng222
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nice.org.uk
+    - www.nice.org.uk
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NICE_GAD_PANIC
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: National Institute for Health and Care Excellence
+  title: Generalised anxiety disorder and panic disorder in adults
+  version: v2
+  year: 2011
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_CCF81A7876
+  source_type: clinical_guideline
+  target_collection: evidence
+  collection: evidence
+  topics:
+  - anxiety_disorders
+  - panic
+  - professional_help
+  topic_tags:
+  - anxiety_disorders
+  - panic
+  - professional_help
+  population_tags:
+  - adults
+  life_stage_tags: []
+  use_mode: clinical_reference_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: true
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nice.org.uk/guidance/cg113
+  official_url: https://www.nice.org.uk/guidance/cg113
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nice.org.uk
+    - www.nice.org.uk
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NICE_SELF_HARM
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: National Institute for Health and Care Excellence
+  title: 'Self-harm: assessment, management and preventing recurrence'
+  version: v2
+  year: 2022
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_2775C87165
+  source_type: clinical_guideline
+  target_collection: safety
+  collection: safety
+  topics:
+  - self_harm
+  - suicidal_thoughts
+  - safety_planning_principles
+  - referral_guidance
+  topic_tags:
+  - self_harm
+  - suicidal_thoughts
+  - safety_planning_principles
+  - referral_guidance
+  population_tags:
+  - adolescents
+  - adults
+  - older_adults
+  life_stage_tags: []
+  use_mode: safety_only
+  risk_scope: safety_route_only
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nice.org.uk/guidance/ng225
+  official_url: https://www.nice.org.uk/guidance/ng225
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nice.org.uk
+    - www.nice.org.uk
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NIMH_ADHD
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: National Institute of Mental Health
+  title: Attention-Deficit/Hyperactivity Disorder
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_08382EECDF
+  source_type: fact_sheet
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - ADHD
+  - professional_help
+  topic_tags:
+  - ADHD
+  - professional_help
+  population_tags:
+  - children
+  - adolescents
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd
+  official_url: https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nimh.nih.gov
+    - www.nimh.nih.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NIMH_ANXIETY
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: National Institute of Mental Health
+  title: Anxiety Disorders
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_94B29DAD45
+  source_type: fact_sheet
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - anxiety_disorders
+  - anxiety
+  - panic
+  - social_anxiety
+  topic_tags:
+  - anxiety_disorders
+  - anxiety
+  - panic
+  - social_anxiety
+  population_tags:
+  - adolescents
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nimh.nih.gov/health/topics/anxiety-disorders
+  official_url: https://www.nimh.nih.gov/health/topics/anxiety-disorders
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nimh.nih.gov
+    - www.nimh.nih.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NIMH_AUTISM
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: National Institute of Mental Health
+  title: Autism Spectrum Disorder
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_61A0354A51
+  source_type: fact_sheet
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - autism
+  - professional_help
+  topic_tags:
+  - autism
+  - professional_help
+  population_tags:
+  - children
+  - adolescents
+  - young_adults
+  - adults
+  - parents
+  - caregivers
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd
+  official_url: https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nimh.nih.gov
+    - www.nimh.nih.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NIMH_BIPOLAR
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: National Institute of Mental Health
+  title: Bipolar Disorder
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_F245265FFE
+  source_type: fact_sheet
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - bipolar_disorder
+  - mania
+  - professional_help
+  topic_tags:
+  - bipolar_disorder
+  - mania
+  - professional_help
+  population_tags:
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nimh.nih.gov/health/topics/bipolar-disorder
+  official_url: https://www.nimh.nih.gov/health/topics/bipolar-disorder
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nimh.nih.gov
+    - www.nimh.nih.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NIMH_DEPRESSION
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: National Institute of Mental Health
+  title: Depression
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_2EBBA84803
+  source_type: fact_sheet
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - depression
+  - low_mood
+  - professional_help
+  topic_tags:
+  - depression
+  - low_mood
+  - professional_help
+  population_tags:
+  - adolescents
+  - young_adults
+  - adults
+  - older_adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nimh.nih.gov/health/topics/depression
+  official_url: https://www.nimh.nih.gov/health/topics/depression
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nimh.nih.gov
+    - www.nimh.nih.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NIMH_EATING_DISORDERS
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: National Institute of Mental Health
+  title: Eating Disorders
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_51B5F48CE4
+  source_type: fact_sheet
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - eating_disorders
+  - severe_eating_disorder_risk
+  - professional_help
+  topic_tags:
+  - eating_disorders
+  - severe_eating_disorder_risk
+  - professional_help
+  population_tags:
+  - adolescents
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nimh.nih.gov/health/topics/eating-disorders
+  official_url: https://www.nimh.nih.gov/health/topics/eating-disorders
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nimh.nih.gov
+    - www.nimh.nih.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NIMH_OCD
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: National Institute of Mental Health
+  title: Obsessive-Compulsive Disorder
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_123C3D5525
+  source_type: fact_sheet
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - OCD
+  - anxiety_disorders
+  - professional_help
+  topic_tags:
+  - OCD
+  - anxiety_disorders
+  - professional_help
+  population_tags:
+  - adolescents
+  - adults
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd
+  official_url: https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nimh.nih.gov
+    - www.nimh.nih.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NIMH_PTSD
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: National Institute of Mental Health
+  title: Post-Traumatic Stress Disorder
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_A90723B5FC
+  source_type: fact_sheet
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - PTSD
+  - trauma
+  - professional_help
+  topic_tags:
+  - PTSD
+  - trauma
+  - professional_help
+  population_tags:
+  - adolescents
+  - adults
+  - people_exposed_to_trauma
+  life_stage_tags: []
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd
+  official_url: https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nimh.nih.gov
+    - www.nimh.nih.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: NIMH_SUICIDE_PREVENTION
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: National Institute of Mental Health
+  title: Suicide Prevention
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_CB83D5C04E
+  source_type: fact_sheet
+  target_collection: safety
+  collection: safety
+  topics:
+  - self_harm
+  - suicidal_thoughts
+  - acute_crisis
+  - referral_guidance
+  topic_tags:
+  - self_harm
+  - suicidal_thoughts
+  - acute_crisis
+  - referral_guidance
+  population_tags:
+  - adolescents
+  - young_adults
+  - adults
+  - older_adults
+  life_stage_tags: []
+  use_mode: safety_only
+  risk_scope: safety_route_only
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.nimh.nih.gov/health/topics/suicide-prevention
+  official_url: https://www.nimh.nih.gov/health/topics/suicide-prevention
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - nimh.nih.gov
+    - www.nimh.nih.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: SAMHSA_FAMILY_SUPPORT
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: Substance Abuse and Mental Health Services Administration
+  title: Family, Parent and Caregiver Peer Support
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_45C9385724
+  source_type: official_web_guide
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - family_relationships
+  - caregiving_stress
+  - communication
+  - support_boundaries
+  topic_tags:
+  - family_relationships
+  - caregiving_stress
+  - communication
+  - support_boundaries
+  population_tags:
+  - parents
+  - caregivers
+  - family_members_supporting_others
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  user_facing: true
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.samhsa.gov/families
+  official_url: https://www.samhsa.gov/families
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - samhsa.gov
+    - www.samhsa.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: SAMHSA_TRAUMA_INFORMED_CARE
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: Substance Abuse and Mental Health Services Administration
+  title: Practical Guide for Implementing a Trauma-Informed Approach
+  version: v2
+  year: 2023
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_D834555B95
+  source_type: guide
+  target_collection: helping_skills
+  collection: helping_skills
+  topics:
+  - trauma
+  - communication
+  - non_harmful_helping
+  - safety
+  topic_tags:
+  - trauma
+  - communication
+  - non_harmful_helping
+  - safety
+  population_tags:
+  - people_exposed_to_trauma
+  - family_members_supporting_others
+  life_stage_tags: []
+  use_mode: helping_skills_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.samhsa.gov/resource/dbhis/practical-guide-implementing-trauma-informed-approach
+  official_url: https://www.samhsa.gov/resource/dbhis/practical-guide-implementing-trauma-informed-approach
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - samhsa.gov
+    - www.samhsa.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: UNICEF_ADOLESCENT_MH
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: UNICEF
+  title: Mental health and psychosocial support for adolescents
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_A0155633AD
+  source_type: official_web_guide
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - adolescent_development
+  - stress
+  - anxiety
+  - low_mood
+  - social_relationships
+  topic_tags:
+  - adolescent_development
+  - stress
+  - anxiety
+  - low_mood
+  - social_relationships
+  population_tags:
+  - adolescents
+  - parents
+  - caregivers
+  life_stage_tags:
+  - adolescent_development
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.unicef.org/mental-health
+  official_url: https://www.unicef.org/mental-health
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - unicef.org
+    - www.unicef.org
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: UNICEF_PARENTING_MH
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: UNICEF
+  title: Parent and caregiver mental health support
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_05160E141C
+  source_type: official_web_guide
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - parent_child_relationship
+  - caregiving_stress
+  - communication
+  - self_compassion
+  topic_tags:
+  - parent_child_relationship
+  - caregiving_stress
+  - communication
+  - self_compassion
+  population_tags:
+  - parents
+  - caregivers
+  - children
+  - adolescents
+  life_stage_tags:
+  - parenthood
+  use_mode: direct_user_support
+  risk_scope: normal
+  user_facing: true
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.unicef.org/parenting/mental-health
+  official_url: https://www.unicef.org/parenting/mental-health
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - unicef.org
+    - www.unicef.org
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: VA_SKILLS_PSYCHOLOGICAL_RECOVERY
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: VA National Center for PTSD
+  title: Skills for Psychological Recovery
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_1B4AE9F4BB
+  source_type: manual
+  target_collection: helping_skills
+  collection: helping_skills
+  topics:
+  - trauma
+  - problem_solving
+  - social_support
+  - anger
+  - sleep
+  - grief
+  topic_tags:
+  - trauma
+  - problem_solving
+  - social_support
+  - anger
+  - sleep
+  - grief
+  population_tags:
+  - people_exposed_to_trauma
+  - parents
+  - caregivers
+  life_stage_tags: []
+  use_mode: helping_skills_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: B
+  source_authority: tier_a
+  official_page_url: https://www.ptsd.va.gov/professional/treat/type/SPR/SPR_manual.asp
+  official_url: https://www.ptsd.va.gov/professional/treat/type/SPR/SPR_manual.asp
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - ptsd.va.gov
+    - www.ptsd.va.gov
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_DEMENTIA_ACTION_PLAN_2017
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization
+  title: Global action plan on the public health response to dementia 2017-2025
+  version: v2
+  year: 2017
+  language_preference:
+  - zh-CN
+  - en
+  language: zh-CN
+  translation_group_id: TRG_8D64E57138
+  source_type: policy_guidance
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - dementia
+  - caregiving_stress
+  - social_support
+  topic_tags:
+  - dementia
+  - caregiving_stress
+  - social_support
+  population_tags:
+  - older_adults
+  - caregivers
+  - family_members_supporting_others
+  life_stage_tags:
+  - aging
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/global-action-plan-on-the-public-health-response-to-dementia-2017---2025
+  official_url: https://www.who.int/publications/i/item/global-action-plan-on-the-public-health-response-to-dementia-2017---2025
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_DWM_STRESS_2020
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: World Health Organization
+  title: 'Doing What Matters in Times of Stress: An Illustrated Guide'
+  year: 2020
+  language_preference:
+  - zh-CN
+  - en
+  source_type: self_help_guide
+  target_collection: interventions
+  topics:
+  - stress
+  - grounding
+  - acceptance
+  - self_compassion
+  - emotion_regulation
+  user_facing: true
+  evidence_level: A
+  official_page_url: https://www.who.int/publications/i/item/9789240003927
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - who.int
+    - iris.who.int
+    - tdr.who.int
+    preferred_languages:
+    - Chinese
+    - English
+    preferred_mime_types:
+    - application/pdf
+    max_assets: 3
+  license_note: official_public_source
+  notes: Prefer official Chinese asset when available.
+  version: v2
+  collection: interventions
+  official_url: https://www.who.int/publications/i/item/9789240003927
+  download_url: ''
+  language: zh-CN
+  translation_group_id: TRG_D715A0FE66
+  topic_tags:
+  - stress
+  - grounding
+  - acceptance
+  - self_compassion
+  - emotion_regulation
+  population_tags:
+  - adolescents
+  - young_adults
+  - adults
+  - older_adults
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: WHO_EASE_INTERVENTION_2023
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: World Health Organization / UNICEF
+  title: Early Adolescent Skills for Emotions (EASE)
+  version: v2
+  year: 2023
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_3FF84675EA
+  source_type: intervention_manual
+  target_collection: interventions
+  collection: interventions
+  topics:
+  - stress
+  - anxiety
+  - low_mood
+  - emotion_regulation
+  - caregiver_support
+  topic_tags:
+  - stress
+  - anxiety
+  - low_mood
+  - emotion_regulation
+  - caregiver_support
+  population_tags:
+  - adolescents
+  - caregivers
+  - parents
+  life_stage_tags:
+  - adolescent_development
+  use_mode: direct_user_support
+  risk_scope: normal
+  user_facing: true
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/9789240082755
+  official_url: https://www.who.int/publications/i/item/9789240082755
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_EASE_TRAINING_2025
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization / UNICEF
+  title: 'Early Adolescent Skills for Emotions (EASE): training manual'
+  version: v2
+  year: 2025
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_C522BB5AFD
+  source_type: training_manual
+  target_collection: helping_skills
+  collection: helping_skills
+  topics:
+  - helper_training
+  - adolescent_support
+  - caregiver_support
+  - communication
+  topic_tags:
+  - helper_training
+  - adolescent_support
+  - caregiver_support
+  - communication
+  population_tags:
+  - adolescents
+  - caregivers
+  life_stage_tags:
+  - adolescent_development
+  use_mode: helping_skills_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/9789240113718
+  official_url: https://www.who.int/publications/i/item/9789240113718
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_GROUP_PM_PLUS_2020
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: World Health Organization
+  title: 'Group Problem Management Plus (Group PM+): group psychological help for adults impaired by distress in communities
+    exposed to adversity'
+  version: v2
+  year: 2020
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_89DF5F2DCC
+  source_type: intervention_manual
+  target_collection: interventions
+  collection: interventions
+  topics:
+  - stress
+  - group_support
+  - social_support
+  - problem_solving
+  topic_tags:
+  - stress
+  - group_support
+  - social_support
+  - problem_solving
+  population_tags:
+  - adults
+  - people_exposed_to_trauma
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  user_facing: true
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/9789240008106
+  official_url: https://www.who.int/publications/i/item/9789240008106
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_GROUP_PM_PLUS_TRAINING_2026
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization
+  title: 'Group Problem Management Plus (PM+) psychological intervention: training manual'
+  version: v2
+  year: 2026
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_59B0F9789C
+  source_type: training_manual
+  target_collection: helping_skills
+  collection: helping_skills
+  topics:
+  - helper_training
+  - group_delivery
+  - supervision
+  - communication
+  topic_tags:
+  - helper_training
+  - group_delivery
+  - supervision
+  - communication
+  population_tags:
+  - adults
+  life_stage_tags: []
+  use_mode: helping_skills_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/9789240122185
+  official_url: https://www.who.int/publications/i/item/9789240122185
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_HELPING_SKILLS_2025
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization / UNICEF
+  title: 'Foundational helping skills training manual: a competency-based approach for training helpers to support adults'
+  year: 2025
+  language_preference:
+  - en
+  source_type: training_manual
+  target_collection: helping_skills
+  topics:
+  - empathy
+  - active_listening
+  - communication
+  - collaboration
+  - non_harmful_helping
+  user_facing: false
+  evidence_level: A
+  official_page_url: https://www.who.int/publications/i/item/9789240105935
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - who.int
+    - iris.who.int
+    preferred_mime_types:
+    - application/pdf
+    max_assets: 2
+  license_note: official_public_source
+  notes: ''
+  version: v2
+  collection: helping_skills
+  official_url: https://www.who.int/publications/i/item/9789240105935
+  download_url: ''
+  language: en
+  translation_group_id: TRG_BB0C227A9B
+  topic_tags:
+  - empathy
+  - active_listening
+  - communication
+  - collaboration
+  - non_harmful_helping
+  population_tags:
+  - adults
+  - family_members_supporting_others
+  life_stage_tags: []
+  use_mode: helping_skills_only
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: WHO_LIVE_LIFE_2021
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: World Health Organization
+  title: 'LIVE LIFE: an implementation guide for suicide prevention in countries'
+  year: 2021
+  language_preference:
+  - zh-CN
+  - en
+  source_type: implementation_guide
+  target_collection: safety
+  topics:
+  - self_harm
+  - suicidal_thoughts
+  - acute_crisis
+  - referral_guidance
+  user_facing: false
+  evidence_level: A
+  official_page_url: https://www.who.int/publications/i/item/9789240026629
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - who.int
+    - iris.who.int
+    preferred_languages:
+    - Chinese
+    - English
+    preferred_mime_types:
+    - application/pdf
+    max_assets: 3
+  license_note: official_public_source
+  notes: ''
+  version: v2
+  collection: safety
+  official_url: https://www.who.int/publications/i/item/9789240026629
+  download_url: ''
+  language: zh-CN
+  translation_group_id: TRG_4132DE4F27
+  topic_tags:
+  - self_harm
+  - suicidal_thoughts
+  - acute_crisis
+  - referral_guidance
+  population_tags:
+  - adolescents
+  - adults
+  - older_adults
+  life_stage_tags: []
+  use_mode: safety_only
+  risk_scope: safety_route_only
+  clinical_only: false
+  source_authority: tier_a
+  license: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: WHO_MHGAP_2023
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization
+  title: mhGAP guideline for mental, neurological and substance use disorders, third edition
+  year: 2023
+  language_preference:
+  - en
+  source_type: guideline
+  target_collection: evidence
+  topics:
+  - depression
+  - anxiety_disorders
+  - self_harm
+  - substance_use
+  - psychosis
+  - bipolar_disorder
+  - dementia
+  user_facing: false
+  evidence_level: A
+  official_page_url: https://www.who.int/publications/i/item/9789240084278
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - who.int
+    - iris.who.int
+    preferred_mime_types:
+    - application/pdf
+    max_assets: 2
+  license_note: official_public_source
+  notes: Clinical reference only; ordinary counselor must not turn it into diagnosis or treatment.
+  version: v2
+  collection: evidence
+  official_url: https://www.who.int/publications/i/item/9789240084278
+  download_url: ''
+  language: en
+  translation_group_id: TRG_4D230B5397
+  topic_tags:
+  - depression
+  - anxiety_disorders
+  - self_harm
+  - substance_use
+  - psychosis
+  - bipolar_disorder
+  - dementia
+  population_tags:
+  - adults
+  - older_adults
+  - adolescents
+  life_stage_tags: []
+  use_mode: clinical_reference_only
+  risk_scope: normal
+  clinical_only: true
+  source_authority: tier_a
+  license: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: WHO_PFA_FACILITATOR_2013
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization
+  title: 'Psychological first aid: facilitator''s manual for orienting field workers'
+  version: v2
+  year: 2013
+  language_preference:
+  - zh-CN
+  - en
+  language: zh-CN
+  translation_group_id: TRG_C88B1C7FBA
+  source_type: training_manual
+  target_collection: helping_skills
+  collection: helping_skills
+  topics:
+  - acute_crisis
+  - helper_training
+  - communication
+  topic_tags:
+  - acute_crisis
+  - helper_training
+  - communication
+  population_tags:
+  - people_exposed_to_trauma
+  - family_members_supporting_others
+  life_stage_tags: []
+  use_mode: helping_skills_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/psychological-first-aid
+  official_url: https://www.who.int/publications/i/item/psychological-first-aid
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_PFA_GUIDE_2011
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization
+  title: 'Psychological first aid: Guide for field workers'
+  version: v2
+  year: 2011
+  language_preference:
+  - zh-CN
+  - en
+  language: zh-CN
+  translation_group_id: TRG_52FAC5899D
+  source_type: technical_document
+  target_collection: helping_skills
+  collection: helping_skills
+  topics:
+  - acute_crisis
+  - trauma
+  - communication
+  - referral_guidance
+  topic_tags:
+  - acute_crisis
+  - trauma
+  - communication
+  - referral_guidance
+  population_tags:
+  - people_exposed_to_trauma
+  - family_members_supporting_others
+  life_stage_tags: []
+  use_mode: helping_skills_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/9789241548205
+  official_url: https://www.who.int/publications/i/item/9789241548205
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_PM_PLUS_2018
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: World Health Organization
+  title: 'Problem Management Plus (PM+): individual psychological help for adults impaired by distress in communities exposed
+    to adversity'
+  version: v2
+  year: 2018
+  language_preference:
+  - zh-CN
+  - en
+  language: zh-CN
+  translation_group_id: TRG_F442073138
+  source_type: intervention_manual
+  target_collection: interventions
+  collection: interventions
+  topics:
+  - stress
+  - problem_solving
+  - behavioral_activation
+  - social_support
+  - anxiety
+  - low_mood
+  topic_tags:
+  - stress
+  - problem_solving
+  - behavioral_activation
+  - social_support
+  - anxiety
+  - low_mood
+  population_tags:
+  - adults
+  - people_exposed_to_trauma
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  user_facing: true
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/WHO-MSD-MER-18.5
+  official_url: https://www.who.int/publications/i/item/WHO-MSD-MER-18.5
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_PM_PLUS_TRAINING_2025
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization
+  title: 'Problem Management Plus (PM+) psychological intervention for individuals: training manual'
+  version: v2
+  year: 2025
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_7994717BAD
+  source_type: training_manual
+  target_collection: helping_skills
+  collection: helping_skills
+  topics:
+  - helper_training
+  - supervision
+  - communication
+  - support_boundaries
+  topic_tags:
+  - helper_training
+  - supervision
+  - communication
+  - support_boundaries
+  population_tags:
+  - adults
+  - family_members_supporting_others
+  life_stage_tags: []
+  use_mode: helping_skills_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/9789240109926
+  official_url: https://www.who.int/publications/i/item/9789240109926
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_PSYCH_IMPLEMENTATION_2024
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization
+  title: 'Psychological interventions implementation manual: integrating evidence-based psychological interventions into existing
+    services'
+  year: 2024
+  language_preference:
+  - en
+  source_type: implementation_manual
+  target_collection: governance
+  topics:
+  - implementation
+  - adaptation
+  - monitoring
+  - service_boundaries
+  user_facing: false
+  evidence_level: A
+  official_page_url: https://www.who.int/publications/i/item/9789240087149
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - who.int
+    - iris.who.int
+    preferred_mime_types:
+    - application/pdf
+    max_assets: 2
+  license_note: WHO publication; preserve attribution/licence metadata.
+  notes: Useful for implementation and boundary design, not normal chat retrieval.
+  version: v2
+  collection: governance
+  official_url: https://www.who.int/publications/i/item/9789240087149
+  download_url: ''
+  language: en
+  translation_group_id: WHO_PSYCH_IMPLEMENTATION_2024
+  topic_tags:
+  - implementation
+  - adaptation
+  - monitoring
+  - service_boundaries
+  population_tags:
+  - university_students
+  - young_adults
+  - adults
+  life_stage_tags: []
+  use_mode: agent_policy_only
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: WHO publication; preserve attribution/licence metadata.
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: WHO_SAFETY_PLANNING_2023
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: World Health Organization
+  title: Safety planning interventions
+  year: 2023
+  language_preference:
+  - en
+  source_type: evidence_recommendation
+  target_collection: safety
+  topics:
+  - self_harm
+  - suicidal_thoughts
+  - suicidal_plan
+  - safety_planning_principles
+  user_facing: false
+  evidence_level: A
+  official_page_url: https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme/evidence-centre/self-harm-and-suicide/safety-planning-interventions
+  download:
+    mode: html_plus_linked_assets
+    allowed_domains:
+    - who.int
+    - iris.who.int
+    include_link_text_patterns:
+    - Evidence profile
+    - Safety planning
+    preferred_mime_types:
+    - text/html
+    - application/pdf
+    max_assets: 3
+  license_note: official_public_source
+  notes: ''
+  version: v2
+  collection: safety
+  official_url: https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme/evidence-centre/self-harm-and-suicide/safety-planning-interventions
+  download_url: ''
+  language: en
+  translation_group_id: TRG_F2AD4298EE
+  topic_tags:
+  - self_harm
+  - suicidal_thoughts
+  - suicidal_plan
+  - safety_planning_principles
+  population_tags:
+  - adolescents
+  - adults
+  - older_adults
+  life_stage_tags: []
+  use_mode: safety_only
+  risk_scope: safety_route_only
+  clinical_only: false
+  source_authority: tier_a
+  license: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: WHO_SELFHELP_2026
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: World Health Organization
+  title: 'Psychological self-help interventions: delivering self-help for individuals, featuring Step-by-Step and Doing What
+    Matters in Times of Stress'
+  year: 2026
+  language_preference:
+  - en
+  source_type: manual
+  target_collection: interventions
+  topics:
+  - self_help
+  - stress
+  - guided_self_help
+  - problem_solving
+  user_facing: true
+  evidence_level: A
+  official_page_url: https://www.who.int/publications/i/item/9789240120785
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - who.int
+    - iris.who.int
+    preferred_mime_types:
+    - application/pdf
+    max_assets: 2
+  license_note: official_public_source
+  notes: Core self-help guidance; deduplicate against DWM/Step-by-Step annexes.
+  version: v2
+  collection: interventions
+  official_url: https://www.who.int/publications/i/item/9789240120785
+  download_url: ''
+  language: en
+  translation_group_id: TRG_0A3069F158
+  topic_tags:
+  - self_help
+  - stress
+  - guided_self_help
+  - problem_solving
+  population_tags:
+  - young_adults
+  - adults
+  - workers
+  - university_students
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  clinical_only: false
+  source_authority: tier_a
+  license: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+- id: WHO_SH_PLUS_2021
+  enabled: true
+  auto_download: true
+  priority: P0
+  organization: World Health Organization
+  title: 'SELF-HELP PLUS (SH+): a group-based stress management course for adults'
+  version: v2
+  year: 2021
+  language_preference:
+  - zh-CN
+  - en
+  language: zh-CN
+  translation_group_id: TRG_2EA2E065E3
+  source_type: toolkit
+  target_collection: interventions
+  collection: interventions
+  topics:
+  - stress
+  - group_support
+  - mindfulness_acceptance
+  - grounding
+  topic_tags:
+  - stress
+  - group_support
+  - mindfulness_acceptance
+  - grounding
+  population_tags:
+  - adults
+  - workers
+  - people_exposed_to_trauma
+  life_stage_tags: []
+  use_mode: direct_user_support
+  risk_scope: normal
+  user_facing: true
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/9789240035119
+  official_url: https://www.who.int/publications/i/item/9789240035119
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_THINKING_HEALTHY_2015
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization
+  title: 'Thinking Healthy: a manual for psychological management of perinatal depression'
+  version: v2
+  year: 2015
+  language_preference:
+  - zh-CN
+  - en
+  language: zh-CN
+  translation_group_id: TRG_AE18708C35
+  source_type: intervention_manual
+  target_collection: professional_knowledge
+  collection: professional_knowledge
+  topics:
+  - depression
+  - depressive_feelings
+  - perinatal_crisis
+  - parenthood
+  topic_tags:
+  - depression
+  - depressive_feelings
+  - perinatal_crisis
+  - parenthood
+  population_tags:
+  - pregnant_people
+  - postpartum_people
+  - parents
+  life_stage_tags:
+  - pregnancy
+  - postpartum
+  - parenthood
+  use_mode: psychoeducation_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/WHO-MSD-MER-15.1
+  official_url: https://www.who.int/publications/i/item/WHO-MSD-MER-15.1
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_WORK_GUIDELINE_2022
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization
+  title: WHO guidelines on mental health at work
+  version: v2
+  year: 2022
+  language_preference:
+  - zh-CN
+  - en
+  language: zh-CN
+  translation_group_id: TRG_C89A9B5209
+  source_type: guideline
+  target_collection: evidence
+  collection: evidence
+  topics:
+  - work_stress
+  - burnout_related_distress
+  - return_to_work
+  - employment_anxiety
+  topic_tags:
+  - work_stress
+  - burnout_related_distress
+  - return_to_work
+  - employment_anxiety
+  population_tags:
+  - workers
+  - job_seekers
+  - adults
+  life_stage_tags:
+  - career_transition
+  use_mode: evidence_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: true
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/9789240053052
+  official_url: https://www.who.int/publications/i/item/9789240053052
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+- id: WHO_WORK_POLICY_BRIEF_2022
+  enabled: true
+  auto_download: true
+  priority: P1
+  organization: World Health Organization / International Labour Organization
+  title: 'Mental health at work: policy brief'
+  version: v2
+  year: 2022
+  language_preference:
+  - en
+  language: en
+  translation_group_id: TRG_02DA6B28E7
+  source_type: policy_brief
+  target_collection: governance
+  collection: governance
+  topics:
+  - work_stress
+  - workplace_relationship
+  - return_to_work
+  topic_tags:
+  - work_stress
+  - workplace_relationship
+  - return_to_work
+  population_tags:
+  - workers
+  - job_seekers
+  life_stage_tags:
+  - career_transition
+  use_mode: agent_policy_only
+  risk_scope: normal
+  user_facing: false
+  clinical_only: false
+  evidence_level: A
+  source_authority: tier_a
+  official_page_url: https://www.who.int/publications/i/item/9789240057944
+  official_url: https://www.who.int/publications/i/item/9789240057944
+  download_url: ''
+  license: official_public_source
+  license_note: official_public_source
+  review_status: pending
+  eligible_for_approval: true
+  quality_checked: false
+  expert_reviewed: false
+  last_checked_at: ''
+  document_hash: ''
+  download:
+    mode: follow_official_download_link
+    allowed_domains:
+    - iris.who.int
+    - tdr.who.int
+    - who.int
+    - www.who.int
+    preferred_mime_types:
+    - application/pdf
+    - text/html
+    allowed_extensions:
+    - .pdf
+    - .html
+    - .htm
+    - .doc
+    - .docx
+    max_assets: 4
+  notes: ''
+build_policy:
+  download_only_enabled_sources: true
+  forbid_unlisted_domains: true
+  forbid_search_engine_expansion: true
+  forbid_paywall_bypass: true
+  forbid_login_bypass: true
+  forbid_captcha_bypass: true
+  max_concurrent_downloads: 2
+  minimum_delay_seconds_per_domain: 1.0
+  retries: 2
+  request_timeout_seconds: 30
+  save_html_pages: true
+  save_downloaded_assets: true
+  compute_sha256: true
+  deduplicate_by_sha256: true
+  keep_original_files: true
+  unpack_zip_files: true
+  retain_zip_after_unpack: true
+processing_policy:
+  supported_extensions:
+  - .html
+  - .htm
+  - .pdf
+  - .doc
+  - .docx
+  - .txt
+  - .md
+  - .json
+  - .jsonl
+  - .zip
+  do_not_ocr_unless_needed: true
+  remove_navigation_and_boilerplate: true
+  preserve_headings: true
+  preserve_source_metadata: true
+  preserve_section_hierarchy: true
+  strip_repeated_headers_footers: true
+  strip_page_numbers_when_safe: true
+  do_not_index_references_by_default: true
+  chunking:
+    strategy: heading_paragraph_sentence_then_fallback
+    target_chars: 500
+    overlap_chars: 80
+    min_chars: 120
+    max_chars: 900
+  review:
+    require_review_before_production_index: true
+    initial_status: pending
+    sample_review_size: 150
+  metadata_fields:
+  - source_id
+  - organization
+  - title
+  - year
+  - source_type
+  - target_collection
+  - topics
+  - language
+  - section
+  - subsection
+  - evidence_level
+  - user_facing
+  - official_page_url
+  - downloaded_url
+  - sha256
+  - review_status
+  - version
+  - translation_group_id
+  - population_tags
+  - topic_tags
+  - life_stage_tags
+  - collection
+  - use_mode
+  - risk_scope
+  - clinical_only
+  - source_authority
+  - license
+  - document_hash
+  - content_hash
+  - quality_checked
+  - expert_reviewed
+  - eligible_for_approval
+index_policy:
+  first_version:
+    dense_vector_store: chromadb
+    keyword_index: bm25
+    only_index_review_status:
+    - approved
+  collections:
+  - professional_knowledge
+  - interventions
+  - helping_skills
+  - campus_support
+  - safety
+  - evidence
+  - governance
+  - case_rag
+  safety_rules:
+  - Safety collection must be queried only by Risk/Safety routing, never by generic similarity search alone.
+  - Case RAG must remain separate from professional knowledge.
+  - Governance/policy documents must not be treated as user-facing self-help instructions.
+  - A retrieved source must retain exact provenance metadata.
+  ordinary_retrieval_filter:
+    user_facing: true
+    clinical_only: false
+    use_mode:
+    - direct_user_support
+    risk_scope:
+    - normal
+    - general
+knowledge_base_version: V2
+coverage_matrix: backend/data/knowledge_base/sources/coverage_matrix.yaml

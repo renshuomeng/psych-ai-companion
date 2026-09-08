@@ -1,0 +1,19 @@
+version: 1
+purpose: Evaluation and training datasets must not be imported into the professional Knowledge RAG.
+excluded_sources:
+- id: CARE-Bench
+  reason: benchmark_or_training_leakage_risk
+- id: ESC-Eval
+  reason: benchmark_or_training_leakage_risk
+- id: CPsyCounE
+  reason: benchmark_or_training_leakage_risk
+- id: CounselBench
+  reason: benchmark_or_training_leakage_risk
+- id: CPsyCoun Test
+  reason: benchmark_or_training_leakage_risk
+- id: CPsyCounD Train
+  reason: benchmark_or_training_leakage_risk
+- id: SoulChat
+  reason: benchmark_or_training_leakage_risk
+- id: ESConv
+  reason: benchmark_or_training_leakage_risk

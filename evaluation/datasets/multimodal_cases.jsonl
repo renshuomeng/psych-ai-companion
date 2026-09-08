@@ -1,0 +1,2 @@
+{"case_id":"multimodal_001","input":{"user_text":"请结合这张图分析我的状态。","image_visual":"人物露出笑容","image_ocr":[]},"expected":{"visual_low_weight":true,"primary_label":"joy"}}
+{"case_id":"multimodal_002","input":{"user_text":"我很焦虑，但图片里看起来很平静。","image_visual":"人物表情平静","image_ocr":[]},"expected":{"text_priority":true,"primary_label":"anxiety"}}

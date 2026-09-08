@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-09-07T12:58:58+00:00",
+  "dry_run": false,
+  "production_ready": true,
+  "eligible_chunks": 8641,
+  "blockers": [],
+  "bm25": {
+    "status": "ready",
+    "documents": 8641,
+    "average_tokens": 381.91,
+    "dir": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/bm25/production",
+    "atomic_switch": true,
+    "temporary_dir": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/bm25/.tmp/production_2026-09-07T125858+0000",
+    "backup_dir": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/bm25/backups/production_2026-09-07T125858+0000",
+    "health_check": "ok"
+  },
+  "dense": {
+    "index_version": "KB_V2.1_dense_production_2026-09-07T130007+0000",
+    "created_at": "2026-09-07T13:00:07+00:00",
+    "index_mode": "production",
+    "incremental": true,
+    "force_rebuild": false,
+    "dry_run": false,
+    "embedding_provider": "local",
+    "embedding_model": "BAAI/bge-m3",
+    "embedding_model_version": "BAAI/bge-m3",
+    "embedding_dimension": 1024,
+    "chunk_count": 8641,
+    "new_embeddings": 0,
+    "cache_hits": 8641,
+    "cache_path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/chroma/embedding_cache.jsonl",
+    "registry_hash": "460caea0b4822d91f57af8c3a41cb8aceff690a0ca345b358d8ed310d40154da",
+    "chunk_manifest_hash": "99f7136a14881d956fb747e1793cbae3d694285eb741fbef2e0dfac9c9db55c6",
+    "build_time_ms": 45959,
+    "collection_counts": {
+      "safety": 762,
+      "interventions": 4968,
+      "professional_knowledge": 990,
+      "helping_skills": 673,
+      "governance": 281,
+      "campus_support": 25,
+      "evidence": 942
+    },
+    "chroma_collections": {
+      "psych_campus_support_production": {
+        "collection": "campus_support",
+        "count": 25,
+        "status": "ready"
+      },
+      "psych_evidence_production": {
+        "collection": "evidence",
+        "count": 942,
+        "status": "ready"
+      },
+      "psych_governance_production": {
+        "collection": "governance",
+        "count": 281,
+        "status": "ready"
+      },
+      "psych_helping_skills_production": {
+        "collection": "helping_skills",
+        "count": 673,
+        "status": "ready"
+      },
+      "psych_interventions_production": {
+        "collection": "interventions",
+        "count": 4968,
+        "status": "ready"
+      },
+      "psych_professional_knowledge_production": {
+        "collection": "professional_knowledge",
+        "count": 990,
+        "status": "ready"
+      },
+      "psych_safety_production": {
+        "collection": "safety",
+        "count": 762,
+        "status": "ready"
+      }
+    }
+  },
+  "build_time_ms": 70474,
+  "rollback": {
+    "bm25_supported": true,
+    "bm25_backup_dir": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/bm25/backups/production_2026-09-07T125858+0000",
+    "bm25_command": "python scripts\\rag\\build_production_indexes.py --rollback-bm25 --backup-dir C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/backend/data/knowledge_base/indexes/bm25/backups/production_2026-09-07T125858+0000",
+    "dense_note": "Chroma production collections are stage-isolated. Re-run the production build from approved chunks or restore the Chroma persist directory from filesystem backup if a full vector rollback is required."
+  },
+  "rollback_note": "BM25 production builds are switched from a temporary directory after health check. A previous BM25 production directory is moved to backup when it exists."
+}

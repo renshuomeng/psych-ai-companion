@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-09-01T08:34:37+00:00",
+  "buckets": {
+    "p0_safety": {
+      "rows": 150,
+      "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p0_safety.csv"
+    },
+    "p1_interventions": {
+      "rows": 49,
+      "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p1_interventions.csv"
+    },
+    "p1_children": {
+      "rows": 1260,
+      "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p1_children.csv"
+    },
+    "p1_perinatal": {
+      "rows": 0,
+      "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p1_perinatal.csv"
+    },
+    "p2_general": {
+      "rows": 189,
+      "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p2_general.csv"
+    },
+    "high_risk": {
+      "rows": 150,
+      "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_high_risk.csv"
+    },
+    "p1": {
+      "rows": 864,
+      "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p1.csv"
+    },
+    "p2": {
+      "rows": 0,
+      "path": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/reports/review_priority_p2.csv"
+    }
+  }
+}

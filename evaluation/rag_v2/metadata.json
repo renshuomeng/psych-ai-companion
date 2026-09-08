@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "cases": 162,
+  "purpose": "RAG V2 engineering retrieval benchmark; not a psychological scale.",
+  "query_file": "C:/Users/renshuomeng/Documents/Codex/2026-06-30/ban/psych-ai-companion/evaluation/rag_v2/retrieval_queries.jsonl"
+}

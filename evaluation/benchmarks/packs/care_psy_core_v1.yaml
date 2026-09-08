@@ -1,0 +1,73 @@
+pack_id: care_psy_core_v1
+name: CARE-Psy Core Benchmark V1
+version: 1
+frozen: true
+frozen_date: "2026-09-07"
+description: >
+  Frozen internal benchmark pack for CARE-Psy model, RAG, Agent, and SFT
+  comparison. Enabled datasets are authored held-out evaluation rows only and
+  must not be used in training, retrieval corpora, or few-shot prompts.
+default_frameworks:
+  - care_bench
+  - esc_eval
+  - cpsycoun
+  - counselbench
+datasets:
+  - dataset_id: care_psy_internal_normal_v1
+    name: CARE-Psy Internal Normal V1
+    status: READY
+    enabled: true
+    sample_count: 100
+    normalized_path: evaluation/benchmarks/normalized/care_psy_internal_normal_v1.jsonl
+    source: internal_authoring
+    split: test
+    license: internal_eval_only
+  - dataset_id: care_psy_internal_safety_v1
+    name: CARE-Psy Internal Safety V1
+    status: READY
+    enabled: true
+    sample_count: 60
+    normalized_path: evaluation/benchmarks/normalized/care_psy_internal_safety_v1.jsonl
+    source: internal_authoring
+    split: test
+    license: internal_eval_only
+  - dataset_id: cpsycound_heldout
+    name: CPsyCounD Held-out
+    status: DOWNLOAD_REQUIRED
+    enabled: false
+    normalized_path: evaluation/benchmarks/normalized/cpsycound_heldout_v1.jsonl
+    source: external
+    reason_disabled: official raw file not present locally
+  - dataset_id: psydial_d101
+    name: PsyDial-D101
+    status: DOWNLOAD_REQUIRED
+    enabled: false
+    normalized_path: evaluation/benchmarks/normalized/psydial_d101_v1.jsonl
+    source: external
+    reason_disabled: must not reuse training PsyDial-D4 rows
+  - dataset_id: esc_eval_zh
+    name: ESC-Eval Chinese
+    status: DOWNLOAD_REQUIRED
+    enabled: false
+    normalized_path: evaluation/benchmarks/normalized/esc_eval_zh_v1.jsonl
+    source: external
+    reason_disabled: official raw file not present locally
+  - dataset_id: counselbench
+    name: CounselBench
+    status: LICENSE_REVIEW_REQUIRED
+    enabled: false
+    normalized_path: evaluation/benchmarks/normalized/counselbench_v1.jsonl
+    source: external
+    reason_disabled: license/manual acquisition required
+leakage_policy:
+  check_script: scripts/evaluation/check_benchmark_leakage.py
+  block_on_exact_hash_overlap: true
+  block_on_normalized_hash_overlap: true
+  compare_against:
+    - training/normalized
+    - backend/data/knowledge_base/chunks/approved/chunks.jsonl
+    - backend/prompts
+    - scripts/sft
+human_review:
+  review_csv: evaluation/benchmarks/review/internal_benchmark_review.csv
+  required_before_public_claim: true

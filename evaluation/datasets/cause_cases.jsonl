@@ -1,0 +1,7 @@
+{"case_id":"cause_001","input":{"text":"论文开题一直卡住，晚上也睡不好。"},"expected":{"cause":"academic_stress"}}
+{"case_id":"cause_002","input":{"text":"秋招投了很多简历都没有回应，我很焦虑。"},"expected":{"cause":"career_anxiety"}}
+{"case_id":"cause_003","input":{"text":"和室友沟通边界很难，每次说完都像吵架。"},"expected":{"cause":"interpersonal_conflict"}}
+{"case_id":"cause_004","input":{"text":"最近总是凌晨还睡不着，第二天特别疲惫。"},"expected":{"cause":"sleep_disturbance"}}
+{"case_id":"cause_005","input":{"text":"我在学校总觉得一个人，没人真正理解我。"},"expected":{"cause":"loneliness"}}
+{"case_id":"cause_006","input":{"text":"我情绪突然崩溃，感觉自己快失控了。"},"expected":{"cause":"emotion_regulation"}}
+{"case_id":"cause_007","input":{"text":"我有轻生念头，担心自己会伤害自己。"},"expected":{"cause":"crisis_safety"}}

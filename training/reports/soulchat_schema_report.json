@@ -1,0 +1,123 @@
+{
+  "dataset": "soulchat",
+  "raw_file": "C:\\Users\\renshuomeng\\Downloads\\SoulChatCorpus-sft-multi-Turn.json",
+  "raw_count": 258353,
+  "normalized_count": 258353,
+  "first_item_keys": [
+    "id",
+    "topic",
+    "messages"
+  ],
+  "top_level_key_counts": {
+    "id": 258353,
+    "topic": 258353,
+    "messages": 258353
+  },
+  "role_counts_after_normalization": {
+    "user": 1515844,
+    "assistant": 1515844
+  },
+  "first_pass_reject_counts": {
+    "high_risk_without_safety_response": 11881,
+    "unsafe_boundary_medication_directive": 561,
+    "unsafe_boundary_recovery_guarantee": 210,
+    "too_short_for_sft": 82,
+    "broken_conversation": 78,
+    "unsafe_boundary_direct_diagnosis": 64,
+    "low_information": 17,
+    "unsafe_boundary_professional_only_procedure": 4,
+    "assistant_too_short": 4,
+    "unsafe_boundary_medication_directive|recovery_guarantee": 2,
+    "unsafe_boundary_medication_directive|direct_diagnosis": 1
+  },
+  "length_percentiles_after_hard_filters": {
+    "turn_count": {
+      "p1": 2.0,
+      "p5": 8.0,
+      "p50": 12.0,
+      "p90": 14.0,
+      "p95": 16.0,
+      "p99": 18.0
+    },
+    "characters": {
+      "p1": 342.0,
+      "p5": 428.0,
+      "p50": 736.0,
+      "p90": 1137.0,
+      "p95": 1279.0,
+      "p99": 1574.0
+    },
+    "estimated_tokens": {
+      "p1": 230.0,
+      "p5": 289.0,
+      "p50": 503.0,
+      "p90": 781.0,
+      "p95": 879.0,
+      "p99": 1083.0
+    }
+  },
+  "eligible_label_counts_top20": {
+    "group": {
+      "通用人群": 245449
+    },
+    "problem": {
+      "婚恋": 54106,
+      "人际": 29374,
+      "情绪": 28389,
+      "家庭": 23844,
+      "成长": 23102,
+      "治疗": 21811,
+      "行为": 19778,
+      "自我": 19402,
+      "社会": 9484,
+      "职场": 9076,
+      "心理学知识": 5946,
+      "未明确": 966,
+      "性心理": 171
+    },
+    "cause": {
+      "unknown_cause": 245449
+    },
+    "support_focus": {
+      "认知重评、情绪命名、行动计划": 128947,
+      "安全支持、认知重评、情绪命名": 26651,
+      "情绪命名、行动计划、社会支持": 26384,
+      "认知重评、情绪命名、社会支持": 15142,
+      "情绪命名、行动计划、自我接纳": 6525,
+      "情绪命名、行动计划": 6312,
+      "安全支持、情绪命名、行动计划": 4131,
+      "认知重评、情绪命名、自我接纳": 4039,
+      "认知重评、行动计划、社会支持": 3983,
+      "认知重评、情绪命名": 3713,
+      "情绪命名、社会支持": 2786,
+      "情绪命名、社会支持、自我接纳": 1992,
+      "情绪命名": 1647,
+      "认知重评、行动计划、自我接纳": 1576,
+      "认知重评、行动计划": 1230,
+      "情绪命名、自我接纳": 1227,
+      "认知重评、社会支持": 858,
+      "行动计划、社会支持": 834,
+      "安全支持、情绪命名、社会支持": 783,
+      "行动计划": 757
+    },
+    "severity": {
+      "medium": 125208,
+      "low": 117406,
+      "high": 2835
+    },
+    "strategy": {
+      "emotion_labeling": 221909,
+      "cognitive_reframe": 139993,
+      "grounding_relaxation": 96958,
+      "problem_solving": 76700,
+      "empathy_validation": 76093,
+      "resource_referral": 75195,
+      "open_question": 33522,
+      "psychoeducation": 29684,
+      "safety_planning": 27909,
+      "supportive_dialogue": 3325
+    }
+  },
+  "normalization_error_examples": [],
+  "normalized_jsonl": "C:\\Users\\renshuomeng\\Documents\\Codex\\2026-06-30\\ban\\psych-ai-companion\\training\\normalized\\soulchat_normalized.jsonl"
+}
